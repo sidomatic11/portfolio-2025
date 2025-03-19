@@ -14,8 +14,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="max-w-7xl mx-auto">
-				{children}
+			<body className="max-w-5xl mx-auto">
+				<div className="min-h-screen w-full">
+					{children}
+				</div>
 
 				<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center h-24 bg-gray-900">
 					<a

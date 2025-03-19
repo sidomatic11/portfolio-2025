@@ -24,10 +24,10 @@ export default function Home() {
 	}
 
 	return (
-		<div className=" bg-blue-200 ">
+		<div>
 
 			<Header toggleExploreSolve={toggleExploreSolve} isExploreVisible={isExploreVisible} />
-			<main className="w-full">
+			<main className="w-full py-16">
 
 				{isExploreVisible ? (
 
