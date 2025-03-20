@@ -12,6 +12,8 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+
+
 	return (
 		<html lang="en">
 			<body className="max-w-5xl mx-auto">
@@ -19,7 +21,7 @@ export default function RootLayout({
 					{children}
 				</div>
 
-				<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center h-24 bg-gray-900">
+				<footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center h-64 pb-16 bg-gray-900">
 					<a
 						className="flex items-center gap-2 hover:underline hover:underline-offset-4"
 						href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"

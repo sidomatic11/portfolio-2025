@@ -4,7 +4,7 @@ export default function Header({ toggleExploreSolve, isExploreVisible, isProject
 
 
 	return (
-		<header className="w-full flex gap-[24px] flex-wrap items-center justify-between h-16 bg-white border-b border-black md:border-b md:relative md:bottom-auto fixed bottom-0 border-t">
+		<header className="w-full flex gap-[24px] flex-wrap items-center justify-between h-16 bg-white border-b border-black sm:border-b sm:relative sm:bottom-auto fixed bottom-0 border-t">
 
 			<div className="border-x border-black h-full w-16 flex items-center justify-center">
 				<Link href="/" className="h-full w-full flex items-center justify-center">{isProjectHeader ? "Back" : "Home"}</Link>
