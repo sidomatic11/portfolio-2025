@@ -44,31 +44,31 @@ export default function Home() {
 					// EXPLORE SECTION
 					<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
 
-						<ProjectCard title="Voice Typing" link="/explore/voice-typing">
+						<ProjectCard link="/explore/voice-typing">
 							<p>Can voice typing be better?</p>
 						</ProjectCard>
 
-						<ProjectCard title="Vertical Calendar" link="/explore/vertical-calendar">
+						<ProjectCard link="/explore/vertical-calendar">
 							<p>Exploring Vertical Calendar</p>
 						</ProjectCard>
 
-						<ProjectCard title="HCI Notes" link="/explore/hci-notes">
+						<ProjectCard link="/explore/hci-notes">
 							<p>Notes on Humans, Computers and their Interaction</p>
 						</ProjectCard>
 
-						<ProjectCard title="Three Music" link="/explore/threejs-music">
+						<ProjectCard link="/explore/threejs-music">
 							<p>Music + Three.js</p>
 						</ProjectCard>
 
-						<ProjectCard title="Threejs Hands" link="/explore/mediapipe-threejs">
+						<ProjectCard link="/explore/mediapipe-threejs">
 							<p>Mediapipe + Three.js</p>
 						</ProjectCard>
 
-						<ProjectCard title="Three Visuals" link="/explore/threejs-visuals">
+						<ProjectCard link="/explore/threejs-visuals">
 							<p>Three.js Visuals & Interactivity</p>
 						</ProjectCard>
 
-						<ProjectCard title="Shock Ghosts" link="/explore/shock-ghosts">
+						<ProjectCard link="/explore/shock-ghosts">
 							<p>Shock all ghosts!</p>
 						</ProjectCard>
 
@@ -78,32 +78,32 @@ export default function Home() {
 					// SOLVE SECTION
 					<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
 
-						<ProjectCard title="IHH POC" link="/solve/ihh-poc">
+						<ProjectCard link="/solve/ihh-poc">
 							<p className="text-md">hardware integration, data visualization</p>
 							<Image src="/thumb-ihh.jpg" alt="IHH POC" width={400} height={400} className="h-1/2 object-contain" />
 							<p className="text-lg">Real time patient monitoring.</p>
 						</ProjectCard>
 
-						<ProjectCard title="What will the future of our data platform look like?" link="/solve/data-platform">
+						<ProjectCard link="/solve/data-platform">
 							<p>What is the future of our data platform? — a data company</p>
 						</ProjectCard>
 
 						{showNDAProjects && (
-							<ProjectCard title="NFT based Loyalty Program" link="/solve/ihh-poc">
+							<ProjectCard link="/solve/ihh-poc">
 							</ProjectCard>
 						)}
 
-						<ProjectCard title="What can multi-app management in XR look like?" link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0" newTab={true}>
+						<ProjectCard link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0" newTab={true}>
 							<p>How might we manage multiple apps in XR?</p>
 							<p>2020</p>
 						</ProjectCard>
 
-						<ProjectCard title="Helping the elderly adhere to mediterranean diet" link="https://like-period-e24.notion.site/Olitor-UW-School-of-Nursing-094630a0cc714395905ad675631a6c4f" newTab={true}>
+						<ProjectCard link="https://like-period-e24.notion.site/Olitor-UW-School-of-Nursing-094630a0cc714395905ad675631a6c4f" newTab={true}>
 							<p>Helping the elderly adhere to mediterranean diet</p>
 							<p>2021</p>
 						</ProjectCard>
 
-						<ProjectCard title="Enterprise Software Development @ Contentserv" link="https://like-period-e24.notion.site/Contentserv-171b41fa91b645c3b1dcfaf48dfffc18" newTab={true}>
+						<ProjectCard link="https://like-period-e24.notion.site/Contentserv-171b41fa91b645c3b1dcfaf48dfffc18" newTab={true}>
 							<p>Enterprise Software Development @ Contentserv</p>
 							<p>2018</p>
 						</ProjectCard>
