@@ -5,8 +5,10 @@ import Header from "./components/header";
 import { useState, useEffect } from "react";
 import ProjectCard from "./components/project-card";
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from "react";
 
-export default function Home() {
+// Client component that uses useSearchParams
+function HomeContent() {
 	const [isExploreVisible, setIsExploreVisible] = useState(false);
 	const [showNDAProjects, setShowNDAProjects] = useState(true);
 	const searchParams = useSearchParams();
@@ -35,12 +37,9 @@ export default function Home() {
 
 	return (
 		<div>
-
 			<Header toggleExploreSolve={toggleExploreSolve} isExploreVisible={isExploreVisible} />
 			<main className="w-full py-16 px-8">
-
 				{isExploreVisible ? (
-
 					// EXPLORE SECTION
 					<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
 
@@ -74,7 +73,6 @@ export default function Home() {
 
 					</section>
 				) : (
-
 					// SOLVE SECTION
 					<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
 
@@ -115,10 +113,16 @@ export default function Home() {
 
 					</section>
 				)}
-
-
 			</main>
-
 		</div>
+	);
+}
+
+// Main page component
+export default function Home() {
+	return (
+		<Suspense fallback={<div>Loading...</div>}>
+			<HomeContent />
+		</Suspense>
 	);
 }
