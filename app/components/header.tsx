@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ExploreSwitch from "./ExploreSwitch";
 
 export default function Header({ toggleExploreSolve, isExploreVisible, isProjectHeader }: { toggleExploreSolve?: () => void, isExploreVisible?: boolean, isProjectHeader?: boolean }) {
 
@@ -11,10 +12,8 @@ export default function Header({ toggleExploreSolve, isExploreVisible, isProject
 			</div>
 
 			{toggleExploreSolve && (
-				<div className="flex gap-4 cursor-pointer grow justify-center items-center h-full" onClick={toggleExploreSolve}>
-					<div className={isExploreVisible ? "font-bold" : ""}>Explore</div>
-					<div>{isExploreVisible ? "<" : ">"}</div>
-					<div className={!isExploreVisible ? "font-bold" : ""}>Solve</div>
+				<div className="flex grow justify-center items-center h-full">
+					<ExploreSwitch isExploreVisible={isExploreVisible || false} onClick={toggleExploreSolve} />
 				</div>
 			)}
 

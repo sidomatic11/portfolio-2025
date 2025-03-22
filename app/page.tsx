@@ -84,14 +84,19 @@ export default function Home() {
 							<p className="text-lg">Real time patient monitoring.</p>
 						</ProjectCard>
 
+						{showNDAProjects && (
+							<ProjectCard link="/solve/ihh-poc">
+								<p>Defining & Communicating an NFT based loyalty program</p>
+							</ProjectCard>
+						)}
+
 						<ProjectCard link="/solve/data-platform">
 							<p>What is the future of our data platform? — a data company</p>
 						</ProjectCard>
 
-						{showNDAProjects && (
-							<ProjectCard link="/solve/ihh-poc">
-							</ProjectCard>
-						)}
+						<ProjectCard link="/solve/data-platform">
+							<p>SVB Developer Portal Redesign</p>
+						</ProjectCard>
 
 						<ProjectCard link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0" newTab={true}>
 							<p>How might we manage multiple apps in XR?</p>
