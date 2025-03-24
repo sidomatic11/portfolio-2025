@@ -38,7 +38,7 @@ function HomeContent() {
 	return (
 		<div>
 			<Header toggleExploreSolve={toggleExploreSolve} isExploreVisible={isExploreVisible} />
-			<main className="w-full py-16 px-8">
+			<main className="w-full py-16 px-8 lg:px-0">
 				{isExploreVisible ? (
 					// EXPLORE SECTION
 					<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
@@ -53,6 +53,10 @@ function HomeContent() {
 
 						<ProjectCard link="/explore/hci-notes">
 							<p>Notes on Humans, Computers and their Interaction</p>
+						</ProjectCard>
+
+						<ProjectCard link="/explore/code-abstraction">
+							<p>Can we have variable abstraction for code while using AI?</p>
 						</ProjectCard>
 
 						<ProjectCard link="/explore/threejs-music">

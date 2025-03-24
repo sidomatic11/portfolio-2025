@@ -9,6 +9,9 @@ export default function VerticalCalendar() {
         Exploring Vertical Calendar
       </div>
 
+      <p>I often find myself using a handcrafter vertical calendar when I need to plan something.</p>
+
+      <p></p>
     </div>
   );
 }
