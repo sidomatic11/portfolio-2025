@@ -77,7 +77,7 @@ export default function HCI() {
         </div>
 
         {/* Radio button controls */}
-        <div className="flex gap-6 justify-center mt-8">
+        <div className="grid grid-cols-2 sm:flex sm:flex-row gap-4 sm:gap-6 justify-center mt-8">
           {/* Base image option */}
           <label className="flex items-center gap-2 cursor-pointer">
             <input
