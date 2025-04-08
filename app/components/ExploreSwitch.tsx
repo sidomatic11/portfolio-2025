@@ -7,7 +7,37 @@ interface ExploreSwitchProps {
 
 export default function ExploreSwitch({ isExploreVisible, onClick }: ExploreSwitchProps) {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 overflow-hidden">
+      <div className="flex flex-row gap-2">
+        {/* explore animations */}
+        <motion.div
+          className="bg-green-500 h-[30px] w-[60px] rounded-md"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: isExploreVisible ? 0 : 30,
+            opacity: isExploreVisible ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.1 }}
+        />
+        <motion.div
+          className="bg-green-500 h-[30px] w-[60px] rounded-md"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: isExploreVisible ? 0 : 30,
+            opacity: isExploreVisible ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.05 }}
+        />
+        <motion.div
+          className="bg-green-500 h-[30px] w-[60px] rounded-md"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: isExploreVisible ? 0 : 30,
+            opacity: isExploreVisible ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0 }}
+        />
+      </div>
       <span className={`text-md w-[56px] text-right ${isExploreVisible ? "font-bold" : ""}`}>explore</span>
       <div
         onClick={onClick}
@@ -23,6 +53,36 @@ export default function ExploreSwitch({ isExploreVisible, onClick }: ExploreSwit
         />
       </div>
       <span className={`text-md w-[56px] ${!isExploreVisible ? "font-bold" : ""}`}>solve</span>
+      <div className="flex flex-row gap-2">
+        {/* solve animations */}
+        <motion.div
+          className="bg-blue-500 h-[30px] w-[60px] rounded-md"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: !isExploreVisible ? 0 : 30,
+            opacity: !isExploreVisible ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0 }}
+        />
+        <motion.div
+          className="bg-blue-500 h-[30px] w-[60px] rounded-md"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: !isExploreVisible ? 0 : 30,
+            opacity: !isExploreVisible ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.05 }}
+        />
+        <motion.div
+          className="bg-blue-500 h-[30px] w-[60px] rounded-md"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{
+            y: !isExploreVisible ? 0 : 30,
+            opacity: !isExploreVisible ? 1 : 0
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 25, delay: 0.1 }}
+        />
+      </div>
     </div>
   );
 } 
