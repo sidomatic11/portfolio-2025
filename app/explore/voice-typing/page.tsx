@@ -9,6 +9,14 @@ export default function VoiceTyping() {
         <h1 className="text-3xl font-bold mb-8">Can voice typing be better?</h1>
 
         <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Challenges</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Deleting, editing, going back, undo/redo</strong> — is hard with voice</li>
+            <li><strong>Errors</strong>: spelling mistakes, proper nouns</li>
+          </ul>
+        </section>
+
+        <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Ideas and Hypotheses</h2>
           <p className="mb-4">
             Voice typing has the potential to revolutionize how we interact with computers,
@@ -18,19 +26,56 @@ export default function VoiceTyping() {
         </section>
 
         <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Prototypes</h2>
+
+          <h3 className="text-xl font-medium mb-3">Pointer interactions</h3>
+          <p className="mb-4">
+            Exploring how mouse and touch interactions can enhance voice typing.
+          </p>
+          <div className="bg-gray-100 rounded-lg p-4 mb-6 flex items-center justify-center h-64">
+            <p className="text-gray-500 text-center">[Prototype visualization: Mouse/touch interaction with voice commands]</p>
+          </div>
+
+          <h3 className="text-xl font-medium mb-3">Combining mouse interaction with STT</h3>
+          <p className="mb-4">
+            Investigating ways to blend speech-to-text with traditional input methods.
+          </p>
+          <div className="bg-gray-100 rounded-lg p-4 mb-6 flex items-center justify-center h-64">
+            <p className="text-gray-500 text-center">[Prototype visualization: Hybrid input methods demonstration]</p>
+          </div>
+          <div className="mb-6">
+            <a
+              href="#"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            >
+              <span className="mr-2">▶</span>
+              Try Live Demo
+            </a>
+          </div>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Thought experiments</h2>
+          <p className="mb-4">
+            Imagine as if you have a human personal assistant who can type at superhuman speed.
+            Now when you instruct that person, what does that interaction look like?
+            What kind of cues is the person able to take from you?
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Body language?</li>
+            <li>Pointing?</li>
+            <li>Voice tone?</li>
+          </ul>
+          <p className="mt-4 mb-2">Speak everytime while writing with keyboard??</p>
+          <p className="mb-2">What is better with voice? What is better with keyboard? What are you relying on mouse for?</p>
+        </section>
+
+        <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-4">Use case scenarios</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>OS level</strong> - System-wide voice commands and dictation</li>
             <li><strong>App level</strong> - Integrated voice typing within specific applications</li>
             <li><strong>Browser level</strong> - Browser extensions for voice typing on any website</li>
-          </ul>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Challenges</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Deleting, editing, going back, undo/redo</strong> — is hard with voice</li>
-            <li><strong>Errors</strong>: spelling mistakes, proper nouns</li>
           </ul>
         </section>
 
@@ -84,50 +129,6 @@ export default function VoiceTyping() {
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Thought experiments</h2>
-          <p className="mb-4">
-            Imagine as if you have a human personal assistant who can type at superhuman speed.
-            Now when you instruct that person, what does that interaction look like?
-            What kind of cues is the person able to take from you?
-          </p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Body language?</li>
-            <li>Pointing?</li>
-            <li>Voice tone?</li>
-          </ul>
-          <p className="mt-4 mb-2">Speak everytime while writing with keyboard??</p>
-          <p className="mb-2">What is better with voice? What is better with keyboard? What are you relying on mouse for?</p>
-        </section>
-
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Prototypes</h2>
-
-          <h3 className="text-xl font-medium mb-3">Pointer interactions</h3>
-          <p className="mb-4">
-            Exploring how mouse and touch interactions can enhance voice typing.
-          </p>
-          <div className="bg-gray-100 rounded-lg p-4 mb-6 flex items-center justify-center h-64">
-            <p className="text-gray-500 text-center">[Prototype visualization: Mouse/touch interaction with voice commands]</p>
-          </div>
-
-          <h3 className="text-xl font-medium mb-3">Combining mouse interaction with STT</h3>
-          <p className="mb-4">
-            Investigating ways to blend speech-to-text with traditional input methods.
-          </p>
-          <div className="bg-gray-100 rounded-lg p-4 mb-6 flex items-center justify-center h-64">
-            <p className="text-gray-500 text-center">[Prototype visualization: Hybrid input methods demonstration]</p>
-          </div>
-          <div className="mb-6">
-            <a
-              href="#"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            >
-              <span className="mr-2">▶</span>
-              Try Live Demo
-            </a>
-          </div>
-        </section>
       </div>
     </div>
   );
