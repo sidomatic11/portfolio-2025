@@ -52,7 +52,12 @@ function HomeContent() {
 						</ProjectCard> */}
 
 						<ProjectCard link="/explore/hci-notes">
-							<p>Notes on Humans, Computers and their Interaction</p>
+							<div className="flex flex-col gap-4 h-full">
+								<p className="text-lg">Notes on <span className="font-bold">Humans, Computers</span> and their <span className="font-bold">Interaction</span></p>
+								<div className="relative w-full flex-1">
+									<Image src="/thumbnails/hci.jpg" alt="HCI Notes" fill className="object-contain" />
+								</div>
+							</div>
 						</ProjectCard>
 
 						<ProjectCard link="/explore/code-abstraction">
