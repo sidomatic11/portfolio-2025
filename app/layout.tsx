@@ -14,8 +14,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="max-w-5xl mx-auto">
-				<div className="min-h-screen w-full">
+			<body className="max-w-5xl mx-auto sm:pt-16">
+				<div className="min-h-screen w-full lg:w-[calc(100%-4rem)] mx-auto">
 					{children}
 				</div>
 				<Footer />

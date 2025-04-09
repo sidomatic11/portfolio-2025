@@ -36,7 +36,7 @@ function HomeContent() {
 	}
 
 	return (
-		<div>
+		<div className="w-full">
 			<Header toggleExploreSolve={toggleExploreSolve} isExploreVisible={isExploreVisible} />
 			<main className="w-full py-16 px-8 lg:px-0">
 				{isExploreVisible ? (
@@ -47,9 +47,9 @@ function HomeContent() {
 							<p>Can voice typing be better?</p>
 						</ProjectCard>
 
-						<ProjectCard link="/explore/vertical-calendar">
+						{/* <ProjectCard link="/explore/vertical-calendar">
 							<p>Exploring Vertical Calendar</p>
-						</ProjectCard>
+						</ProjectCard> */}
 
 						<ProjectCard link="/explore/hci-notes">
 							<p>Notes on Humans, Computers and their Interaction</p>
