@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="row-start-3 flex flex-col items-center justify-center h-64 pb-16 bg-gray-900 text-white lg:w-[calc(100%-4rem)] mx-auto relative before:content-[''] before:absolute before:inset-0 before:left-1/2 before:-translate-x-1/2 before:w-screen before:bg-gray-900 before:-z-10">
+    <footer className="row-start-3 flex flex-col items-center justify-center h-64 pb-16 bg-gray700 text-white lg:w-[calc(100%-4rem)] mx-auto relative before:content-[''] before:absolute before:inset-0 before:left-1/2 before:-translate-x-1/2 before:w-screen before:bg-gray-700 before:-z-10">
       <nav className="flex gap-6 mb-8">
         <a
           href="https://www.linkedin.com/in/patilsiddhant/"

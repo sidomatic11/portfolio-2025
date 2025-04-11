@@ -50,7 +50,7 @@ export default function HCI() {
         isProjectHeader={true}
       />
       <main className="w-full py-16 px-4 sm:px-8">
-        <h1 className="text-4xl font-bold mb-8">Notes on Humans, Computers and their Interaction</h1>
+        <h1 className="text-4xl font-bold mb-8 max-w-xl mx-auto">Notes on Humans, Computers and their Interaction</h1>
 
         {/* Image container with aspect ratio 16:9 */}
         <div className="relative w-full aspect-[16/9]">
@@ -77,7 +77,7 @@ export default function HCI() {
         </div>
 
         {/* Radio button controls */}
-        <div className="grid grid-cols-2 sm:flex sm:flex-row gap-4 sm:gap-6 justify-center mt-8">
+        <div className="grid grid-cols-2 sm:flex sm:flex-row gap-4 sm:gap-6 justify-center mt-8 max-w-xl mx-auto">
           {/* Base image option */}
           <label className="flex items-center gap-2 cursor-pointer">
             <input
@@ -107,7 +107,7 @@ export default function HCI() {
         </div>
 
         {/* Content section */}
-        <div className="mt-16 max-w-3xl mx-auto">
+        <div className="mt-16 max-w-xl mx-auto">
           <h2 className="text-2xl font-bold mb-6">Important considerations:</h2>
 
           <div className="space-y-6">

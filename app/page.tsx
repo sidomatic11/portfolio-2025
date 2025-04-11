@@ -61,7 +61,7 @@ function HomeContent() {
 						</ProjectCard>
 
 						<ProjectCard link="/explore/code-abstraction">
-							<p>Can we have variable abstraction for code while using AI?</p>
+							<p>What if we have variable code abstraction levels while using AI?</p>
 						</ProjectCard>
 
 						<ProjectCard link="/explore/threejs-music">

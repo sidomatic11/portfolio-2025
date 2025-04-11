@@ -4,7 +4,7 @@ export default function ProjectCard({ link, newTab = false, children }: { link: 
 
   return (
     <Link href={link} target={newTab ? "_blank" : "_self"}>
-      <div className="bg-gray-200 p-6 rounded-md aspect-square">
+      <div className="bg-gray-50 border border-gray-300 p-6 rounded-lg aspect-square">
         {children}
       </div>
     </Link>
