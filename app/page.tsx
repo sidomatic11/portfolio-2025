@@ -7,7 +7,7 @@ import ProjectCard from "./components/project-card";
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from "react";
 import { MicrophoneSpeaking } from "iconoir-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Client component that uses useSearchParams
 function HomeContent() {
@@ -42,7 +42,7 @@ function HomeContent() {
 	return (
 		<div className="w-full">
 			<Header toggleExploreSolve={toggleExploreSolve} isExploreVisible={isExploreVisible} />
-			<main className="w-full pt-16 px-8 lg:px-0">
+			<main className="w-full pt-16 mb-8">
 				{isExploreVisible ? (
 					// EXPLORE SECTION
 					<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
@@ -175,13 +175,24 @@ function HomeContent() {
 			</main>
 
 			<div className="absolute bottom-[-1px] left-0 w-full h-full z-[-1]">
-				<Image
-					src={imageSrc}
-					alt=""
-					fill
-					className="w-full h-auto object-contain object-bottom"
-					priority
-				/>
+				<motion.div
+					key={imageSrc}
+					initial={{ y: 100, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+					transition={{
+						duration: 0.25,
+						ease: "easeOut"
+					}}
+					className="w-full h-full"
+				>
+					<Image
+						src={imageSrc}
+						alt=""
+						fill
+						className="w-full h-auto object-contain object-bottom"
+						priority
+					/>
+				</motion.div>
 			</div>
 
 		</div>

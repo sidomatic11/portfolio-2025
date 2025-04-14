@@ -1,20 +1,24 @@
 "use client";
 
 import Header from "@/app/components/header";
+import EndOfPage from "@/app/components/EndOfPage";
+import EmbedContainer from "@/app/components/EmbedContainer";
 
 export default function About() {
   return (
-    <div>
+    <div className="min-h-screen bg-white">
       <Header isProjectHeader={true} />
 
-      <h2 className="text-2xl font-bold max-w-xl mx-auto mt-8">
-        Three.js + Music
-      </h2>
-      <p className="max-w-xl mx-auto mt-2">
-        Couple of experiments to explore audio responsive Three.js animations.
-      </p>
+      <div className="max-w-xl mx-auto px-4 py-12">
+        <h2 className="text-2xl font-bold">
+          Three.js + Music
+        </h2>
+        <p className="mt-2">
+          Couple of experiments to explore audio responsive Three.js animations.
+        </p>
+      </div>
 
-      <div className="w-full mt-8">
+      <EmbedContainer description="First experiment, a simple audio reactive three.js animation.">
         <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
           <iframe
             src="https://player.vimeo.com/video/1074639860?h=7c0c0c0c0c&app_id=58479&dnt=1"
@@ -31,12 +35,9 @@ export default function About() {
             title="Audio responsive Three.js animation v1"
           ></iframe>
         </div>
-        <p className="mt-1">
-          First experiment, a simple audio reactive three.js animation.
-        </p>
-      </div>
+      </EmbedContainer>
 
-      <div className="w-full mt-8">
+      <EmbedContainer description="Second experiment, exploring more complex audio visualizations." demoLink="https://siddhantkcode.github.io/threejs-music/" demoLinkLabel="Try with your own audio">
         <div style={{ padding: "53.05% 0 0 0", position: "relative" }}>
           <iframe
             src="https://player.vimeo.com/video/1074660274?h=7c0c0c0c0c&app_id=58479&dnt=1"
@@ -53,21 +54,9 @@ export default function About() {
             title="Audio responsive Three.js animation v2"
           ></iframe>
         </div>
-        <p className="mt-1">
-          Second experiment, exploring more complex audio visualizations.
-        </p>
-        <p className="mt-2 text-sm text-gray-600">
-          Try with your own audio file:{" "}
-          <a
-            href="https://siddhantkcode.github.io/threejs-music/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
-            Live Demo
-          </a>
-        </p>
-      </div>
+      </EmbedContainer>
+
+      <EndOfPage />
     </div>
   );
 }

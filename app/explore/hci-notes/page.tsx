@@ -3,7 +3,7 @@
 import Header from "@/app/components/header";
 import Image from "next/image";
 import { useState } from "react";
-
+import EndOfPage from "@/app/components/EndOfPage";
 // Type definition for image options
 interface ImageOption {
   id: string;
@@ -49,7 +49,7 @@ export default function HCI() {
       <Header
         isProjectHeader={true}
       />
-      <main className="w-full py-16 px-4 sm:px-8">
+      <main className="w-full py-16 sm:px-8">
         <h1 className="text-4xl font-bold mb-8 max-w-xl mx-auto">Notes on Humans, Computers and their Interaction</h1>
 
         {/* Image container with aspect ratio 16:9 */}
@@ -162,6 +162,8 @@ export default function HCI() {
             </div>
           </div>
         </div>
+
+        <EndOfPage />
       </main>
     </div>
   );
