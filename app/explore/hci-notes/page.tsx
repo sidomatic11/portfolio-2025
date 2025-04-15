@@ -123,7 +123,7 @@ export default function HCI() {
 
             <div>
               <h3 className="text-xl font-semibold mb-2">3. Integration</h3>
-              <p className="text-gray-700">Human perception arises from the brain's constant integration of information from multiple sensory systems (e.g., taste, smell, and touch combine to create flavor perception), forming a unified understanding of the world rather than isolated sensory inputs.</p>
+              <p className="text-gray-700">Human perception arises from the brain&apos;s constant integration of information from multiple sensory systems (e.g., taste, smell, and touch combine to create flavor perception), forming a unified understanding of the world rather than isolated sensory inputs.</p>
             </div>
 
             <div>

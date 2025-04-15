@@ -7,7 +7,7 @@ import ProjectCard from "./components/project-card";
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from "react";
 import { MicrophoneSpeaking } from "iconoir-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Client component that uses useSearchParams
 function HomeContent() {
