@@ -10,7 +10,7 @@ export default function About() {
       <Header isProjectHeader={true} />
 
       <div className="max-w-xl mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-4xl font-bold">
           Three.js + Music
         </h2>
         <p className="mt-2">
@@ -18,7 +18,7 @@ export default function About() {
         </p>
       </div>
 
-      <EmbedContainer description="First experiment, a simple audio reactive three.js animation.">
+      <EmbedContainer description="#1 — A simple audio reactive three.js animation.">
         <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
           <iframe
             src="https://player.vimeo.com/video/1074639860?h=7c0c0c0c0c&app_id=58479&dnt=1"
@@ -37,7 +37,7 @@ export default function About() {
         </div>
       </EmbedContainer>
 
-      <EmbedContainer description="Second experiment, exploring more complex audio visualizations." demoLink="https://siddhantkcode.github.io/threejs-music/" demoLinkLabel="Try with your own audio">
+      <EmbedContainer description="#2 — Visualizing a wider range of frequencies." demoLink="https://sidomatic11.github.io/day-9/" demoLinkLabel="Try with your own audio">
         <div style={{ padding: "53.05% 0 0 0", position: "relative" }}>
           <iframe
             src="https://player.vimeo.com/video/1074660274?h=7c0c0c0c0c&app_id=58479&dnt=1"

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { OpenNewWindow } from 'iconoir-react';
 
 interface EmbedContainerProps {
   description?: string;
@@ -23,9 +24,10 @@ export default function EmbedContainer({ description, demoLink, demoLinkLabel, c
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 bg-gray-800 text-gray-100 rounded-md hover:bg-gray-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-100 rounded-md hover:bg-gray-700 transition-colors"
             >
               {demoLinkLabel}
+              <OpenNewWindow width={16} height={16} />
             </a>
           </div>
         )}
@@ -39,9 +41,10 @@ export default function EmbedContainer({ description, demoLink, demoLinkLabel, c
             href={demoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 bg-gray-800 text-gray-100 rounded-md hover:bg-gray-700 transition-colors self-end"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-gray-100 rounded-md hover:bg-gray-700 transition-colors self-end"
           >
             {demoLinkLabel}
+            <OpenNewWindow width={16} height={16} />
           </a>
         )}
       </div>

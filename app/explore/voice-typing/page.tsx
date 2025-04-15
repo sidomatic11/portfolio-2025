@@ -7,7 +7,7 @@ export default function VoiceTyping() {
 
       <div className="w-full px-4 py-12">
         <div className="max-w-xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Can voice typing be better?</h1>
+          <h1 className="text-4xl font-bold mb-8">Can voice typing be better?</h1>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Challenges</h2>

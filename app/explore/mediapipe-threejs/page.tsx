@@ -8,15 +8,15 @@ export default function MediapipeThreejs() {
       <Header isProjectHeader={true} />
 
       <div className="max-w-prose mx-auto px-4 py-12">
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-4xl font-bold">
           MediaPipe + Three.js
         </h2>
         <p className="mt-2">
-          Exploring hand tracking and 3D interactions using MediaPipe and Three.js.
+          Exploring hand tracking with MediaPipe and interactions with Three.js.
         </p>
       </div>
 
-      <EmbedContainer description="Interactive landscape exploration using hand tracking." demoLink="https://vimeo.com/1075112125" demoLinkLabel="View Demo">
+      <EmbedContainer description="Complete the hand, by collecting all the pieces. 🤚🏽" demoLink="https://sidomatic11.github.io/day-12/" demoLinkLabel="Try it out">
         <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
           <iframe
             src="https://player.vimeo.com/video/1075112125?badge=0&autopause=0&player_id=0&app_id=58479"
@@ -35,7 +35,7 @@ export default function MediapipeThreejs() {
         </div>
       </EmbedContainer>
 
-      <EmbedContainer description="Another experiment with hand tracking and 3D interactions.">
+      <EmbedContainer description="Another fun little experiment.">
         <div style={{ padding: "60.99% 0 0 0", position: "relative" }}>
           <iframe
             src="https://player.vimeo.com/video/1075113010?badge=0&autopause=0&player_id=0&app_id=58479"

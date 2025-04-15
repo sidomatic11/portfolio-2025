@@ -49,7 +49,7 @@ export default function HCI() {
       <Header
         isProjectHeader={true}
       />
-      <main className="w-full py-16 sm:px-8">
+      <main className="w-full py-16">
         <h1 className="text-4xl font-bold mb-8 max-w-xl mx-auto">Notes on Humans, Computers and their Interaction</h1>
 
         {/* Image container with aspect ratio 16:9 */}

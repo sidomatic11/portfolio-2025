@@ -12,7 +12,7 @@ export default function ShockGhosts() {
       <div className="w-full py-12">
         <div className="max-w-xl mx-auto mb-8">
           <h1 className="text-4xl font-bold mb-4">Ghosts & Thunder</h1>
-          <p className="text-lg mb-8 text-gray-700">Try your luck... and skill 😉 Click on the clouds to release thunder, and try to shock all the ghosts!</p>
+          <p className=" mb-8 text-gray-700">Try your luck... and skill 😉 <br />Click on the clouds to release thunder, and try to shock all the ghosts!</p>
         </div>
 
         <EmbedContainer
