@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import ProjectCard from "./components/project-card";
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from "react";
-import { MicrophoneSpeaking } from "iconoir-react";
+import { MicrophoneSpeaking, OpenNewWindow } from "iconoir-react";
 import { motion } from "framer-motion";
 
 // Client component that uses useSearchParams
@@ -23,10 +23,10 @@ function HomeContent() {
 		}
 
 		// Handle NDA projects visibility
-		if (searchParams.get('password') === 'CreativeLab' && !sessionStorage.getItem('showNDAProjects')) {
-			sessionStorage.setItem('showNDAProjects', 'true');
-		}
-		setShowNDAProjects(sessionStorage.getItem('showNDAProjects') === 'true');
+		// if (searchParams.get('password') === 'CreativeLab' && !sessionStorage.getItem('showNDAProjects')) {
+		// 	sessionStorage.setItem('showNDAProjects', 'true');
+		// }
+		// setShowNDAProjects(sessionStorage.getItem('showNDAProjects') === 'true');
 	}, [searchParams]);
 
 	const toggleExploreSolve = () => {
@@ -143,7 +143,7 @@ function HomeContent() {
 
 						{showNDAProjects && (
 							<ProjectCard link="/solve/ihh-poc">
-								<p>Defining & Communicating an NFT based loyalty program</p>
+								<p>NFT based loyalty program: Concept & Communication</p>
 							</ProjectCard>
 						)}
 
@@ -156,18 +156,39 @@ function HomeContent() {
 						</ProjectCard>
 
 						<ProjectCard link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0" newTab={true}>
-							<p>How might we manage multiple apps in XR?</p>
-							<p>2020</p>
+							<div className="flex flex-col gap-4 h-full">
+								<div className="flex flex-row gap-2 justify-between items-start">
+									<p className="text-lg font-light flex-1">How might we <span className="font-bold">manage multiple apps</span> in <span className="font-bold">XR</span>?</p>
+									<OpenNewWindow width={20} height={20} className="text-gray-500 flex-shrink-0" />
+								</div>
+								<div className="relative w-full flex-1">
+									<Image src="/thumbnails/xrm.png" alt="XR Multitasking Design Guide" fill className="object-contain" />
+								</div>
+							</div>
 						</ProjectCard>
 
 						<ProjectCard link="https://like-period-e24.notion.site/Olitor-UW-School-of-Nursing-094630a0cc714395905ad675631a6c4f" newTab={true}>
-							<p>Helping the elderly adhere to mediterranean diet</p>
-							<p>2021</p>
+							<div className="flex flex-col gap-4 h-full">
+								<div className="flex flex-row gap-2 justify-between items-start">
+									<p className="text-lg font-light flex-1">Helping the elderly adhere to mediterranean diet</p>
+									<OpenNewWindow width={20} height={20} className="text-gray-500 flex-shrink-0" />
+								</div>
+								<div className="relative w-full flex-1 flex flex-col items-end">
+									<Image src="/thumbnails/olitor.png" alt="Olitor" fill className="object-contain object-bottom" />
+								</div>
+							</div>
 						</ProjectCard>
 
 						<ProjectCard link="https://like-period-e24.notion.site/Contentserv-171b41fa91b645c3b1dcfaf48dfffc18" newTab={true}>
-							<p>Enterprise Software Development @ Contentserv</p>
-							<p>2018</p>
+							<div className="flex flex-col gap-4 h-full">
+								<div className="flex flex-row gap-2 justify-between items-start">
+									<p className="text-lg font-light flex-1">Enterprise Software @ Contentserv</p>
+									<OpenNewWindow width={20} height={20} className="text-gray-500 flex-shrink-0" />
+								</div>
+								<div className="relative w-full flex-1 flex flex-col items-end">
+									<Image src="/thumbnails/contentserv.png" alt="Contentserv" fill className="object-contain object-bottom" />
+								</div>
+							</div>
 						</ProjectCard>
 
 					</section>

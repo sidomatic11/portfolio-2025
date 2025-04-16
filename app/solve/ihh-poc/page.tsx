@@ -1,34 +1,68 @@
 import Header from "@/app/components/header";
+import PersonChip from "@/app/components/PersonChip";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
       <Header isProjectHeader={true} />
 
-      <div className="max-w-prose mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold mb-8">POC Development — Critical patient monitoring system</h1>
+      <div className="w-full py-12">
+        <h1 className="max-w-xl mx-auto text-3xl font-bold mb-8">POC Development — Critical patient monitoring system</h1>
 
-        <div className="prose prose-lg max-w-none">
-          <p className="text-xl mb-8">
-            In a groundbreaking proof-of-concept (POC) project for IHH Healthcare Berhad, our team successfully demonstrated the integration of multiple critical medical devices into a unified, real-time monitoring system. This innovative solution transformed manual patient monitoring processes into an automated, highly accurate system that enhances patient care and reduces nursing workload.
-          </p>
+        <div className="sm:flex sm:gap-12 max-w-xl mx-auto">
+          <div className="max-w-xl sm:w-2/3">
+            <p className="text-base mb-1 font-semibold">Client</p>
+            <p className="text-base mb-8"> IHH Healthcare Berhad — Pantai Hospital Klang & Gleneagles Hospital Johor</p>
+          </div>
 
-          <p className="text-xl mb-12">
-            The project, completed in just two months, positioned us alongside industry giant Philips as a top contender in the RFP phase.
-          </p>
+          <div className="max-w-xl sm:w-1/3">
+            <p className="text-base mb-1 font-semibold">Timeline</p>
+            <p className="text-base mb-8">2 months</p>
+          </div>
+        </div>
 
-          <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
-          <p className="text-xl mb-4">Nurses and Doctors face several critical challenges in patient monitoring:</p>
-          <ul className="list-disc pl-6 mb-8 text-lg">
-            <li>Manual recording of patient vitals by nurses, leading to potential human errors</li>
-            <li>Limited frequency of vital sign monitoring due to staff constraints</li>
-            <li>Fragmented data from multiple medical devices with no unified view</li>
-            <li>Time-consuming calculations for critical parameters like fluid balance</li>
+        <div className="max-w-xl mx-auto mb-12">
+          <p className="text-base mb-1 font-semibold">Team</p>
+          <div className="flex flex-row gap-2 flex-wrap">
+            <PersonChip imageUrl="/rajnikanth.jpeg" name="Rajnikanth" role="Team Lead" />
+            <PersonChip imageUrl="/vidit.jpeg" name="Vidit" role="Engineer" />
+            <PersonChip imageUrl="/siddhant.jpg" name="Me" role="Engineer" />
+          </div>
+        </div>
+
+        <hr className="my-12" />
+
+        <div className="max-w-xl mx-auto">
+          <p className="text-2xl mb-2 font-semibold">Objective</p>
+          <p className="text-xl font-light mb-8">POC for transforming the manual patient monitoring processes into an automated, highly accurate system that enhances patient care and reduces nursing workload.</p>
+          <ul className="list-disc pl-6 text-lg">
+
           </ul>
+        </div>
 
-          <h3 className="text-2xl font-semibold mb-4">Technical challenge:</h3>
-          <p className="text-lg mb-12">Complex device ecosystem with non-standardized communication protocols</p>
+        <div className="max-w-xl mx-auto">
+          <p className="text-2xl mb-2 font-semibold">Results</p>
+          <ul className="list-none text-xl font-light pl-0 mb-8">
+            <li className="flex items-start gap-2 mb-2">
+              <span>✅</span>
+              <span>Real time data capture at 5s intervals + Automated alerts = major nursing overload reduced</span>
+            </li>
+            <li className="flex items-start gap-2 mb-2">
+              <span>✅</span>
+              <span>10+ types of devices integrated — modern as well as legacy devices</span>
+            </li>
+            <li className="flex items-start gap-2 mb-2">
+              <span>❤️</span>
+              <span>Bespoke nursing chart UX, closely aligning with their needs and habits</span>
+            </li>
+            <li className="flex items-start gap-2 mb-2">
+              <span>🏆</span>
+              <span>Top contender alongside industry giant Philips for the RFP phase</span>
+            </li>
+          </ul>
+        </div>
 
+        <div className="prose prose-lg max-w-none mx-auto">
           <h2 className="text-3xl font-bold mb-6">Our Solution</h2>
           <p className="text-xl mb-12">A comprehensive integration platform that unifies critical care devices:</p>
 
@@ -52,45 +86,16 @@ export default function About() {
               </ul>
             </div>
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Before</h3>
-              <p className="text-lg">physical charts that nurses use and are familiar with:</p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">After</h3>
-              <p className="text-lg">We matched the digital monitoring interface to these charts so it is easy for nurses to adapt</p>
-            </div>
-          </div>
-
-          <h2 className="text-3xl font-bold mb-6">Impact and Results</h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Clinical Benefits:</h3>
-              <ul className="list-disc pl-6 text-lg">
-                <li>24/7 continuous monitoring</li>
-                <li>Reduced nursing workloads and error rates</li>
-                <li>Automated emergency alerts for critical conditions</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Operational Improvements:</h3>
-              <ul className="list-disc pl-6 text-lg">
-                <li>Eliminated manual data entry errors</li>
-                <li>Real-time, HL7-compliant data capture at 5-second intervals</li>
-                <li>Streamlined digital record-keeping</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Technical Achievements:</h3>
-              <ul className="list-disc pl-6 text-lg">
-                <li>Integrated 10+ device types</li>
-                <li>Compliant with HIPAA and healthcare standards</li>
-              </ul>
-            </div>
-          </div>
+        <div className="w-full">
+          <video
+            src="/test-poc-demo.mov"
+            className="w-full max-w-none rounded-lg"
+            autoPlay
+            muted
+            loop
+          />
         </div>
       </div>
     </div>
