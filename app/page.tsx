@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 // Client component that uses useSearchParams
 function HomeContent() {
 	const [isExploreVisible, setIsExploreVisible] = useState(false);
-	const [showNDAProjects, setShowNDAProjects] = useState(true);
+	const [showNDAProjects] = useState(true);
 	const searchParams = useSearchParams();
 
 	// Use useEffect to safely handle localStorage and sessionStorage after component mounts
