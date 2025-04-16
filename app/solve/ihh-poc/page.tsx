@@ -90,7 +90,7 @@ export default function About() {
 
         <div className="w-full">
           <video
-            src="/test-poc-demo.mov"
+            src="/test-poc-demo.mp4"
             className="w-full max-w-none rounded-lg"
             autoPlay
             muted
