@@ -136,9 +136,15 @@ function HomeContent() {
 					<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
 
 						<ProjectCard link="/solve/ihh-poc">
-							<p className="text-md">hardware integration, data visualization</p>
-							<Image src="/thumb-ihh.jpg" alt="IHH POC" width={400} height={400} className="h-1/2 object-contain" />
-							<p className="text-lg">Real time patient monitoring.</p>
+							<div className="flex flex-col gap-4 h-full">
+								<div className="flex flex-col gap-2">
+									<p className="text-lg font-light">Critical Patient Monitoring System</p>
+									<p className="text-sm text-gray-500">POC development</p>
+								</div>
+								<div className="relative w-full flex-1">
+									<Image src="/thumb-ihh.jpg" alt="IHH POC" fill className="object-contain object-bottom" />
+								</div>
+							</div>
 						</ProjectCard>
 
 						{showNDAProjects && (

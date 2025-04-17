@@ -1,6 +1,6 @@
 import Header from "@/app/components/header";
 import PersonChip from "@/app/components/PersonChip";
-
+import EndOfPage from "@/app/components/EndOfPage";
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
@@ -30,67 +30,120 @@ export default function About() {
           </div>
         </div>
 
-        <hr className="my-12" />
+        <hr className="my-12 max-w-xl mx-auto" />
 
         <div className="max-w-xl mx-auto">
-          <p className="text-2xl mb-2 font-semibold">Objective</p>
-          <p className="text-xl font-light mb-8">POC for transforming the manual patient monitoring processes into an automated, highly accurate system that enhances patient care and reduces nursing workload.</p>
+          <p className="text-xl mb-2 font-semibold">Objective</p>
+          <p className="text-base mb-8">Transforming the manual patient monitoring processes into an automated, highly accurate system that enhances patient care and reduces nursing workload. POC Stage.</p>
           <ul className="list-disc pl-6 text-lg">
 
           </ul>
         </div>
 
         <div className="max-w-xl mx-auto">
-          <p className="text-2xl mb-2 font-semibold">Results</p>
-          <ul className="list-none text-xl font-light pl-0 mb-8">
-            <li className="flex items-start gap-2 mb-2">
-              <span>✅</span>
+          <p className="text-xl mb-2 font-semibold">Results</p>
+          <ul className="list-none text-base pl-0 mb-8">
+            <li className="flex items-baseline gap-2 mb-3">
+              <span className="text-sm">✅</span>
               <span>Real time data capture at 5s intervals + Automated alerts = major nursing overload reduced</span>
             </li>
-            <li className="flex items-start gap-2 mb-2">
-              <span>✅</span>
+            <li className="flex items-baseline gap-2 mb-3">
+              <span className="text-sm">✅</span>
               <span>10+ types of devices integrated — modern as well as legacy devices</span>
             </li>
-            <li className="flex items-start gap-2 mb-2">
-              <span>❤️</span>
+            <li className="flex items-baseline gap-2 mb-3">
+              <span className="text-sm">❤️</span>
               <span>Bespoke nursing chart UX, closely aligning with their needs and habits</span>
             </li>
-            <li className="flex items-start gap-2 mb-2">
-              <span>🏆</span>
+            <li className="flex items-baseline gap-2 mb-3">
+              <span className="text-sm">🏆</span>
               <span>Top contender alongside industry giant Philips for the RFP phase</span>
             </li>
           </ul>
         </div>
 
-        <div className="prose prose-lg max-w-none mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Our Solution</h2>
-          <p className="text-xl mb-12">A comprehensive integration platform that unifies critical care devices:</p>
+        <hr className="my-12 max-w-xl mx-auto" />
 
-          <h2 className="text-3xl font-bold mb-6">My Contributions</h2>
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Hardware integration prep</h3>
-              <ul className="list-disc pl-6 text-lg">
-                <li>Connecting to devices via RS232 and RJ45</li>
-                <li>Connections via IoT adapter</li>
-                <li>Custom connector cables</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">UI Development</h3>
-              <ul className="list-disc pl-6 text-lg">
-                <li>Chart prototypes</li>
-                <li>Built the chart view shown above</li>
-                <li>Backend integration</li>
-                <li>Bespoke UX built with daily feedback from healthcare professionals</li>
-              </ul>
-            </div>
+        <h2 className="max-w-xl mx-auto text-2xl font-bold mb-6">Our Solution</h2>
+
+        <div className="max-w-xl mx-auto bg-gray-100 p-4 rounded-lg mb-8">
+          <img src="/diagram.png" alt="POC solution" className="max-w-64 mx-auto rounded-lg" />
+        </div>
+
+        <div className="max-w-xl mx-auto mb-8">
+          <img src="/nurses.jpg" alt="POC solution" className="w-full h-auto rounded-lg" />
+        </div>
+
+        <div className="w-full mb-16">
+          <video
+            src="/chart-overview.mp4"
+            className="w-full max-w-none rounded-lg"
+            autoPlay
+            muted
+            loop
+          />
+        </div>
+
+        <hr className="my-12 max-w-xl mx-auto" />
+
+        {/* <h2 className="max-w-xl mx-auto text-2xl font-bold mb-6">My Contributions</h2> */}
+        <h3 className="max-w-xl mx-auto text-2xl font-semibold mb-4">I worked on figuring out how to connect with certain medical devices...</h3>
+        <ul className="max-w-xl mx-auto list-disc pl-6 text-base mb-8">
+          <li>RS232 communication via DB and RJ45 connectors</li>
+          <li>Data parsing</li>
+          <li>Making custom connectors and exploring RS232 to Ethernet converters</li>
+        </ul>
+
+        <div className="max-w-xl mx-auto mb-16">
+          <video
+            src="/rs232.mp4"
+            className="w-full max-w-none rounded-lg"
+            autoPlay
+            muted
+            loop
+          />
+          <p className="text-sm text-gray-500 mt-1">The first RS232 connection 🎉</p>
+
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            <img
+              src="/hardware-prep-1.jpg"
+              alt="Hardware preparation step 1"
+              className="w-full h-auto rounded-lg"
+            />
+            <img
+              src="/hardware-prep-2.jpg"
+              alt="Hardware preparation step 2"
+              className="w-full h-auto rounded-lg"
+            />
+            <img
+              src="/hardware-prep-3.jpg"
+              alt="Hardware preparation step 3"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+          <p className="text-sm text-gray-500 mt-1">Explorations, Hacks and Solutions</p>
+        </div>
+
+
+
+        <h3 className="max-w-xl mx-auto text-2xl font-semibold mb-4">...and was responsible for building the Nursing Chart dashboard</h3>
+
+        <p className="max-w-xl mx-auto text-base mb-4">We learnt about their existing practices, and taking regular feedback, built the chart view to be exactly what they needed.</p>
+
+        <div className="w-full bg-gray-200 p-4 rounded-lg mb-8 flex flex-row gap-4 overflow-hidden">
+          <div className="flex-1 overflow-hidden">
+            <img src="/current-state-1.jpg" alt="Current state" className="w-full h-full rounded-lg object-cover" />
+          </div>
+          <div className="flex-1 overflow-hidden">
+            <img src="/current-state-2.jpg" alt="Current state" className="w-full h-full rounded-lg object-cover" />
           </div>
         </div>
 
+        <p className="max-w-xl mx-auto text-base mb-4">Evolution of the chart view:</p>
+
         <div className="w-full">
           <video
-            src="/test-poc-demo.mp4"
+            src="/chart-evolution.mp4"
             className="w-full max-w-none rounded-lg"
             autoPlay
             muted
@@ -98,6 +151,8 @@ export default function About() {
           />
         </div>
       </div>
+
+      <EndOfPage />
     </div>
   );
 }
