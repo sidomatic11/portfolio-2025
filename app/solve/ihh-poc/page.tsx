@@ -34,7 +34,7 @@ export default function About() {
 
         <div className="max-w-xl mx-auto">
           <p className="text-xl mb-2 font-semibold">Objective</p>
-          <p className="text-base mb-8">Transforming the manual patient monitoring processes into an automated, highly accurate system that enhances patient care and reduces nursing workload. POC Stage.</p>
+          <p className="text-base mb-8">Transforming the manual patient monitoring processes into an automated, highly accurate system that enhances patient care and reduces nursing workload. POC phase.</p>
           <ul className="list-disc pl-6 text-lg">
 
           </ul>
@@ -57,7 +57,7 @@ export default function About() {
             </li>
             <li className="flex items-baseline gap-2 mb-3">
               <span className="text-sm">🏆</span>
-              <span>Top contender alongside industry giant Philips for the RFP phase</span>
+              <span>Top contender alongside industry giant Philips for securing the full-scale project</span>
             </li>
           </ul>
         </div>
