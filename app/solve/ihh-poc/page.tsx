@@ -82,6 +82,7 @@ export default function About() {
             muted
             loop
           />
+          <p className="max-w-xl mx-auto text-sm text-gray-500 mt-1">Nursing chart dashboard</p>
         </div>
 
         <hr className="my-12 max-w-xl mx-auto" />
