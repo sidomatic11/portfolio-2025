@@ -1,5 +1,4 @@
 import Header from "@/app/components/header";
-import PersonChip from "@/app/components/PersonChip";
 import EndOfPage from "@/app/components/EndOfPage";
 
 // Main page component
@@ -98,9 +97,9 @@ export default function Page() {
         </div>
 
         <div className="max-w-xl mx-auto p-6 bg-gray-100 rounded-lg">
-          <p className="text-base mb-2">"Ultimately the complexity of the project became much more than expected and Sid was involved with nearly all aspects of the project.</p>
+          <p className="text-base mb-2">&quot;Ultimately the complexity of the project became much more than expected and Sid was involved with nearly all aspects of the project.</p>
           <p className="text-base mb-2">He stepped up many times over the course of the work, presented to clients and helped bring about a very successful conclusion.</p>
-          <p className="text-base mb-2">His ability to draw upon programmer friends for advice, his willingness to explore areas he had little experience with and his general engagement throughout the long project was top notch."</p>
+          <p className="text-base mb-2">His ability to draw upon programmer friends for advice, his willingness to explore areas he had little experience with and his general engagement throughout the long project was top notch.&quot;</p>
           <p className="text-base">— Aaron Perkins, Team Lead</p>
         </div>
 
@@ -110,7 +109,7 @@ export default function Page() {
         <h3 className="max-w-xl mx-auto text-2xl mb-4 mt-32">SVB Developer Portal Website Redesign</h3>
 
         <p className="max-w-xl mx-auto text-base mb-4">
-          I lead a team of 3 designers to redesign the developer portal experience of Silicon Valley Bank's API Banking platform
+          I lead a team of 3 designers to redesign the developer portal experience of Silicon Valley Bank&apos;s API Banking platform
         </p>
 
         <div className="w-full p-4 bg-gray-100 rounded-lg  mb-12">
@@ -128,14 +127,14 @@ export default function Page() {
 
         <p className="max-w-xl mx-auto text-base mb-4">I was part of the core organizing team. We crafted the environment, and flow of activities to suit our workshop needs.</p>
 
-        <p className="max-w-xl mx-auto text-base mb-4">We also created museum like showcases of the latest in tech, to get everyone's creative juices flowing.</p>
+        <p className="max-w-xl mx-auto text-base mb-4">We also created museum like showcases of the latest in tech, to get everyone&apos;s creative juices flowing.</p>
 
 
         <div className="w-full  rounded-lg  mb-8">
           <img src="/concentrix/metax.png" alt="Innovation workshop" className="w-full max-w-none rounded-lg" />
         </div>
 
-        <p className="max-w-xl mx-auto text-base mb-4">The workshop was a success, and went quite well. However, the benefits offered by the virtual environment didn't seem outweigh the challenges and friction of using it. A great experience never the less.</p>
+        <p className="max-w-xl mx-auto text-base mb-4">The workshop was a success, and went quite well. However, the benefits offered by the virtual environment didn&apos;t seem outweigh the challenges and friction of using it. A great experience never the less.</p>
 
 
         <div className="max-w-xl mx-auto w-full rounded-lg  mb-12 flex gap-2">
