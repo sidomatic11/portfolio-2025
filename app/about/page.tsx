@@ -22,9 +22,9 @@ export default function About() {
             My background
           </h2>
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 bg-gray-100 rounded-xl p-4">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
             {/* Design Card */}
-            <div className="p-2">
+            <div className="p-4 bg-gray-100 rounded-lg">
               <h3 className="text-xl font-bold mb-4 text-gray-900">Design</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
@@ -37,20 +37,20 @@ export default function About() {
                 />
               </div>
               <div className="space-y-4">
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-sm font-light">
                   Versatile design from product strategy and concept design to mobile and web design.
                 </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-700 text-sm font-light leading-relaxed">
                   Interactive prototypes, video prototypes, UI design, storyboards, user flows, wireframes, journey maps, service blueprints, UX research
                 </p>
-                <p className="text-gray-500 text-sm font-medium">
+                <p className="text-gray-700 text-sm font-light">
                   3 years work experience in UX Design
                 </p>
               </div>
             </div>
 
             {/* Technology Card */}
-            <div className="p-2">
+            <div className="p-4 bg-gray-100 rounded-lg">
               <h3 className="text-xl font-bold mb-4 text-gray-900">Technology</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
@@ -63,20 +63,20 @@ export default function About() {
                 />
               </div>
               <div className="space-y-4">
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-sm font-light">
                   Have built complex front-end for enterprise product, physical prototyping with arduino, hardware interfacing with medical devices and more.
                 </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-700 text-sm font-light leading-relaxed">
                   JavaScript, React.js, Three.js, Node, MediaPipe, Arduino etc.
                 </p>
-                <p className="text-gray-500 text-sm font-medium">
+                <p className="text-gray-700 text-sm font-light">
                   2+ years work experience in Software Development
                 </p>
               </div>
             </div>
 
             {/* Art Card */}
-            <div className="p-2">
+            <div className="p-4 bg-gray-100 rounded-lg">
               <h3 className="text-xl font-bold mb-4 text-gray-900">Art</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
@@ -89,10 +89,10 @@ export default function About() {
                 />
               </div>
               <div className="space-y-4">
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-sm font-light">
                   Traditional mediums, to digital art and now also art with code.
                 </p>
-                <p className="text-gray-500 text-sm font-medium">
+                <p className="text-gray-700 text-sm font-light">
                   {`Lifelong hobby :D`}
                 </p>
               </div>
