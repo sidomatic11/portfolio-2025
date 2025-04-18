@@ -1,14 +1,19 @@
 import Header from "@/app/components/header";
 import PersonChip from "@/app/components/PersonChip";
 import EndOfPage from "@/app/components/EndOfPage";
+
+// Main page component
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Header section */}
       <Header isProjectHeader={true} />
 
       <div className="w-full py-12">
+        {/* Project title */}
         <h1 className="max-w-xl mx-auto text-3xl font-bold mb-8">POC Development — Critical patient monitoring system</h1>
 
+        {/* Client and timeline info */}
         <div className="sm:flex sm:gap-12 max-w-xl mx-auto">
           <div className="max-w-xl sm:w-2/3">
             <p className="text-base mb-1 font-semibold">Client</p>
@@ -21,6 +26,7 @@ export default function About() {
           </div>
         </div>
 
+        {/* Team members */}
         <div className="max-w-xl mx-auto mb-12">
           <p className="text-base mb-1 font-semibold">Team</p>
           <div className="flex flex-row gap-2 flex-wrap">
@@ -32,14 +38,13 @@ export default function About() {
 
         <hr className="my-12 max-w-xl mx-auto" />
 
+        {/* Project objective */}
         <div className="max-w-xl mx-auto">
           <p className="text-xl mb-2 font-semibold">Objective</p>
           <p className="text-base mb-8">Transforming the manual patient monitoring processes into an automated, highly accurate system that enhances patient care and reduces nursing workload. POC phase.</p>
-          <ul className="list-disc pl-6 text-lg">
-
-          </ul>
         </div>
 
+        {/* Project results */}
         <div className="max-w-xl mx-auto">
           <p className="text-xl mb-2 font-semibold">Results</p>
           <ul className="list-none text-base pl-0 mb-8">
@@ -64,6 +69,7 @@ export default function About() {
 
         <hr className="my-12 max-w-xl mx-auto" />
 
+        {/* Solution overview */}
         <h2 className="max-w-xl mx-auto text-2xl font-bold mb-6">Our Solution</h2>
 
         <div className="max-w-xl mx-auto bg-gray-100 p-4 rounded-lg mb-8">
@@ -74,6 +80,7 @@ export default function About() {
           <img src="/nurses.jpg" alt="POC solution" className="w-full h-auto rounded-lg" />
         </div>
 
+        {/* Nursing chart dashboard demo */}
         <div className="w-full mb-16">
           <video
             src="/chart-overview.mp4"
@@ -87,7 +94,7 @@ export default function About() {
 
         <hr className="my-12 max-w-xl mx-auto" />
 
-        {/* <h2 className="max-w-xl mx-auto text-2xl font-bold mb-6">My Contributions</h2> */}
+        {/* Medical device integration work */}
         <h3 className="max-w-xl mx-auto text-2xl font-semibold mb-4">I worked on figuring out how to connect with certain medical devices...</h3>
         <ul className="max-w-xl mx-auto list-disc pl-6 text-base mb-8">
           <li>RS232 communication via DB and RJ45 connectors</li>
@@ -95,6 +102,7 @@ export default function About() {
           <li>Making custom connectors and exploring RS232 to Ethernet converters</li>
         </ul>
 
+        {/* Hardware integration demo */}
         <div className="max-w-xl mx-auto mb-16">
           <video
             src="/rs232.mp4"
@@ -125,23 +133,24 @@ export default function About() {
           <p className="text-sm text-gray-500 mt-1">Explorations, Hacks and Solutions</p>
         </div>
 
-
-
+        {/* Nursing chart dashboard development */}
         <h3 className="max-w-xl mx-auto text-2xl font-semibold mb-4">...and was responsible for building the Nursing Chart dashboard</h3>
 
         <p className="max-w-xl mx-auto text-base mb-4">We learnt about their existing practices, and taking regular feedback, built the chart view to be exactly what they needed.</p>
 
+        {/* Current state comparison */}
         <div className="w-full bg-gray-200 p-4 rounded-lg mb-8 flex flex-row gap-4 overflow-hidden">
           <div className="flex-1 overflow-hidden">
-            <img src="/current-state-1.jpg" alt="Current state" className="w-full h-full rounded-lg object-cover" />
+            <img src="/current-state-1.jpg" alt="Current state" className="w-full h-full rounded-md object-cover" />
           </div>
           <div className="flex-1 overflow-hidden">
-            <img src="/current-state-2.jpg" alt="Current state" className="w-full h-full rounded-lg object-cover" />
+            <img src="/current-state-2.jpg" alt="Current state" className="w-full h-full rounded-md object-cover" />
           </div>
         </div>
 
         <p className="max-w-xl mx-auto text-base mb-4">Evolution of the chart view:</p>
 
+        {/* Chart evolution demo */}
         <div className="w-full">
           <video
             src="/chart-evolution.mp4"
@@ -153,6 +162,7 @@ export default function About() {
         </div>
       </div>
 
+      {/* Footer */}
       <EndOfPage />
     </div>
   );

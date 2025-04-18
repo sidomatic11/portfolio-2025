@@ -142,7 +142,7 @@ function HomeContent() {
 									<p className="text-sm text-gray-500">POC development</p>
 								</div>
 								<div className="relative w-full flex-1">
-									<Image src="/thumb-ihh.jpg" alt="IHH POC" fill className="object-contain object-bottom" />
+									<Image src="/thumbnails/ihh.png" alt="IHH POC" fill className="object-contain object-bottom" />
 								</div>
 							</div>
 						</ProjectCard>
@@ -153,13 +153,10 @@ function HomeContent() {
 							</ProjectCard>
 						)}
 
-						<ProjectCard link="/solve/data-platform">
-							<p>What is the future of our data platform? — a data company</p>
+						<ProjectCard link="/solve/ux-at-concentrix">
+							<p>UX Design @ Concentrix</p>
 						</ProjectCard>
 
-						<ProjectCard link="/solve/data-platform">
-							<p>SVB Developer Portal Redesign</p>
-						</ProjectCard>
 
 						<ProjectCard link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0" newTab={true}>
 							<div className="flex flex-col gap-4 h-full">
