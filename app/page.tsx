@@ -158,7 +158,12 @@ function HomeContent() {
 						)}
 
 						<ProjectCard link="/solve/ux-at-concentrix">
-							<p>UX Design @ Concentrix</p>
+							<div className="flex flex-col gap-4 h-full">
+								<p className="text-lg font-light">UX Design @ Concentrix</p>
+								<div className="relative w-full flex-1 flex flex-col items-end">
+									<Image src="/thumbnails/concentrix.png" alt="Concentrix" fill className="object-contain object-bottom" />
+								</div>
+							</div>
 						</ProjectCard>
 
 
