@@ -11,8 +11,9 @@ import { motion } from "framer-motion";
 
 // Client component that uses useSearchParams
 function HomeContent() {
-	const [isExploreVisible, setIsExploreVisible] = useState(false);
+	const [isExploreVisible, setIsExploreVisible] = useState(true);
 	const [showNDAProjects] = useState(false);
+	const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
 	const searchParams = useSearchParams();
 
 	// Use useEffect to safely handle localStorage and sessionStorage after component mounts
@@ -21,6 +22,9 @@ function HomeContent() {
 		if (storedValue) {
 			setIsExploreVisible(storedValue === 'true');
 		}
+
+		// Show animated spans after mount
+		setShowAnimatedSpans(true);
 
 		// Handle NDA projects visibility
 		// if (searchParams.get('password') === 'CreativeLab' && !sessionStorage.getItem('showNDAProjects')) {
@@ -51,7 +55,7 @@ function HomeContent() {
 							<div className="flex flex-col h-full">
 								<div className="w-full">
 									<div className="w-full flex flex-wrap gap-y-2 items-start">
-										{Array.from({ length: 16 }).map((_, i) => (
+										{showAnimatedSpans && Array.from({ length: 16 }).map((_, i) => (
 											<motion.span
 												key={i}
 												initial={{ opacity: 0 }}
