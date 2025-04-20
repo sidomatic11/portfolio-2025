@@ -5,11 +5,13 @@ export default function About() {
     <div className="min-h-screen">
       <Header />
 
-      <main className="w-full mx-auto py-12 md:py-20">
+      <main className="w-full mx-auto">
         {/* Intro Section */}
-        <div className="max-w-xl mx-auto mb-16 md:mb-24 font-light">
+        <div className="max-w-xl mx-auto mt-24 mb-32 font-light">
           <div className="flex flex-col items-start">
-            <div className="w-32 h-32 rounded-full bg-gray-200 mb-8 overflow-hidden" />
+            <div className="w-full rounded-md mb-8 overflow-hidden" >
+              <img src="/about/siddhant.jpg" alt="Siddhant Patil" className="w-full h-full object-contain object-bottom" />
+            </div>
             <p className="text-lg md:text-xl leading-relaxed text-gray-700">
               Hey! This is Siddhant, your friendly neighborhood creative technologist :)
             </p>

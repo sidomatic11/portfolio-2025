@@ -41,7 +41,7 @@ function HomeContent() {
 		}
 	}
 
-	const imageSrc = isExploreVisible ? '/footer/mountains.svg' : '/footer/city.svg';
+	// const imageSrc = isExploreVisible ? '/footer/mountains.svg' : '/footer/city.svg';
 
 	return (
 		<div className="w-full">

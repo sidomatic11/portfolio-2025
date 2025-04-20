@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, Linkedin, Twitter, Instagram, X } from "iconoir-react";
+import { Copy, Linkedin, Instagram, X } from "iconoir-react";
 import { useState } from "react";
 
 export default function Footer() {
