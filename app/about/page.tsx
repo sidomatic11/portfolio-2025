@@ -11,7 +11,7 @@ export default function About() {
         <div className="max-w-xl mx-auto mt-24 mb-32 font-light">
           <div className="flex flex-col items-start">
             <div className="w-full rounded-md mb-8 overflow-hidden" >
-              <img src="/about/siddhant.jpg" alt="Siddhant Patil" className="w-full h-full object-contain object-bottom" />
+              <img src="/about/siddhant.jpg" alt="Siddhant Patil" className="w-full h-full object-contain object-bottom border-1 border-gray-200 rounded-md" />
             </div>
             <p className="text-lg md:text-xl leading-relaxed text-gray-700">
               Hey! This is Siddhant, your friendly neighborhood creative technologist :)
