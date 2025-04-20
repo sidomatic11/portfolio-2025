@@ -1,68 +1,55 @@
 import Header from "@/app/components/header";
+import EmbedContainer from "@/app/components/EmbedContainer";
 
 export default function VoiceTyping() {
   return (
     <div className="min-h-screen bg-white">
       <Header isProjectHeader={true} />
 
-      <div className="w-full px-4 py-12">
+      <main className="w-full py-16">
         <div className="max-w-xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Can voice typing be better?</h1>
 
+          <p className="mb-8 italic text-fuchsia-600 font-light"><span className="font-medium">Note:</span> This is an ongoing project. I will update this page as I explore more.</p>
+
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Challenges</h2>
+            <h2 className="text-2xl font-semibold mb-4">Current Challenges</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Deleting, editing, going back, undo/redo</strong> — is hard with voice</li>
-              <li><strong>Errors</strong>: spelling mistakes, proper nouns</li>
+              <li><span className="font-semibold">Deleting, editing, undo/redo</span> is not great with current voice typing implementations</li>
+              <li>Dealing with <span className="font-semibold">errors</span> (spelling mistakes, proper nouns etc) is also a pain</li>
+              <li><span className="font-semibold">Voice commands</span> during typing (“period”, “next line”) feel unnatural. You also need to be precise with the commands, which is a big point of friction.</li>
             </ul>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Ideas and Hypotheses</h2>
-            <p className="mb-4">
-              Voice typing has the potential to revolutionize how we interact with computers,
-              but current implementations fall short of the natural interaction we experience
-              when speaking to another person.
-            </p>
-          </section>
+          <h2 className="max-w-xl mx-auto text-2xl font-semibold mb-8">Ideas and Hypotheses</h2>
+
+        </div>
+        <div className="w-full">
+          <EmbedContainer>
+            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+              <iframe
+                src="https://embed.figma.com/board/wsxQ8DDLLLKLYe3dWJZcnX/voice-typing-ideas?node-id=0-1&embed-host=share"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "1px solid rgba(0, 0, 0, 0.1)",
+                  backgroundColor: "transparent"
+                }}
+                allowFullScreen
+                title="Voice Typing Ideas"
+              />
+            </div>
+          </EmbedContainer>
         </div>
 
-        <section className="mb-12">
-          <div className="max-w-xl mx-auto">
-            <h2 className="text-2xl font-semibold mb-4">Prototypes</h2>
-
-            <h3 className="text-xl font-medium mb-3">Pointer interactions</h3>
-            <p className="mb-4">
-              Exploring how mouse and touch interactions can enhance voice typing.
-            </p>
-          </div>
-          <div className="w-full bg-gray-100 rounded-lg p-4 mb-6 flex items-center justify-center h-64">
-            <p className="text-gray-500 text-center">[Prototype visualization: Mouse/touch interaction with voice commands]</p>
-          </div>
-
-          <div className="max-w-xl mx-auto">
-            <h3 className="text-xl font-medium mb-3">Combining mouse interaction with STT</h3>
-            <p className="mb-4">
-              Investigating ways to blend speech-to-text with traditional input methods.
-            </p>
-          </div>
-          <div className="w-full bg-gray-100 rounded-lg p-4 mb-6 flex items-center justify-center h-64">
-            <p className="text-gray-500 text-center">[Prototype visualization: Hybrid input methods demonstration]</p>
-          </div>
-          <div className="max-w-xl mx-auto mb-6">
-            <a
-              href="#"
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-            >
-              <span className="mr-2">▶</span>
-              Try Live Demo
-            </a>
-          </div>
-        </section>
+        {/* <h2 className="max-w-xl mx-auto text-2xl font-semibold mb-4">Prototyping</h2> */}
 
         <div className="max-w-xl mx-auto">
           <section className="mb-12">
-            <h2 className="text-2xl font-semibold mb-4">Thought experiments</h2>
+            <h2 className="text-2xl font-semibold mb-4">Thought experiment</h2>
             <p className="mb-4">
               Imagine as if you have a human personal assistant who can type at superhuman speed.
               Now when you instruct that person, what does that interaction look like?
@@ -73,20 +60,20 @@ export default function VoiceTyping() {
               <li>Pointing?</li>
               <li>Voice tone?</li>
             </ul>
-            <p className="mt-4 mb-2">Speak everytime while writing with keyboard??</p>
-            <p className="mb-2">What is better with voice? What is better with keyboard? What are you relying on mouse for?</p>
           </section>
 
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Use case scenarios</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li><strong>OS level</strong> - System-wide voice commands and dictation</li>
-              <li><strong>App level</strong> - Integrated voice typing within specific applications</li>
+              <li><strong>App level</strong> - Integrated within specific applications</li>
               <li><strong>Browser level</strong> - Browser extensions for voice typing on any website</li>
             </ul>
           </section>
 
-          <section className="mb-12">
+          <p className="mb-12 max-w-xl mx-auto text-amber-600 font-light">🏗️ Prototypes coming very soon! Stay tuned!</p>
+
+          {/* <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4">Mapping the typing experience</h2>
             <p className="mb-4">
               Understanding the full spectrum of interactions that occur during typing
@@ -134,9 +121,9 @@ export default function VoiceTyping() {
                 </ul>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
-      </div>
+      </main>
     </div>
   );
 }
