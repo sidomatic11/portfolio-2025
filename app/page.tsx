@@ -207,7 +207,7 @@ function HomeContent() {
 				)}
 			</main>
 
-			<div className="absolute bottom-[-1px] left-0 w-full h-full z-[-1]">
+			{/* <div className="absolute bottom-[-1px] left-0 w-full h-full z-[-1]">
 				<motion.div
 					key={imageSrc}
 					initial={{ y: 100, opacity: 0 }}
@@ -226,7 +226,7 @@ function HomeContent() {
 						priority
 					/>
 				</motion.div>
-			</div>
+			</div> */}
 
 		</div>
 	);

@@ -7,10 +7,14 @@ export default function About() {
 
       <main className="w-full mx-auto py-12 md:py-20">
         {/* Intro Section */}
-        <div className="max-w-xl mx-auto mb-16 md:mb-24">
-          <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-            Hey! This is Siddhant, your friendly neighborhood creative technologist :)
-          </p>
+        <div className="max-w-xl mx-auto mb-16 md:mb-24 font-light">
+          <div className="flex flex-col items-start">
+            <div className="w-32 h-32 rounded-full bg-gray-200 mb-8 overflow-hidden" />
+            <p className="text-lg md:text-xl leading-relaxed text-gray-700">
+              Hey! This is Siddhant, your friendly neighborhood creative technologist :)
+            </p>
+          </div>
+
           <p className="mt-4 text-lg md:text-xl leading-relaxed text-gray-700">
             I am in an exploratory phase in my career, looking to leverage the various skills acquired so far — across UX design, technology and art — onto new innovative frontiers.
           </p>
@@ -18,14 +22,14 @@ export default function About() {
 
         {/* Background Section */}
         <section className="mb-16 md:mb-24">
-          <h2 className="max-w-xl mx-auto text-2xl md:text-3xl font-bold mb-12 text-gray-900">
+          <h2 className="max-w-xl mx-auto text-2xl md:text-3xl font-bold mb-12">
             My background
           </h2>
 
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
             {/* Design Card */}
             <div className="p-4 bg-gray-100 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Design</h3>
+              <h3 className="text-xl font-bold mb-4">Design</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
                   src="/about/design.mp4"
@@ -51,7 +55,7 @@ export default function About() {
 
             {/* Technology Card */}
             <div className="p-4 bg-gray-100 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Technology</h3>
+              <h3 className="text-xl font-bold mb-4">Technology</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
                   src="/about/tech.mp4"
@@ -77,7 +81,7 @@ export default function About() {
 
             {/* Art Card */}
             <div className="p-4 bg-gray-100 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Art</h3>
+              <h3 className="text-xl font-bold mb-4">Art</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
                   src="/about/art.mp4"
@@ -102,12 +106,12 @@ export default function About() {
 
         {/* Interests Section */}
         <section className="max-w-xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
+          <h2 className="text-3xl font-bold mb-8">
             I love working on...
           </h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <li className="bg-gray-100 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              <h3 className="text-lg font-semibold mb-3">
                 Prototyping & Proof of Concepts
               </h3>
               <p className="text-gray-600">
@@ -115,7 +119,7 @@ export default function About() {
               </p>
             </li>
             <li className="bg-gray-100 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              <h3 className="text-lg font-semibold mb-3">
                 Innovative Explorations
               </h3>
               <p className="text-gray-600">
@@ -123,7 +127,7 @@ export default function About() {
               </p>
             </li>
             <li className="bg-gray-100 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              <h3 className="text-lg font-semibold mb-3">
                 Emerging Tech
               </h3>
               <p className="text-gray-600">
@@ -131,7 +135,7 @@ export default function About() {
               </p>
             </li>
             <li className="bg-gray-100 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              <h3 className="text-lg font-semibold mb-3">
                 Social Impact
               </h3>
               <p className="text-gray-600">
@@ -139,7 +143,7 @@ export default function About() {
               </p>
             </li>
             <li className="bg-gray-100 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">
+              <h3 className="text-lg font-semibold mb-3">
                 Art with Tech
               </h3>
               <p className="text-gray-600">

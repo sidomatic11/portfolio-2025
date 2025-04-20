@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${inter.className} max-w-5xl mx-auto`}>
-				<div className="min-h-screen w-full lg:w-[calc(100%-4rem)] mx-auto relative pb-32 sm:pt-16 text-gray-700 px-8 lg:px-0">
+			<body className={`${inter.className} w-full overflow-x-hidden`}>
+				<div className="min-h-screen max-w-5xl mx-auto lg:w-[calc(100%-4rem)] relative pb-32 sm:pt-16 text-gray-700 px-8 lg:px-0">
 					{children}
 				</div>
 				<Footer />
