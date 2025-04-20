@@ -1,4 +1,5 @@
 import Header from "../components/header";
+import EndOfPage from "../components/EndOfPage";
 
 export default function About() {
   return (
@@ -154,6 +155,7 @@ export default function About() {
             </li>
           </ul>
         </section>
+        <EndOfPage />
       </main>
     </div>
   );
