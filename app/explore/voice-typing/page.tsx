@@ -3,7 +3,7 @@ import EmbedContainer from "@/app/components/EmbedContainer";
 
 export default function VoiceTyping() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Header isProjectHeader={true} />
 
       <main className="w-full py-16">

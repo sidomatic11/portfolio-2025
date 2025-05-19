@@ -31,7 +31,7 @@ export default function About() {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
             {/* Design Card */}
-            <div className="p-4 bg-gray-100 rounded-lg">
+            <div className="p-4 bg-gray-100 rounded-lg border-1 border-gray-200">
               <h3 className="text-xl font-bold mb-4">Design</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
@@ -57,7 +57,7 @@ export default function About() {
             </div>
 
             {/* Technology Card */}
-            <div className="p-4 bg-gray-100 rounded-lg">
+            <div className="p-4 bg-gray-100 rounded-lg border-1 border-gray-200">
               <h3 className="text-xl font-bold mb-4">Technology</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
@@ -83,7 +83,7 @@ export default function About() {
             </div>
 
             {/* Art Card */}
-            <div className="p-4 bg-gray-100 rounded-lg">
+            <div className="p-4 bg-gray-100 rounded-lg border-1 border-gray-200">
               <h3 className="text-xl font-bold mb-4">Art</h3>
               <div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
                 <video
@@ -113,7 +113,7 @@ export default function About() {
             I love working on...
           </h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <li className="bg-gray-100 rounded-lg p-6">
+            <li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
               <h3 className="text-lg font-semibold mb-3">
                 Prototyping & Proof of Concepts
               </h3>
@@ -121,7 +121,7 @@ export default function About() {
                 Getting started from zero, and going from ambiguity to clarity.
               </p>
             </li>
-            <li className="bg-gray-100 rounded-lg p-6">
+            <li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
               <h3 className="text-lg font-semibold mb-3">
                 Innovative Explorations
               </h3>
@@ -129,7 +129,7 @@ export default function About() {
                 Always love to challenge the status quo.
               </p>
             </li>
-            <li className="bg-gray-100 rounded-lg p-6">
+            <li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
               <h3 className="text-lg font-semibold mb-3">
                 Emerging Tech
               </h3>
@@ -137,7 +137,7 @@ export default function About() {
                 I enjoy researching, keeping up and working with the latest in tech.
               </p>
             </li>
-            <li className="bg-gray-100 rounded-lg p-6">
+            <li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
               <h3 className="text-lg font-semibold mb-3">
                 Social Impact
               </h3>
@@ -145,7 +145,7 @@ export default function About() {
                 Real problems, real solutions.
               </p>
             </li>
-            <li className="bg-gray-100 rounded-lg p-6">
+            <li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
               <h3 className="text-lg font-semibold mb-3">
                 Art with Tech
               </h3>

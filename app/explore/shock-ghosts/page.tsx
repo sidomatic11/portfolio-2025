@@ -6,7 +6,7 @@ import EndOfPage from "@/app/components/EndOfPage";
 
 export default function ShockGhosts() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Header isProjectHeader={true} />
 
       <div className="w-full py-12">

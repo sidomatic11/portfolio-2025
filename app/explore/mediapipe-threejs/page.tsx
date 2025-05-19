@@ -4,7 +4,7 @@ import EmbedContainer from "@/app/components/EmbedContainer";
 
 export default function MediapipeThreejs() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Header isProjectHeader={true} />
 
       <div className="max-w-prose mx-auto px-4 py-12">

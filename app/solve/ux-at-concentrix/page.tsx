@@ -4,7 +4,7 @@ import EndOfPage from "@/app/components/EndOfPage";
 // Main page component
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       {/* Header section */}
       <Header isProjectHeader={true} />
 
