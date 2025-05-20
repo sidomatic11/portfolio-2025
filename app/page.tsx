@@ -9,9 +9,11 @@ import { Suspense } from "react";
 import { MicrophoneSpeaking, OpenNewWindow } from "iconoir-react";
 import { motion } from "framer-motion";
 
+const defaultIsExploreVisible = false;
+
 // Client component that uses useSearchParams
 function HomeContent() {
-	const [isExploreVisible, setIsExploreVisible] = useState(true);
+	const [isExploreVisible, setIsExploreVisible] = useState(defaultIsExploreVisible);
 	const [showNDAProjects] = useState(false);
 	const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
 	const searchParams = useSearchParams();
