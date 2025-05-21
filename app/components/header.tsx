@@ -10,7 +10,7 @@ export default function Header({ toggleExploreSolve, isExploreVisible, isProject
 
 			<div className="w-full max-w-5xl mx-auto lg:w-[calc(100%-4rem)] h-full flex items-center justify-between">
 				<div className="border-r lg:border-x border-gray-900 h-full w-16 flex items-center justify-center flex-shrink-0">
-					<Link href="/" className="h-full w-full flex items-center justify-center">
+					<Link href="/" className="h-full w-full flex items-center justify-center hover:bg-gray-200">
 						{isProjectHeader ? <ArrowLeft className="w-6 h-6" /> : <Home className="w-6 h-6" />}
 					</Link>
 				</div>
@@ -22,7 +22,7 @@ export default function Header({ toggleExploreSolve, isExploreVisible, isProject
 				)}
 
 				<div className="border-l lg:border-x border-gray-900 h-full w-16 flex items-center justify-center flex-shrink-0">
-					{!isProjectHeader && <Link href="/about" className="h-full w-full flex items-center justify-center"><InfoCircle className="w-6 h-6" /></Link>}
+					{!isProjectHeader && <Link href="/about" className="h-full w-full flex items-center justify-center hover:bg-gray-200"><InfoCircle className="w-6 h-6" /></Link>}
 				</div>
 			</div>
 

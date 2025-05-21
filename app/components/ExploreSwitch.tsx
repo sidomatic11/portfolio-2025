@@ -8,7 +8,7 @@ interface ExploreSwitchProps {
 
 export default function ExploreSwitch({ isExploreVisible, onClick }: ExploreSwitchProps) {
   return (
-    <div className="flex items-center w-full h-full max-w-full overflow-hidden">
+    <div className="flex items-center w-full h-full max-w-full overflow-hidden cursor-pointer hover:bg-gray-100" onClick={onClick}>
 
       {/* Left side animations - flex container */}
       <div className="flex-1 min-w-0 flex justify-end h-full">
@@ -73,7 +73,6 @@ export default function ExploreSwitch({ isExploreVisible, onClick }: ExploreSwit
       <div className="flex items-center gap-4 flex-shrink-0">
         <span className={`text-md w-[64px] text-right whitespace-nowrap ${isExploreVisible ? "font-bold" : ""}`}>explore</span>
         <div
-          onClick={onClick}
           className={`relative w-[48px] h-[24px] rounded-full cursor-pointer flex-shrink-0 ${isExploreVisible ? "bg-[#4ade80]" : "bg-[#60a5fa]"}`}
         >
           <motion.div
