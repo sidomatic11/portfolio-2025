@@ -72,7 +72,7 @@ export default function About() {
         {/* Solution overview */}
         <h2 className="max-w-xl mx-auto text-2xl font-bold mb-6">Our Solution</h2>
 
-        <div className="max-w-xl mx-auto bg-gray-100 p-4 rounded-lg mb-8">
+        <div className="max-w-xl mx-auto bg-gray-100 p-4 rounded-lg mb-8 border border-gray-200">
           <img src="/diagram.png" alt="POC solution" className="max-w-96 mx-auto rounded-lg" />
         </div>
 
@@ -139,7 +139,7 @@ export default function About() {
         <p className="max-w-xl mx-auto text-base mb-4">We learnt about their existing practices, and taking regular feedback, built the chart view to be exactly what they needed.</p>
 
         {/* Current state comparison */}
-        <div className="w-full bg-gray-200 p-4 rounded-lg mb-8 flex flex-row gap-4 overflow-hidden">
+        <div className="w-full bg-gray-100 p-4 rounded-lg mb-8 flex flex-row gap-4 overflow-hidden border border-gray-200">
           <div className="flex-1 overflow-hidden">
             <img src="/current-state-1.jpg" alt="Current state" className="w-full h-full rounded-md object-cover" />
           </div>
