@@ -74,7 +74,7 @@ export default function About() {
         <h2 className="max-w-xl mx-auto text-2xl font-bold mb-6">Our Solution</h2>
 
         <div className="max-w-xl mx-auto bg-gray-100 p-4 rounded-lg mb-8 border border-gray-200">
-          <img src="/diagram.png" alt="POC solution" className="max-w-96 mx-auto rounded-lg" />
+          <img src="/diagram.png" alt="POC solution" className="w-full max-w-96 mx-auto rounded-lg" />
         </div>
 
         <div className="max-w-xl mx-auto mb-8">
