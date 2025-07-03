@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 // import ExploreSwitch from "./ExploreSwitch";
-import { Home, ArrowLeft, InfoCircle } from "iconoir-react";
+import { ArrowLeft } from "iconoir-react";
 
-export default function Header({ toggleExploreSolve, isExploreVisible, isProjectHeader }: { toggleExploreSolve?: () => void, isExploreVisible?: boolean, isProjectHeader?: boolean }) {
+export default function Header({ isProjectHeader }: { isProjectHeader?: boolean }) {
 
 
 	return (

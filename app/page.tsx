@@ -8,23 +8,22 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from "react";
 import { MicrophoneSpeaking, OpenNewWindow } from "iconoir-react";
 import { motion } from "framer-motion";
-import ExploreSwitch from "./components/ExploreSwitch";
 
-const defaultIsExploreVisible = false;
+// const defaultIsExploreVisible = false;
 
 // Client component that uses useSearchParams
 function HomeContent() {
-	const [isExploreVisible, setIsExploreVisible] = useState(defaultIsExploreVisible);
+	// const [isExploreVisible, setIsExploreVisible] = useState(defaultIsExploreVisible);
 	const [showNDAProjects] = useState(false);
 	const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
 	const searchParams = useSearchParams();
 
 	// Use useEffect to safely handle localStorage and sessionStorage after component mounts
 	useEffect(() => {
-		const storedValue = localStorage.getItem('isExploreVisible');
-		if (storedValue) {
-			setIsExploreVisible(storedValue === 'true');
-		}
+		// const storedValue = localStorage.getItem('isExploreVisible');
+		// if (storedValue) {
+		// 	setIsExploreVisible(storedValue === 'true');
+		// }
 
 		// Show animated spans after mount
 		setShowAnimatedSpans(true);
@@ -36,26 +35,26 @@ function HomeContent() {
 		// setShowNDAProjects(sessionStorage.getItem('showNDAProjects') === 'true');
 	}, [searchParams]);
 
-	const toggleExploreSolve = () => {
-		setIsExploreVisible(!isExploreVisible);
-		// Update localStorage with the new state
-		if (typeof window !== 'undefined') {
-			localStorage.setItem('isExploreVisible', (!isExploreVisible).toString());
-		}
-	}
+	// const toggleExploreSolve = () => {
+	// 	setIsExploreVisible(!isExploreVisible);
+	// 	// Update localStorage with the new state
+	// 	if (typeof window !== 'undefined') {
+	// 		localStorage.setItem('isExploreVisible', (!isExploreVisible).toString());
+	// 	}
+	// }
 
 	// const imageSrc = isExploreVisible ? '/footer/mountains.svg' : '/footer/city.svg';
 
 	return (
 		<div className="w-full">
-			<Header toggleExploreSolve={toggleExploreSolve} isExploreVisible={isExploreVisible} />
+			<Header />
 			<main className="w-full mb-8">
 
 				<div className="w-full flex flex-col items-center justify-center pt-32 pb-16">
 					<div className="w-full">
 						<p className="text-3xl font-light leading-normal">Hallo! 👋🏽</p>
 						{/* <p className="text-3xl font-light pt-4"></p> */}
-						<p className="text-3xl font-light pt-4 leading-normal">I'm Siddhant — a designer & creative technologist who thrives in early-stage work, complex problem spaces, and innovation.</p>
+						<p className="text-3xl font-light pt-4 leading-normal">I&apos;m Siddhant — a designer & creative technologist who thrives in early-stage work, complex problem spaces, and innovation.</p>
 						<div className="flex flex-col md:flex-row gap-4 md:gap-4 text-md font-light pt-8">
 							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300">6 years in design & tech</p>
 							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300 pl-6 relative"><span className="inline-block w-2 h-2 rounded-full bg-lime-500 absolute left-2 top-1/2 -translate-y-1/2"></span> open to work </p>
