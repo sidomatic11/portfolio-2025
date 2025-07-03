@@ -2,6 +2,7 @@ import Header from "@/app/components/header";
 import PersonChip from "@/app/components/PersonChip";
 import EndOfPage from "@/app/components/EndOfPage";
 
+
 // Main page component
 export default function About() {
   return (
@@ -155,9 +156,9 @@ export default function About() {
           <video
             src="/chart-evolution.mp4"
             className="w-full max-w-none rounded-lg"
-            autoPlay
             muted
             loop
+            controls
           />
         </div>
       </div>
