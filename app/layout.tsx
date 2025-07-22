@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 	robots: "index, follow",
 	openGraph: {
 		title: "Siddhant V Patil - Designer & Creative Technologist",
-		description: "Designer & Creative Technologist specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
+		description: "Specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
 		url: "https://www.siddhantpatil.com",
 		siteName: "Siddhant V Patil Portfolio",
 		// images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 	twitter: {
 		card: "summary_large_image",
 		title: "Siddhant V Patil - Designer & Creative Technologist",
-		description: "Designer & Creative Technologist specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
+		description: "Specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
 		// images: ["/siddhant.jpg"], // TODO: Replace with your actual image path
 		creator: "@sidomatic11",
 	},
