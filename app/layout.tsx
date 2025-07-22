@@ -8,7 +8,38 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Siddhant V Patil",
-	description: "Siddhant V Patil's Portfolio",
+	description: "Designer & Creative Technologist specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
+	keywords: ["design", "creative technology", "UX design", "innovation", "Germany", "open to work"],
+	authors: [{ name: "Siddhant V Patil" }],
+	creator: "Siddhant V Patil",
+	publisher: "Siddhant V Patil",
+	robots: "index, follow",
+	openGraph: {
+		title: "Siddhant V Patil - Designer & Creative Technologist",
+		description: "Designer & Creative Technologist specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
+		url: "https://www.siddhantpatil.com",
+		siteName: "Siddhant V Patil Portfolio",
+		// images: [
+		// 	{
+		// 		url: "/siddhant.jpg", // TODO: Replace with your actual image path
+		// 		width: 1200,
+		// 		height: 630,
+		// 		alt: "Siddhant V Patil - Designer & Creative Technologist",
+		// 	},
+		// ],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Siddhant V Patil - Designer & Creative Technologist",
+		description: "Designer & Creative Technologist specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
+		// images: ["/siddhant.jpg"], // TODO: Replace with your actual image path
+		creator: "@sidomatic11",
+	},
+	other: {
+		"theme-color": "#fbbf24", // Amber color to match your brand
+	},
 };
 
 export default function RootLayout({
