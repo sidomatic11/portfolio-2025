@@ -52,10 +52,13 @@ function HomeContent() {
 
 				<div className="w-full flex flex-col items-center justify-center pt-32 pb-16">
 					<div className="w-full">
-						<p className="text-3xl font-light leading-normal">Hallo! 👋🏽</p>
+						{/* <p className="text-2xl font-light leading-normal">Hallo! I'm Sid.👋🏽</p> */}
+						{/* <p className="text-2xl font-light leading-normal">designer / creative technologist</p> */}
 						{/* <p className="text-3xl font-light pt-4"></p> */}
-						<p className="text-3xl font-light pt-4 leading-normal">I&apos;m Siddhant — a designer & creative technologist who thrives in early-stage work, complex problem spaces, and innovation.</p>
-						<div className="flex flex-col md:flex-row gap-4 md:gap-4 text-md font-light pt-8">
+						<p className="text-gray-700 text-4xl font-bold pt-4 leading-normal">I conceptualize, design and prototype ambitious software.</p>
+						{/* <p className="text-4xl font-bold pt-4 leading-normal"><span className="opacity-70">I conceptualize</span><span className="opacity-80">, design</span> and <span>prototype</span> <span className="text-gray-900">ambitious software.</span></p> */}
+						<p className="text-2xl font-light pt-8 leading-normal">Siddhant V Patil — Designer / Creative Technologist</p>
+						<div className="flex flex-col md:flex-row gap-4 md:gap-4 text-md font-light pt-4">
 							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300">6 years in design & tech</p>
 							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300 pl-6 relative"><span className="inline-block w-2 h-2 rounded-full bg-lime-500 absolute left-2 top-1/2 -translate-y-1/2"></span> open to work </p>
 							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300">📍 Germany</p>
@@ -152,7 +155,7 @@ function HomeContent() {
 
 				<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
 
-					<ProjectCard link="/explore/voice-typing">
+					{/* <ProjectCard link="/explore/voice-typing">
 						<div className="flex flex-col h-full">
 							<div className="w-full">
 								<div className="w-full flex flex-wrap gap-y-2 items-start">
@@ -177,7 +180,7 @@ function HomeContent() {
 								<p className="text-3xl font-light">Can voice typing be better?</p>
 							</div>
 						</div>
-					</ProjectCard>
+					</ProjectCard> */}
 
 					{/* <ProjectCard link="/explore/vertical-calendar">
 							<p>Exploring Vertical Calendar</p>
