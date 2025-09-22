@@ -32,12 +32,16 @@ export default function Header({ isProjectHeader }: { isProjectHeader?: boolean 
 							<Link href="/#work" title="Work" className="h-full w-full flex items-center justify-center px-4 sm:px-6">work</Link>
 						</div>
 
-						<div className="border-l border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
+						{/* <div className="border-l border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
 							<Link href="/#explore" title="Explore" className="h-full w-full flex items-center justify-center px-4 sm:px-6">explore</Link>
+						</div> */}
+
+						<div className="border-l border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
+							<Link href="/#about" title="About" className="h-full w-full flex items-center justify-center px-4 sm:px-6">about</Link>
 						</div>
 
 						<div className="border-l lg:border-x border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
-							<Link href="/#about" title="About" className="h-full w-full flex items-center justify-center px-4 sm:px-6">about</Link>
+							<Link href="https://drive.google.com/file/d/1LTnv9bKLkjsilegSi3ngFTEiwMaeAWn-/view" target="_blank" rel="noopener noreferrer" title="CV" className="h-full w-full flex items-center justify-center px-4 sm:px-6">cv</Link>
 						</div>
 					</div>
 				)}

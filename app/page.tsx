@@ -6,8 +6,7 @@ import { useState, useEffect } from "react";
 import ProjectCard from "./components/project-card";
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from "react";
-import { MicrophoneSpeaking, OpenNewWindow } from "iconoir-react";
-import { motion } from "framer-motion";
+import { OpenNewWindow } from "iconoir-react";
 
 // const defaultIsExploreVisible = false;
 
@@ -15,7 +14,7 @@ import { motion } from "framer-motion";
 function HomeContent() {
 	// const [isExploreVisible, setIsExploreVisible] = useState(defaultIsExploreVisible);
 	const [showNDAProjects] = useState(false);
-	const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
+	// const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
 	const searchParams = useSearchParams();
 
 	// Use useEffect to safely handle localStorage and sessionStorage after component mounts
@@ -26,7 +25,7 @@ function HomeContent() {
 		// }
 
 		// Show animated spans after mount
-		setShowAnimatedSpans(true);
+		// setShowAnimatedSpans(true);
 
 		// Handle NDA projects visibility
 		// if (searchParams.get('password') === 'CreativeLab' && !sessionStorage.getItem('showNDAProjects')) {
