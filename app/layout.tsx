@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 		siteName: "Siddhant V Patil Portfolio",
 		images: [
 			{
-				url: "/preview-image.png",
+				url: "https://www.siddhantpatil.com/preview-image.png",
 				width: 1200,
 				height: 630,
 				alt: "Siddhant V Patil - Designer & Creative Technologist",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Siddhant V Patil - Designer & Creative Technologist",
 		description: "Specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
-		images: ["/preview-image.png"],
+		images: ["https://www.siddhantpatil.com/preview-image.png"],
 		creator: "@sidomatic11",
 	},
 	other: {
