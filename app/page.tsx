@@ -83,8 +83,8 @@ function HomeContent() {
 					<ProjectCard link="/solve/ihh-poc">
 						<div className="flex flex-col gap-4 h-full">
 							<div className="flex flex-col gap-2">
-								<p className="text-lg font-light">Critical Patient Monitoring System</p>
-								<p className="text-sm text-gray-500">POC development</p>
+								<p className="text-lg font-light">Real-time Monitoring Interface for ICU Nurses</p>
+								<p className="text-sm text-gray-500">Proof-of-Concept, Cursor AI, H/W Interfacing</p>
 							</div>
 							<div className="relative w-full flex-1">
 								<Image src="/thumbnails/ihh.png" alt="IHH POC" fill className="object-contain object-bottom" />
@@ -267,10 +267,10 @@ function HomeContent() {
 							My background
 						</h2> */}
 
-						<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-4">
+						<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
 							{/* Design Card */}
-							<div className="p-4 bg-gray-100 rounded-lg border-1 border-gray-200">
-								<h3 className="text-xl font-bold mb-4">Design</h3>
+							<div className="">
+								<h3 className="text-xl font-bold mb-2">Design</h3>
 								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
 									<video
 										src="/about/design.mp4"
@@ -281,7 +281,7 @@ function HomeContent() {
 										className="object-contain w-full h-full border-1 border-gray-300 rounded-lg"
 									/>
 								</div>
-								<div className="space-y-4">
+								<div className="space-y-2">
 									<p className="text-gray-700 text-sm font-light">
 										Versatile design from product strategy and concept design to mobile and web design.
 									</p>
@@ -295,8 +295,8 @@ function HomeContent() {
 							</div>
 
 							{/* Technology Card */}
-							<div className="p-4 bg-gray-100 rounded-lg border-1 border-gray-200">
-								<h3 className="text-xl font-bold mb-4">Technology</h3>
+							<div className="">
+								<h3 className="text-xl font-bold mb-2">Technology</h3>
 								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
 									<video
 										src="/about/tech.mp4"
@@ -307,7 +307,7 @@ function HomeContent() {
 										className="object-contain w-full h-full border-1 border-gray-300 rounded-lg"
 									/>
 								</div>
-								<div className="space-y-4">
+								<div className="space-y-2">
 									<p className="text-gray-700 text-sm font-light">
 										Have built complex front-end for enterprise product, physical prototyping with arduino, hardware interfacing with medical devices and more.
 									</p>
@@ -321,8 +321,8 @@ function HomeContent() {
 							</div>
 
 							{/* Art Card */}
-							<div className="p-4 bg-gray-100 rounded-lg border-1 border-gray-200">
-								<h3 className="text-xl font-bold mb-4">Art</h3>
+							<div className="">
+								<h3 className="text-xl font-bold mb-2">Art</h3>
 								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
 									<video
 										src="/about/art.mp4"
@@ -333,7 +333,7 @@ function HomeContent() {
 										className="object-contain w-full h-full border-1 border-gray-300 rounded-lg"
 									/>
 								</div>
-								<div className="space-y-4">
+								<div className="space-y-2">
 									<p className="text-gray-700 text-sm font-light">
 										Traditional mediums, to digital art and now also art with code.
 									</p>
@@ -350,46 +350,101 @@ function HomeContent() {
 						<h2 className="text-3xl font-bold mb-8">
 							I love working on...
 						</h2>
-						<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-							<li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
-								<h3 className="text-lg font-semibold mb-3">
-									Prototyping & Proof of Concepts
-								</h3>
-								<p className="text-gray-600">
-									Getting started from zero, and going from ambiguity to clarity.
-								</p>
+						<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+							<li className="flex items-start gap-4">
+								<div className="w-12 h-12 flex-shrink-0">
+									<Image
+										src="/icon-01.svg"
+										alt="Prototyping icon"
+										width={96}
+										height={96}
+										className="object-contain"
+									/>
+								</div>
+								<div className="flex-1">
+									<h3 className="text-lg font-semibold mb-1">
+										Prototyping & Proof of Concepts
+									</h3>
+									<p className="text-gray-600">
+										Getting started from zero, and going from ambiguity to clarity.
+									</p>
+								</div>
 							</li>
-							<li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
-								<h3 className="text-lg font-semibold mb-3">
-									Innovative Explorations
-								</h3>
-								<p className="text-gray-600">
-									Always love to challenge the status quo.
-								</p>
+							<li className="flex items-start gap-4">
+								<div className="w-12 h-12 flex-shrink-0">
+									<Image
+										src="/icon-02.svg"
+										alt="Innovative Explorations icon"
+										width={96}
+										height={96}
+										className="object-contain"
+									/>
+								</div>
+								<div className="flex-1">
+									<h3 className="text-lg font-semibold mb-1">
+										Innovative Explorations
+									</h3>
+									<p className="text-gray-600">
+										Always love to challenge the status quo.
+									</p>
+								</div>
 							</li>
-							<li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
-								<h3 className="text-lg font-semibold mb-3">
-									Emerging Tech
-								</h3>
-								<p className="text-gray-600">
-									I enjoy researching, keeping up and working with the latest in tech.
-								</p>
+							<li className="flex items-start gap-4">
+								<div className="w-12 h-12 flex-shrink-0">
+									<Image
+										src="/icon-03.svg"
+										alt="Emerging Tech icon"
+										width={96}
+										height={96}
+										className="object-contain"
+									/>
+								</div>
+								<div className="flex-1">
+									<h3 className="text-lg font-semibold mb-1">
+										Emerging Tech
+									</h3>
+									<p className="text-gray-600">
+										I enjoy researching, keeping up and working with the latest in tech.
+									</p>
+								</div>
 							</li>
-							<li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
-								<h3 className="text-lg font-semibold mb-3">
-									Social Impact
-								</h3>
-								<p className="text-gray-600">
-									Real problems, real solutions.
-								</p>
+							<li className="flex items-start gap-4">
+								<div className="w-12 h-12 flex-shrink-0">
+									<Image
+										src="/icon-04.svg"
+										alt="Social Impact icon"
+										width={96}
+										height={96}
+										className="object-contain"
+									/>
+								</div>
+								<div className="flex-1">
+									<h3 className="text-lg font-semibold mb-1">
+										Social Impact
+									</h3>
+									<p className="text-gray-600">
+										Real problems, real solutions.
+									</p>
+								</div>
 							</li>
-							<li className="bg-gray-100 rounded-lg p-6 border-1 border-gray-200">
-								<h3 className="text-lg font-semibold mb-3">
-									Art with Tech
-								</h3>
-								<p className="text-gray-600">
-									For the pure joy of it.
-								</p>
+							<li className="flex items-start gap-4">
+								<div className="w-12 h-12 flex-shrink-0">
+									<Image
+										src="/icon-05.svg"
+										alt="Art with Tech icon"
+										width={96}
+										height={96}
+										className="object-contain"
+									/>
+								</div>
+								<div className="flex-1">
+									<h3 className="text-lg font-semibold mb-1">
+										Art with Tech
+									</h3>
+									<p className="text-gray-600">
+										For the pure joy of it.
+									</p>
+								</div>
 							</li>
 						</ul>
 					</section>
