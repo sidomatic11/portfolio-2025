@@ -19,14 +19,14 @@ export const metadata: Metadata = {
 		description: "Specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
 		url: "https://www.siddhantpatil.com",
 		siteName: "Siddhant V Patil Portfolio",
-		// images: [
-		// 	{
-		// 		url: "/siddhant.jpg", // TODO: Replace with your actual image path
-		// 		width: 1200,
-		// 		height: 630,
-		// 		alt: "Siddhant V Patil - Designer & Creative Technologist",
-		// 	},
-		// ],
+		images: [
+			{
+				url: "/preview-image.png",
+				width: 1200,
+				height: 630,
+				alt: "Siddhant V Patil - Designer & Creative Technologist",
+			},
+		],
 		locale: "en_US",
 		type: "website",
 	},
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Siddhant V Patil - Designer & Creative Technologist",
 		description: "Specializing in early-stage innovation and complex problem spaces. 6 years in design & tech.",
-		// images: ["/siddhant.jpg"], // TODO: Replace with your actual image path
+		images: ["/preview-image.png"],
 		creator: "@sidomatic11",
 	},
 	other: {
