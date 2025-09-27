@@ -47,38 +47,53 @@ function HomeContent() {
 	return (
 		<div className="w-full">
 			<Header />
-			<main className="w-full mb-8">
+			<main className="w-full">
 
-				<div className="w-full flex flex-col items-center justify-center pt-32 pb-16">
+				{/* HERO SECTION */}
+				{/* padding bottom extra on small devices to accomodate for the image size */}
+				<div className="w-full pt-12 sm:pt-20 pb-48 sm:pb-28 relative min-h-[calc(100vh-4rem)] sm:min-h-auto">
+
 					<div className="w-full">
-						{/* <p className="text-2xl font-light leading-normal">Hallo! I'm Sid.👋🏽</p> */}
-						{/* <p className="text-2xl font-light leading-normal">designer / creative technologist</p> */}
-						{/* <p className="text-3xl font-light pt-4"></p> */}
-						<p className="text-gray-700 text-4xl font-bold pt-4 leading-normal">I conceptualize, design and prototype ambitious software.</p>
-						{/* <p className="text-4xl font-bold pt-4 leading-normal"><span className="opacity-70">I conceptualize</span><span className="opacity-80">, design</span> and <span>prototype</span> <span className="text-gray-900">ambitious software.</span></p> */}
-						<p className="text-2xl font-light pt-8 leading-normal">Siddhant V Patil — Designer / Creative Technologist</p>
-						<div className="flex flex-col md:flex-row gap-4 md:gap-4 text-md font-light pt-4">
-							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300">6 years in design & tech</p>
-							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300 pl-6 relative"><span className="inline-block w-2 h-2 rounded-full bg-lime-500 absolute left-2 top-1/2 -translate-y-1/2"></span> open to work </p>
-							<p className="text-gray-700 bg-slate-100 px-3 py-[2px] rounded-lg w-fit border border-slate-300">📍 Germany</p>
+
+						<div className="w-fit px-6 py-4 border border-gray-900 bg-white shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
+							<p className="text-gray-700 text-4xl font-light leading-normal">I conceptualize, design and prototype <br />ambitious software.</p>
 						</div>
+
+						<div className="w-fit border border-gray-900 mt-16 pb-8 relative overflow-hidden bg-white shadow-[8px_8px_0_0_var(--color-gray-300)] ">
+							<div className="w-full px-6 py-4">
+								<p className="text-lg md:text-2xl font-light leading-normal">siddhant v patil</p>
+								<p className="text-lg md:text-2xl font-light leading-normal">designer / creative technologist</p>
+							</div>
+							<div className="marquee-container w-full h-8 border-t border-gray-900 overflow-hidden absolute bottom-0 left-0 flex items-center">
+								<div className="marquee">
+									<span className="text-gray-500 text-xs md:text-sm tracking-widest uppercase marquee-content">6 years in design & tech &nbsp;•&nbsp; open to work &nbsp;•&nbsp; Germany  &nbsp;•&nbsp;&nbsp;</span>
+									<span className="text-gray-500 text-xs md:text-sm tracking-widest uppercase marquee-content">6 years in design & tech &nbsp;•&nbsp; open to work &nbsp;•&nbsp; Germany &nbsp;•&nbsp;&nbsp;</span>
+								</div>
+							</div>
+						</div>
+
 					</div>
+
+					<div className="absolute bottom-0 right-0 sm:block transform scale-x-[-1]">
+						<Image
+							src="/profile.webp"
+							alt="Profile photo of Siddhant"
+							width={284}
+							height={284}
+							className="w-42 h-42 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72"
+						/>
+					</div>
+
 				</div>
 
-				{/* <div id="work" className="flex flex-col items-center justify-center h-16 border border-gray-200 rounded-lg my-16 relative bg-white">
-					<div className="text-gray-500 uppercase text-sm absolute -top-8 left-0 border border-gray-200 rounded-lg bg-gray-100 px-4 py-1">work mode</div>
-					<div className="w-full h-16">
-						<ExploreSwitch isExploreVisible={isExploreVisible} onClick={toggleExploreSolve} />
-					</div>
-				</div> */}
+				{/* WORK SECTION */}
 
-				{/* SOLVE SECTION */}
-
-				<div id="work" className="w-full pt-32 mb-8 pb-2">
-					<p className="text-3xl font-bold">Featured <span className="text-amber-500">Work</span></p>
+				<div className="w-full px-6 py-4 border-x border-gray-900 bg-white mb-16 full-width-borders relative">
+					<p className="text-3xl font-light">work</p>
+					<div id="work" className="w-full h-16 absolute top-0 sm:top-[-63px] left-0"></div>
 				</div>
 
-				<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
+				<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start mb-16">
 
 					<ProjectCard link="/solve/ihh-poc">
 						<div className="flex flex-col gap-4 h-full">
@@ -135,7 +150,7 @@ function HomeContent() {
 					<ProjectCard link="https://like-period-e24.notion.site/Contentserv-171b41fa91b645c3b1dcfaf48dfffc18" newTab={true}>
 						<div className="flex flex-col gap-4 h-full">
 							<div className="flex flex-row gap-2 justify-between items-start">
-								<p className="text-lg font-light flex-1">Enterprise Software @ Contentserv</p>
+								<p className="text-lg font-light flex-1">UI Design + Development for Enterprise SaaS Product</p>
 								<OpenNewWindow width={20} height={20} className="text-gray-500 flex-shrink-0" />
 							</div>
 							<div className="relative w-full flex-1 flex flex-col items-end">
@@ -148,11 +163,11 @@ function HomeContent() {
 
 				{/* EXPLORE SECTION */}
 
-				<div id="explore" className="w-full pt-32 mb-8 pb-2">
-					<p className="text-3xl font-bold">Creative <span className="text-amber-500">Explore</span><span className="text-amber-700">~</span>ations</p>
+				<div id="explore" className="w-fit px-6 py-4 border border-gray-900 bg-white mb-16">
+					<p className="text-2xl font-light">creative explorations</p>
 				</div>
 
-				<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start">
+				<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[32px] row-start-2 items-center sm:items-start mb-32">
 
 					{/* <ProjectCard link="/explore/voice-typing">
 						<div className="flex flex-col h-full">
@@ -240,8 +255,9 @@ function HomeContent() {
 				</section>
 
 				{/* ABOUT SECTION */}
-				<div id="about" className="w-full pt-32 mb-8 pb-2">
-					<p className="text-3xl font-bold"><span className="text-amber-500">About </span>Me</p>
+				<div className="w-full px-6 py-4 border-x border-gray-900 bg-white mb-16 full-width-borders relative">
+					<p className="text-3xl font-light">about</p>
+					<div id="about" className="w-full h-16 absolute top-0 sm:top-[-63px] left-0"></div>
 				</div>
 
 				<div className="w-full">
@@ -270,7 +286,7 @@ function HomeContent() {
 						<div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
 							{/* Design Card */}
 							<div className="">
-								<h3 className="text-xl font-bold mb-2">Design</h3>
+								<h3 className="text-2xl font-light mb-2">Design</h3>
 								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
 									<video
 										src="/about/design.mp4"
@@ -296,7 +312,7 @@ function HomeContent() {
 
 							{/* Technology Card */}
 							<div className="">
-								<h3 className="text-xl font-bold mb-2">Technology</h3>
+								<h3 className="text-2xl font-light mb-2">Technology</h3>
 								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
 									<video
 										src="/about/tech.mp4"
@@ -322,7 +338,7 @@ function HomeContent() {
 
 							{/* Art Card */}
 							<div className="">
-								<h3 className="text-xl font-bold mb-2">Art</h3>
+								<h3 className="text-2xl font-light mb-2">Art</h3>
 								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
 									<video
 										src="/about/art.mp4"
@@ -347,9 +363,9 @@ function HomeContent() {
 
 					{/* Interests Section */}
 					<section className="w-full">
-						<h2 className="text-3xl font-bold mb-8">
+						<div className="text-2xl w-fit font-light mb-12 px-6 py-4 border border-gray-900 bg-white">
 							I love working on...
-						</h2>
+						</div>
 						<ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 							<li className="flex items-start gap-4">
 								<div className="w-12 h-12 flex-shrink-0">
@@ -449,7 +465,7 @@ function HomeContent() {
 						</ul>
 					</section>
 				</div>
-			</main>
+			</main >
 
 			{/* <div className="absolute bottom-[-1px] left-0 w-full h-full z-[-1]">
 				<motion.div
@@ -472,7 +488,7 @@ function HomeContent() {
 				</motion.div>
 			</div> */}
 
-		</div>
+		</div >
 	);
 }
 
