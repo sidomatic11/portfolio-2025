@@ -217,8 +217,8 @@ function HomeContent() {
 					<ProjectCard link="/explore/shock-ghosts">
 						<div className="w-full h-full relative">
 							<div className="absolute top-0 left-0 font-light">
-								<p className="text-lg mb-2 font-bold">Ghosts</p>
-								<p className="text-md mb-2 ml-2">&</p>
+								<p className="text-lg"><span className="font-bold">Ghosts</span> &</p>
+								{/* <p className="text-md mb-2 ml-2">&</p> */}
 								<p className="text-lg italic">Thunder</p>
 							</div>
 							<Image src="/thumbnails/ghosts.png" alt="Shock Ghosts" fill className="object-contain" />
