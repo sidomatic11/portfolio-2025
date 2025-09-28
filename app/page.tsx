@@ -56,7 +56,7 @@ function HomeContent() {
 					<div className="w-full">
 
 						<div className="w-fit px-6 py-4 border border-gray-900 bg-white shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
-							<p className="text-gray-700 text-4xl font-light leading-normal">I conceptualize, design and prototype <br />ambitious software.</p>
+							<p className="text-gray-700 text-3xl sm:text-4xl font-light leading-normal">I conceptualize, design and prototype <br />ambitious software.</p>
 						</div>
 
 						<div className="w-fit border border-gray-900 mt-16 pb-8 relative overflow-hidden bg-white shadow-[8px_8px_0_0_var(--color-gray-300)] ">
