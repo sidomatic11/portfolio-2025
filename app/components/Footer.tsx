@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Footer() {
   const [copySuccess, setCopySuccess] = useState(false);
-  const email = "sidomatic11@gmail.com";
+  const email = "siddhant.v.patil@outlook.com";
 
   const copyToClipboard = async () => {
     try {
