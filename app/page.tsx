@@ -99,7 +99,7 @@ function HomeContent() {
 						<div className="flex flex-col gap-4 h-full">
 							<div className="flex flex-col gap-2">
 								<p className="text-lg font-light">Real-time Monitoring Interface for ICU Nurses</p>
-								<p className="text-sm text-gray-500">Proof-of-Concept, Cursor AI, H/W Interfacing</p>
+								<p className="text-sm text-gray-500">Proof-of-Concept, Cursor AI</p>
 							</div>
 							<div className="relative w-full flex-1">
 								<Image src="/thumbnails/ihh.png" alt="IHH POC" fill className="object-contain object-bottom" />
