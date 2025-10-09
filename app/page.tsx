@@ -287,14 +287,14 @@ function HomeContent() {
 							{/* Design Card */}
 							<div className="">
 								<h3 className="text-2xl font-light mb-2">Design</h3>
-								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
+								<div className="relative aspect-square mb-4 overflow-hidden">
 									<video
 										src="/about/design.mp4"
 										autoPlay
 										muted
 										loop
 										playsInline
-										className="object-contain w-full h-full border-1 border-gray-300 rounded-lg"
+										className="object-contain w-full h-full border-1 border-gray-300"
 									/>
 								</div>
 								<div className="space-y-2">
@@ -313,14 +313,14 @@ function HomeContent() {
 							{/* Technology Card */}
 							<div className="">
 								<h3 className="text-2xl font-light mb-2">Technology</h3>
-								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
+								<div className="relative aspect-square mb-4 overflow-hidden">
 									<video
 										src="/about/tech.mp4"
 										autoPlay
 										muted
 										loop
 										playsInline
-										className="object-contain w-full h-full border-1 border-gray-300 rounded-lg"
+										className="object-contain w-full h-full border-1 border-gray-300"
 									/>
 								</div>
 								<div className="space-y-2">
@@ -339,14 +339,14 @@ function HomeContent() {
 							{/* Art Card */}
 							<div className="">
 								<h3 className="text-2xl font-light mb-2">Art</h3>
-								<div className="relative aspect-square mb-4 overflow-hidden rounded-lg">
+								<div className="relative aspect-square mb-4 overflow-hidden">
 									<video
 										src="/about/art.mp4"
 										autoPlay
 										muted
 										loop
 										playsInline
-										className="object-contain w-full h-full border-1 border-gray-300 rounded-lg"
+										className="object-contain w-full h-full border-1 border-gray-300"
 									/>
 								</div>
 								<div className="space-y-2">
