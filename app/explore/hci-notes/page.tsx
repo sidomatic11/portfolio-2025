@@ -39,7 +39,7 @@ const overlayOptions: ImageOption[] = [
 
 export default function HCI() {
   // State to track which option is currently selected
-  const [selectedOption, setSelectedOption] = useState(BASE_IMAGE.id);
+  const [selectedOption, setSelectedOption] = useState('notes-plus-plus');
 
   // Find the currently selected overlay image (if any)
   const overlayImage = overlayOptions.find(option => option.id === selectedOption);
