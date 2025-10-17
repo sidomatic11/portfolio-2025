@@ -7,6 +7,7 @@ import ProjectCard from "./components/project-card";
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from "react";
 import { OpenNewWindow } from "iconoir-react";
+import HeroCanvas from "./components/HeroCanvas";
 
 // const defaultIsExploreVisible = false;
 
@@ -51,7 +52,8 @@ function HomeContent() {
 
 				{/* HERO SECTION */}
 				{/* padding bottom extra on small devices to accomodate for the image size */}
-				<div className="w-full pt-12 sm:pt-20 pb-48 sm:pb-28 relative min-h-[calc(100svh-4rem)] sm:min-h-auto">
+				<div className="hero-section w-full pt-12 sm:pt-20 pb-48 sm:pb-28 relative min-h-[calc(100svh-4rem)] sm:min-h-auto">
+					<HeroCanvas />
 
 					<div className="w-full">
 
@@ -76,7 +78,7 @@ function HomeContent() {
 
 					<div className="absolute bottom-0 right-0 sm:block transform scale-x-[-1]">
 						<Image
-							src="/profile.webp"
+							src="/profile-opaque.webp"
 							alt="Profile photo of Siddhant"
 							width={284}
 							height={284}
