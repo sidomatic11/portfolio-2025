@@ -83,6 +83,7 @@ function HomeContent() {
 							width={284}
 							height={284}
 							className="w-42 h-42 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72"
+							draggable={false}
 						/>
 					</div>
 
