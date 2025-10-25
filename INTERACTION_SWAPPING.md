@@ -152,3 +152,6 @@ drawMinimal(ctx, time, canvas);
 3. **Customize** your favorite interaction
 4. **Remove** unused interaction files
 5. **Deploy** with your chosen interaction
+
+
+
