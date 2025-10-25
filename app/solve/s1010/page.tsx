@@ -1,5 +1,4 @@
 import Header from "@/app/components/header";
-import PersonChip from "@/app/components/PersonChip";
 import EndOfPage from "@/app/components/EndOfPage";
 
 // Main page component for S1010 project
@@ -64,7 +63,7 @@ export default function S1010() {
             During the Web3 and Metaverse hype-skepticism of late 2022, Concentrix set out to explore how these technologies could reshape e-commerce.
           </p>
           <p className="text-base mb-8">
-            The challenge wasn't to build a product, but to navigate an ambiguous space: understanding potential value, creating alignment, and communicating possibilities to stakeholders and clients.
+            The challenge wasn&apos;t to build a product, but to navigate an ambiguous space: understanding potential value, creating alignment, and communicating possibilities to stakeholders and clients.
           </p>
         </div>
 
@@ -74,7 +73,7 @@ export default function S1010() {
           <ul className="list-disc pl-6 text-base mb-8 space-y-2">
             <li><strong>Research & Concepts</strong> - Explored technology capabilities, trends, and experiences to identify disruptive opportunities.</li>
             <li><strong>Service Blueprinting</strong> - Visualized a complex and vague system, mapping how different players and value flows connect.</li>
-            <li><strong>Innovative System Vision</strong> - Defined "Win-Win-Win Loyalty," a three-way value exchange between brands, partners, and customers.</li>
+            <li><strong>Innovative System Vision</strong> - Defined &quot;Win-Win-Win Loyalty,&quot; a three-way value exchange between brands, partners, and customers.</li>
             <li><strong>Storytelling Proto-Presentation</strong> - Designed and owned a Figma-based interactive deck to communicate the vision with both stakeholders and customers.</li>
             <li><strong>From Ambiguity to Clarity</strong> - Synthesized scattered explorations into a cohesive, compelling narrative.</li>
           </ul>
