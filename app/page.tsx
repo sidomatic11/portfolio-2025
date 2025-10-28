@@ -125,6 +125,15 @@ function HomeContent() {
 						</div>
 					</ProjectCard>
 
+					<ProjectCard link="/solve/svb">
+						<div className="flex flex-col gap-4 h-full">
+							<p className="text-lg font-light">API Portal Modernization for Silicon Valley Bank</p>
+							<div className="relative w-full flex-1 flex flex-col items-end">
+								<Image src="/thumbnails/svb.webp" alt="Silicon Valley Bank" fill className="object-contain object-bottom" />
+							</div>
+						</div>
+					</ProjectCard>
+
 
 					<ProjectCard link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0" newTab={true}>
 						<div className="flex flex-col gap-4 h-full">
