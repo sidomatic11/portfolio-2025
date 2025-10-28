@@ -106,8 +106,7 @@ export default function Page() {
           </div>
         </Accordion>
 
-        <Accordion title="SVB Developer Portal Website Redesign" className="mb-8">
-          {/* <h3 className="max-w-xl mx-auto text-2xl mb-4 mt-32">SVB Developer Portal Website Redesign</h3> */}
+        {/* <Accordion title="SVB Developer Portal Website Redesign" className="mb-8">
 
           <p className="max-w-xl mx-auto text-base mb-8 mt-8">
             I lead a team of 3 designers to redesign the developer portal experience of Silicon Valley Bank&apos;s API Banking platform
@@ -117,7 +116,7 @@ export default function Page() {
             <img src="/concentrix/svb-1.png" alt="SVB redesign" className="w-full max-w-none rounded-lg mb-4" />
             <img src="/concentrix/svb-2.png" alt="SVB redesign" className="w-full max-w-none rounded-lg" />
           </div>
-        </Accordion>
+        </Accordion> */}
 
         <Accordion title="Organized a virtual innovation workshop for Concentrix leadership" className="mb-8">
           {/* <h3 className="max-w-xl mx-auto text-2xl mb-4 mt-32">Organized a virtual innovation workshop for Concentrix leadership</h3> */}

@@ -116,20 +116,22 @@ function HomeContent() {
 						</ProjectCard>
 					)}
 
+
+					<ProjectCard link="/solve/svb">
+						<div className="flex flex-col gap-4 h-full">
+							<p className="text-lg font-light">API Portal Redesign for Silicon Valley Bank</p>
+							<div className="relative w-full flex-1 flex flex-col items-end">
+								<Image src="/thumbnails/svb.webp" alt="Silicon Valley Bank" fill className="object-contain object-bottom" />
+							</div>
+						</div>
+					</ProjectCard>
+
+
 					<ProjectCard link="/solve/ux-at-concentrix">
 						<div className="flex flex-col gap-4 h-full">
 							<p className="text-lg font-light">UX Design @ Concentrix</p>
 							<div className="relative w-full flex-1 flex flex-col items-end">
 								<Image src="/thumbnails/concentrix.png" alt="Concentrix" fill className="object-contain object-bottom" />
-							</div>
-						</div>
-					</ProjectCard>
-
-					<ProjectCard link="/solve/svb">
-						<div className="flex flex-col gap-4 h-full">
-							<p className="text-lg font-light">API Portal Modernization for Silicon Valley Bank</p>
-							<div className="relative w-full flex-1 flex flex-col items-end">
-								<Image src="/thumbnails/svb.webp" alt="Silicon Valley Bank" fill className="object-contain object-bottom" />
 							</div>
 						</div>
 					</ProjectCard>
