@@ -29,12 +29,14 @@ export interface UserTriangle {
   vertices: { x: number; y: number }[]; // 3 vertices relative to center
   rotation: number;
   rotationSpeed: number;
-  velocityX: number;
-  velocityY: number;
+  velocityX: number; // Used for floating oscillation parameters
+  velocityY: number; // Used for floating oscillation parameters
   color: string;
   opacity: number;
   targetOpacity: number;
   createdAt: number; // timestamp when triangle was created
+  originalX: number; // Original position for in-place floating
+  originalY: number; // Original position for in-place floating
 }
 
 export interface ClickRipple {
@@ -283,6 +285,7 @@ export const updateFloatingTriangles = (
 /**
  * Update user-created triangles (position, rotation, and opacity fade)
  * Note: User triangles are in document coordinates (from pageX/pageY clicks)
+ * Triangles float in place with gentle oscillation around their original position
  */
 export const updateUserTriangles = (
   triangles: UserTriangle[],
@@ -290,23 +293,23 @@ export const updateUserTriangles = (
   canvasHeight: number,
   currentTime: number
 ): UserTriangle[] => {
-  // Get canvas bounds in document coordinates for wrapping
-  const canvas = document.querySelector('canvas');
-  const rect = canvas?.getBoundingClientRect();
-  const canvasLeft = (rect?.left || 0) + window.scrollX;
-  const canvasTop = (rect?.top || 0) + window.scrollY;
-  const canvasRight = canvasLeft + canvasWidth;
-  const canvasBottom = canvasTop + canvasHeight;
-  
   return triangles.map(triangle => {
-    let newX = triangle.x + triangle.velocityX;
-    let newY = triangle.y + triangle.velocityY;
+    // Calculate time-based oscillation for subtle floating in place
+    // Use createdAt for phase offset so each triangle floats at different rates
+    const timeSinceCreation = (currentTime - triangle.createdAt) * 0.001; // Convert to seconds
+    const horizontalPhase = triangle.createdAt * 0.001; // Unique phase per triangle
+    const verticalPhase = triangle.createdAt * 0.001 + Math.PI / 2; // Offset by 90° for circular motion
     
-    // Wrap around canvas edges (asteroid behavior) - using document coordinates
-    if (newX < canvasLeft - 100) newX = canvasRight + 100;
-    if (newX > canvasRight + 100) newX = canvasLeft - 100;
-    if (newY < canvasTop - 100) newY = canvasBottom + 100;
-    if (newY > canvasBottom + 100) newY = canvasTop - 100;
+    // Very subtle sine wave oscillation (tiny amplitude, very slow frequency)
+    const oscillationRadius = 2; // Maximum 2px displacement from center
+    const frequency = 0.15; // Very slow oscillation (0.15 cycles per second)
+    
+    const offsetX = Math.sin(timeSinceCreation * frequency * 2 * Math.PI + horizontalPhase) * oscillationRadius;
+    const offsetY = Math.cos(timeSinceCreation * frequency * 2 * Math.PI + verticalPhase) * oscillationRadius;
+    
+    // Position oscillates around original position
+    const newX = triangle.originalX + offsetX;
+    const newY = triangle.originalY + offsetY;
     
     // Calculate opacity fade over 5 seconds
     const elapsedTime = currentTime - triangle.createdAt;
@@ -326,7 +329,7 @@ export const updateUserTriangles = (
       ...triangle,
       x: newX,
       y: newY,
-      rotation: triangle.rotation + triangle.rotationSpeed,
+      rotation: triangle.rotation, // Keep rotation constant, no rotation
       opacity: newOpacity
     };
   });
@@ -355,11 +358,13 @@ export const createUserTriangle = (
     vertices: relativeVertices,
     rotation: 0,
     rotationSpeed: (Math.random() - 0.5) * 0.01, // Slow rotation like floating triangles
-    velocityX: (Math.random() - 0.5) * 0.5, // Slow drift
-    velocityY: (Math.random() - 0.5) * 0.5,
+    velocityX: (Math.random() - 0.5) * 0.5, // Kept for backwards compatibility, now used for oscillation phase
+    velocityY: (Math.random() - 0.5) * 0.5, // Kept for backwards compatibility, now used for oscillation phase
     color: color,
     opacity: 1.0, // Start fully opaque
     targetOpacity: 0.5 + Math.random() * 0.4, // Random target between 0.5 and 0.9
-    createdAt: Date.now() // Timestamp for fade calculation
+    createdAt: Date.now(), // Timestamp for fade calculation and oscillation phase
+    originalX: centerX, // Store original position for in-place floating
+    originalY: centerY // Store original position for in-place floating
   };
 };
