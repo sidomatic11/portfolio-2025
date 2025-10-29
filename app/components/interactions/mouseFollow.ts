@@ -165,8 +165,8 @@ export const drawMouseFollow = (
       // Calculate progress (0 to 1)
       const progress = elapsed / rippleDuration;
       
-      // Radius grows - hint pulses are larger (1 to 24px), user clicks are smaller (1 to 12px)
-      const maxRadius = ripple.isHint ? 23 : 11;
+      // Radius grows - hint pulses are larger, user clicks are smaller (1 to 12px)
+      const maxRadius = ripple.isHint ? 40 : 11;
       const radius = 1 + (progress * maxRadius);
       
       // Opacity fades from 1 to 0
@@ -180,7 +180,7 @@ export const drawMouseFollow = (
       ctx.beginPath();
       ctx.arc(rippleX, rippleY, radius, 0, Math.PI * 2);
       ctx.strokeStyle = ripple.color;
-      ctx.lineWidth = 2;
+      ctx.lineWidth = ripple.isHint ? 3.5 : 2;
       ctx.globalAlpha = opacity;
       ctx.stroke();
       ctx.globalAlpha = 1; // Reset alpha
