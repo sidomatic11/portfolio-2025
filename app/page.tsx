@@ -115,7 +115,7 @@ function HomeContent() {
                   Patient Monitoring System PoC
                 </p>
               </div>
-              <div className="relative aspect-[4/3] w-full flex-1 bg-amber-300">
+              <div className="relative aspect-[4/3] w-full flex-1 bg-white">
                 <Image
                   src="/thumbnails/image.webp"
                   alt="IHH POC"
@@ -148,7 +148,7 @@ function HomeContent() {
                   API Portal Redesign for SVB
                 </p>
               </div>
-              <div className="relative aspect-[4/3] w-full flex-1 bg-amber-300">
+              <div className="relative aspect-[4/3] w-full flex-1 bg-white">
                 <Image
                   src="/thumbnails/svb.webp"
                   alt="Silicon Valley Bank"
@@ -176,7 +176,7 @@ function HomeContent() {
                   Data Fabric Platform Vision
                 </p>
               </div>
-              <div className="relative aspect-[4/3] w-full flex-1 bg-amber-300">
+              <div className="relative aspect-[4/3] w-full flex-1 bg-white">
                 <Image
                   src="/thumbnails/iris.webp"
                   alt="Data Fabric Platform Vision"
