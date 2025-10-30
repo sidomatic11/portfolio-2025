@@ -126,7 +126,7 @@ function HomeContent() {
               <div className="h-auto flex-grow bg-gray-50 px-3 py-4 text-sm font-light text-gray-900">
                 <div className="mb-4 text-base font-light text-gray-500">
                   Integrated real-time data from ICU/OT medical devices into an
-                  interface that preserved nurses' mental model
+                  interface that preserved nurses&#39; mental model
                 </div>
                 <div className="font-mono text-xs leading-[1.5] font-light tracking-wide text-gray-500 lowercase group-hover:text-amber-500">
                   Proof-of-Concept, Cursor AI, 2 months, 2024
@@ -158,8 +158,8 @@ function HomeContent() {
               </div>
               <div className="h-auto flex-grow bg-gray-50 px-3 py-4 text-sm font-light text-gray-900">
                 <div className="mb-4 text-base font-light text-gray-500">
-                  Led the redesign of Silicon Valley Bank's Developer API Portal
-                  into a modern, fully self-service experience
+                  Led the redesign of Silicon Valley Bank&#39;s Developer API
+                  Portal into a modern, fully self-service experience
                 </div>
                 <div className="font-mono text-xs leading-[1.5] font-light tracking-wide text-gray-500 lowercase group-hover:text-amber-500">
                   Design Sprints, Content Model, Flows, UI prototypes, Design
