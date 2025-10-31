@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "./components/header";
 import { useState, useEffect } from "react";
 import ProjectCard from "./components/project-card";
+import WorkProjectCard from "./components/work-project-card";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import { OpenNewWindow } from "iconoir-react";
@@ -108,32 +109,20 @@ function HomeContent() {
         </div>
 
         <section className="row-start-2 mb-16 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
-          <Link href="/solve/ihh-poc" className="h-full">
-            <div className="group flex h-full flex-col gap-[1px] bg-gray-900 p-[1px] hover:bg-amber-500">
-              <div className="bg-gray-50 px-3 py-3">
-                <p className="text-md font-bold text-gray-900">
-                  Patient Monitoring System PoC
-                </p>
-              </div>
-              <div className="relative aspect-[4/3] w-full flex-1 bg-white">
-                <Image
-                  src="/thumbnails/image.webp"
-                  alt="IHH POC"
-                  fill
-                  className="object-contain object-bottom"
-                />
-              </div>
-              <div className="h-auto flex-grow bg-gray-50 px-3 py-4 text-sm font-light text-gray-900">
-                <div className="mb-4 text-base font-light text-gray-500">
-                  Integrated real-time data from ICU/OT medical devices into an
-                  interface that preserved nurses&#39; mental model
-                </div>
-                <div className="font-mono text-xs leading-[1.5] font-light tracking-wide text-gray-400 lowercase group-hover:text-amber-500">
-                  Proof-of-Concept, UI frontend, data parsing, Cursor AI, 2024
-                </div>
-              </div>
-            </div>
-          </Link>
+          <WorkProjectCard
+            link="/solve/ihh-poc"
+            title="Patient Monitoring System PoC"
+            imageSrc="/thumbnails/image.webp"
+            imageAlt="IHH POC"
+            description="Integrated real-time data from ICU/OT medical devices into an interface that preserved nurses&#39; mental model"
+            tags={[
+              "Proof-of-Concept",
+              "UI frontend",
+              "data parsing",
+              "Cursor AI",
+              "2024",
+            ]}
+          />
 
           {showNDAProjects && (
             <ProjectCard link="/solve/ihh-poc">
@@ -141,60 +130,30 @@ function HomeContent() {
             </ProjectCard>
           )}
 
-          <Link href="/solve/svb" className="h-full">
-            <div className="group flex h-full flex-col gap-[1px] bg-gray-900 p-[1px] hover:bg-amber-500">
-              <div className="bg-gray-50 px-3 py-3">
-                <p className="text-md font-bold text-gray-900">
-                  API Portal Redesign for SVB
-                </p>
-              </div>
-              <div className="relative aspect-[4/3] w-full flex-1 bg-white">
-                <Image
-                  src="/thumbnails/svb.webp"
-                  alt="Silicon Valley Bank"
-                  fill
-                  className="object-contain object-bottom"
-                />
-              </div>
-              <div className="h-auto flex-grow bg-gray-50 px-3 py-4 text-sm font-light text-gray-900">
-                <div className="mb-4 text-base font-light text-gray-500">
-                  Led the redesign of Silicon Valley Bank&#39;s Developer API
-                  Portal into a fully self-service experience
-                </div>
-                <div className="font-mono text-xs leading-[1.5] font-light tracking-wide text-gray-400 lowercase group-hover:text-amber-500">
-                  Design Sprints, Content Model, Flows, UI prototypes, Design
-                  System, 2022
-                </div>
-              </div>
-            </div>
-          </Link>
+          <WorkProjectCard
+            link="/solve/svb"
+            title="API Portal Redesign for SVB"
+            imageSrc="/thumbnails/svb.webp"
+            imageAlt="Silicon Valley Bank"
+            description="Led the redesign of Silicon Valley Bank&#39;s Developer API Portal into a fully self-service experience"
+            tags={[
+              "Design Sprints",
+              "Content Model",
+              "Flows",
+              "UI prototypes",
+              "Design System",
+              "2022",
+            ]}
+          />
 
-          <Link href="/solve/data-platform" className="h-full">
-            <div className="group flex h-full flex-col gap-[1px] bg-gray-900 p-[1px] hover:bg-amber-500">
-              <div className="bg-gray-50 px-3 py-3">
-                <p className="text-md font-bold text-gray-900">
-                  Data Fabric Platform Vision
-                </p>
-              </div>
-              <div className="relative aspect-[4/3] w-full flex-1 bg-white">
-                <Image
-                  src="/thumbnails/iris.webp"
-                  alt="Data Fabric Platform Vision"
-                  fill
-                  className="object-contain object-bottom"
-                />
-              </div>
-              <div className="h-auto flex-grow bg-gray-50 px-3 py-4 text-sm font-light text-gray-900">
-                <div className="mb-4 text-base font-light text-gray-500">
-                  Helped a data company envision the future of their platform,
-                  grounded in user needs and business objectives
-                </div>
-                <div className="font-mono text-xs leading-[1.5] font-light tracking-wide text-gray-400 lowercase group-hover:text-amber-500">
-                  Research, User Mindsets, Product Concept, 2021
-                </div>
-              </div>
-            </div>
-          </Link>
+          <WorkProjectCard
+            link="/solve/data-platform"
+            title="Data Fabric Platform Vision"
+            imageSrc="/thumbnails/iris.webp"
+            imageAlt="Data Fabric Platform Vision"
+            description="Helped a data company envision the future of their platform, grounded in user needs and business objectives"
+            tags={["Research", "User Mindsets", "Product Vision", "2021"]}
+          />
 
           {/* <ProjectCard link="/solve/svb">
 						<div className="flex flex-col gap-4 h-full">
