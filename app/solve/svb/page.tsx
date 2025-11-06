@@ -1,14 +1,13 @@
 import Header from "@/app/components/header";
 import PersonChip from "@/app/components/PersonChip";
-import EndOfPage from "@/app/components/EndOfPage";
 
 // SVB Developer API Portal case study page
 // Purpose: Present project overview, outcomes, and testimonials
 // Usage: Rendered at route `/solve/svb`
-// Dependencies: Header, PersonChip, EndOfPage
+// Dependencies: Header, PersonChip
 export default function SVB() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-scree">
       {/* Header */}
       <Header isProjectHeader={true} />
 
@@ -33,11 +32,25 @@ export default function SVB() {
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
               <div className="sm:w-1/2">
                 <p className="text-base font-semibold">Company</p>
-                <p className="text-base">Concentrix Catalyst</p>
+                <a
+                  href="https://www.concentrix.com/catalyst/"
+                  className="cursor-pointer text-base"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Concentrix Catalyst
+                </a>
               </div>
               <div className="sm:w-1/2">
                 <p className="text-base font-semibold">Client</p>
-                <p className="text-base">Silicon Valley Bank</p>
+                <a
+                  href="https://www.svb.com/"
+                  className="cursor-pointer text-base"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Silicon Valley Bank
+                </a>
               </div>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
@@ -84,6 +97,14 @@ export default function SVB() {
                 />
               </div>
             </div>
+            <div>
+              <p className="text-base font-semibold">Activities</p>
+              <p className="font-mono text-sm text-gray-600">
+                design sprints, user and stakeholder interviews, personas,
+                landscape review, IA, content model, user flows, wireframes, UI,
+                interactive prototypes, design system, client presentations
+              </p>
+            </div>
           </div>
         </div>
 
@@ -105,27 +126,27 @@ export default function SVB() {
 
         {/* Where we started */}
         <div className="mx-auto mb-8 max-w-xl">
-          <h2 className="mb-3 text-xl font-semibold">Before</h2>
+          <h2 className="mb-3 text-xl font-semibold">Problems</h2>
           <ul className="mb-8 list-none pl-0 text-base">
             <li className="mb-3 flex items-baseline gap-2">
-              <span className="text-sm">‼️</span>
-              <span>
-                Developers were unable to find information. Sales teams needed
-                to manually hand out information about services.{" "}
-              </span>
-            </li>
-            <li className="mb-3 flex items-baseline gap-2">
-              <span className="text-sm">‼️</span>
+              <span className="text-sm">🤕</span>
               <span>
                 100% manual effort for API Support team to provide and manage
                 customer credentials and scope.
               </span>
             </li>
             <li className="mb-3 flex items-baseline gap-2">
-              <span className="text-sm">‼️</span>
+              <span className="text-sm">🤷</span>
               <span>
                 Extremely outdated and unorganized experience, which didn&apos;t
                 address essential developer needs.
+              </span>
+            </li>
+            <li className="mb-3 flex items-baseline gap-2">
+              <span className="text-sm">😐</span>
+              <span>
+                Sales teams needed to manually hand out information about
+                services.
               </span>
             </li>
           </ul>
@@ -143,17 +164,17 @@ export default function SVB() {
 
         {/* Where we finished */}
         <div className="mx-auto max-w-xl">
-          <h2 className="mb-3 text-xl font-semibold">Where we finished</h2>
+          <h2 className="mb-3 text-xl font-semibold">Results</h2>
           <ul className="mb-8 list-none pl-0 text-base">
             <li className="mb-3 flex items-baseline gap-2">
-              <span className="text-sm">✅</span>
+              <span className="text-sm">😎</span>
               <span>
                 <b>Fully self-service experience</b> — from discovery and
                 onboarding, to integration and support.
               </span>
             </li>
             <li className="mb-3 flex items-baseline gap-2">
-              <span className="text-sm">✅</span>
+              <span className="text-sm">🤩</span>
               <span>
                 <b>Best-in-Class</b> — our redesign incorporated the best
                 aspects and features in the market that developers expect out of
@@ -161,11 +182,25 @@ export default function SVB() {
               </span>
             </li>
             <li className="mb-3 flex items-baseline gap-2">
-              <span className="text-sm">✅</span>
+              <span className="text-sm">🏆</span>
               <span>
                 <b>Ahead of Competitors</b> — no other direct competitors offer
                 such comprehensive suite of features.
               </span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="mx-auto max-w-xl">
+          <h2 className="mb-3 text-xl font-semibold">Further improvements</h2>
+          <ul className="mb-8 list-none pl-0 text-base">
+            <li className="mb-3 flex items-baseline gap-2">
+              <span className="text-sm">✨</span>
+              <span>Visual polish</span>
+            </li>
+            <li className="mb-3 flex items-baseline gap-2">
+              <span className="text-sm">📐</span>
+              <span>Accuracy of implementation</span>
             </li>
           </ul>
         </div>
@@ -257,9 +292,6 @@ export default function SVB() {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <EndOfPage />
     </div>
   );
 }
