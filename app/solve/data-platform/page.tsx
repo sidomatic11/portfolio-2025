@@ -14,12 +14,18 @@ export default function Page() {
 
       <div className="w-full py-12">
         <h1 className="mx-auto mb-8 max-w-xl text-3xl font-bold">
-          User-centered product vision for a data fabric platform
+          A user-centered product vision for a Data Fabric platform (NDA)
         </h1>
-        <p className="mx-auto mb-8 max-w-xl text-xl font-light text-gray-600">
-          Vision, principles, and a mid‑fi prototype to define a cohesive,
-          user-centered data fabric platform.
-        </p>
+        <div className="mx-auto mb-8 flex max-w-xl flex-col gap-2 text-xl font-light text-gray-600">
+          <p>
+            &quot;Help us envision our future product, what it should look like
+            from a user standpoint and the key requirements needed to achieve
+            it.&quot;
+          </p>
+          <p className="mt-0.5 text-base">– The Client</p>
+        </div>
+
+        <hr className="mx-auto my-8 max-w-xl" />
 
         {/* Quick facts: Client, Company, Timeline on one line */}
         <div className="mx-auto mb-2 max-w-xl sm:grid sm:grid-cols-3 sm:gap-8">
@@ -65,37 +71,17 @@ export default function Page() {
           </div>
         </div>
 
-        <hr className="mx-auto my-8 max-w-xl" />
-
-        {/* Client context */}
-        <div className="mx-auto mb-8 max-w-xl">
-          <p className="mb-1 text-base font-semibold">Business Objective</p>
-          <p className="mb-8 text-base">
-            Help envision the product of the future, what it should look like
-            from a <i>user</i> standpoint and understand the key requirements
-            needed to achieve it.
-          </p>
-        </div>
-
         {/* Activities */}
         <div className="mx-auto max-w-xl">
-          <p className="mb-2 text-base font-semibold">My Activities</p>
-          <div className="mb-8 flex flex-col gap-4 sm:flex-row">
-            <div className="sm:w-1/2">
-              <p className="mb-1 text-base font-medium">Lead</p>
-              <ul className="list-disc pl-5">
-                <li>Product Concept Design</li>
-                <li>Design Principles</li>
-                <li>User Mindsets</li>
-              </ul>
+          <p className="mb-2 text-base font-semibold">Activities</p>
+          <div className="mb-8 flex flex-col gap-2 font-mono text-sm text-gray-600 lowercase">
+            <div>
+              <span className="font-bold">Lead:</span> Product Concept Design,
+              User Mindsets, Design Principles
             </div>
-            <div className="sm:w-1/2">
-              <p className="mb-1 text-base font-medium">Contributor</p>
-              <ul className="list-disc pl-5">
-                <li>Stakeholder Interviews</li>
-                <li>User Interviews & Synthesis</li>
-                <li>Competitive Analysis</li>
-              </ul>
+            <div>
+              <span className="font-bold">Contributor:</span> Stakeholder
+              Interviews, User Interviews & Synthesis, Competitive Analysis
             </div>
           </div>
         </div>
