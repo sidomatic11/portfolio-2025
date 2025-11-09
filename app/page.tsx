@@ -54,20 +54,22 @@ function HomeContent() {
           <HeroCanvas />
 
           <div className="w-full">
-            <div className="w-fit border border-gray-900 bg-white px-6 py-4 shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
+            <div className="w-fit border border-gray-900 bg-white px-6 py-6 shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
               <p className="text-3xl leading-normal font-light text-gray-700 sm:text-4xl">
-                I conceptualize, design and prototype <br />
-                ambitious software.
+                From <span className="font-bold">bold ideas</span> to{" "}
+                <span className="italic">practical software</span>.
               </p>
             </div>
 
             <div className="relative mt-16 w-fit overflow-hidden border border-gray-900 bg-white pb-8 shadow-[8px_8px_0_0_var(--color-gray-300)]">
               <div className="w-full px-6 py-4">
-                <p className="text-lg leading-normal font-light md:text-2xl">
-                  siddhant v patil
+                <p className="mb-1 text-lg leading-normal font-light md:text-2xl">
+                  Siddhant V Patil
                 </p>
-                <p className="text-lg leading-normal font-light md:text-2xl">
-                  designer / creative technologist
+                <p className="text-base leading-normal md:text-lg">
+                  <span className="font-semibold">product design</span>
+                  <span className="font-normal"> / strategy / </span>
+                  <span className="font-light">code</span>
                 </p>
               </div>
               <div className="marquee-container absolute bottom-0 left-0 flex h-8 w-full items-center overflow-hidden border-t border-gray-900">
@@ -107,20 +109,35 @@ function HomeContent() {
           ></div>
         </div>
 
-        <section className="row-start-2 mb-16 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
+        <section className="mb-16 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
+          <WorkProjectCard
+            link="/solve/svb"
+            category="product design"
+            title="API Developer Portal Redesign for SVB"
+            imageSrc="/thumbnails/svb.webp"
+            imageAlt="Silicon Valley Bank"
+            description="Transformed a dated, support-dependent portal into a fully self-service platform"
+            tags={["Team Lead", "Design Sprints", "UX", "2022"]}
+          />
+
+          <WorkProjectCard
+            link="/solve/data-platform"
+            category="strategy"
+            title="Data Fabric Platform Vision"
+            imageSrc="/thumbnails/iris.webp"
+            imageAlt="Data Fabric Platform Vision"
+            description="Crafted a user-centered product vision for a complex data-fabric platform"
+            tags={["Product Concept", "Research", "User Mindsets", "2021"]}
+          />
+
           <WorkProjectCard
             link="/solve/ihh-poc"
-            title="Patient Monitoring System PoC"
+            category="code"
+            title="Patient Monitoring System for IHH Malaysia"
             imageSrc="/thumbnails/image.webp"
             imageAlt="IHH POC"
-            description="Integrated real-time data from ICU/OT medical devices into an interface that preserved nurses&#39; mental model"
-            tags={[
-              "Proof-of-Concept",
-              "UI frontend",
-              "data parsing",
-              "Cursor AI",
-              "2024",
-            ]}
+            description="Unified chaotic ICU device data into a single nurse-friendly interface"
+            tags={["Proof-of-Concept", "UI frontend", "Cursor AI", "2024"]}
           />
 
           {showNDAProjects && (
@@ -128,31 +145,6 @@ function HomeContent() {
               <p>NFT based loyalty program: Concept & Communication</p>
             </ProjectCard>
           )}
-
-          <WorkProjectCard
-            link="/solve/svb"
-            title="API Portal Redesign for SVB"
-            imageSrc="/thumbnails/svb.webp"
-            imageAlt="Silicon Valley Bank"
-            description="Led the redesign of Silicon Valley Bank&#39;s Developer API Portal into a fully self-service experience"
-            tags={[
-              "Design Sprints",
-              "Content Model",
-              "Flows",
-              "UI prototypes",
-              "Design System",
-              "2022",
-            ]}
-          />
-
-          <WorkProjectCard
-            link="/solve/data-platform"
-            title="Data Fabric Platform Vision"
-            imageSrc="/thumbnails/iris.webp"
-            imageAlt="Data Fabric Platform Vision"
-            description="Helped a data company envision the future of their platform, grounded in user needs and business objectives"
-            tags={["Research", "User Mindsets", "Product Vision", "2021"]}
-          />
 
           {/* <ProjectCard link="/solve/svb">
 						<div className="flex flex-col gap-4 h-full">
@@ -267,7 +259,7 @@ function HomeContent() {
           <p className="text-2xl font-light">creative explorations</p>
         </div>
 
-        <section className="row-start-2 mb-32 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
+        <section className="mb-32 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
           {/* <ProjectCard link="/explore/voice-typing">
 						<div className="flex flex-col h-full">
 							<div className="w-full">
