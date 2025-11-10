@@ -295,7 +295,7 @@ function HomeContent() {
           <Link
             href="https://sidomatic11.github.io/day-15/"
             target="_blank"
-            className="col-span-1 aspect-square border border-gray-900 hover:border-amber-500"
+            className="group relative col-span-1 aspect-square overflow-hidden border border-gray-900 hover:border-amber-500"
           >
             <video
               src="/duck.mp4"
@@ -306,6 +306,10 @@ function HomeContent() {
               className="h-full w-full object-cover"
               style={{ display: "block" }}
             />
+            {/* Hover chip surfaces tech stack only when the preview is in focus */}
+            <span className="pointer-events-none absolute top-3 right-3 translate-y-1 rounded-full border border-amber-400 bg-gray-900 px-3 py-1 text-xs font-medium tracking-wide text-amber-200 opacity-0 backdrop-blur transition duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+              three.js
+            </span>
           </Link>
 
           <ProjectCard link="/explore/hci-notes">
@@ -364,7 +368,7 @@ function HomeContent() {
             </div>
           </ProjectCard>
 
-          <ProjectCard link="/explore/mediapipe-threejs">
+          {/* <ProjectCard link="/explore/mediapipe-threejs">
             <div className="flex h-full flex-col gap-4">
               <p className="text-lg">
                 <span className="font-bold">MediaPipe</span>
@@ -379,7 +383,7 @@ function HomeContent() {
                 />
               </div>
             </div>
-          </ProjectCard>
+          </ProjectCard> */}
 
           <ProjectCard
             link="https://www.instagram.com/sidomatic11/"
@@ -396,6 +400,33 @@ function HomeContent() {
               </div>
             </div>
           </ProjectCard>
+
+          <Link
+            href="https://sidomatic11.github.io/day-12/"
+            target="_blank"
+            className="group relative col-span-1 aspect-square overflow-hidden border border-gray-900 hover:border-amber-500"
+          >
+            <video
+              src="/hand.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+              style={{
+                display: "block",
+                position: "absolute",
+                top: "-5px",
+                width: "calc(100% + 10px)",
+                height: "calc(100% + 10px)",
+                objectFit: "cover",
+              }}
+            />
+            {/* Hover chip surfaces tech stack only when the preview is in focus */}
+            <span className="pointer-events-none absolute top-3 right-3 translate-y-1 rounded-full border border-amber-400 bg-gray-900 px-3 py-1 text-xs font-medium tracking-wide text-amber-200 opacity-0 backdrop-blur transition duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+              mediapipe + three.js
+            </span>
+          </Link>
         </section>
 
         {/* ABOUT SECTION */}
