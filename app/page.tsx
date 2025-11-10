@@ -56,8 +56,8 @@ function HomeContent() {
           <div className="w-full">
             <div className="w-fit border border-gray-900 bg-white px-6 py-6 shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
               <p className="text-3xl leading-normal font-light text-gray-700 sm:text-4xl">
-                From <span className="font-bold">bold ideas</span> to{" "}
-                <span className="italic">practical software</span>.
+                I shape <span className="font-bold">ambitious ideas</span> into{" "}
+                <span className="italic">meaningful software</span>.
               </p>
             </div>
 
