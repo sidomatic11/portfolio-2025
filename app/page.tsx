@@ -9,6 +9,7 @@ import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
 import { OpenNewWindow } from "iconoir-react";
 import HeroCanvas from "./components/HeroCanvas";
+import Link from "next/link";
 
 // const defaultIsExploreVisible = false;
 
@@ -290,6 +291,22 @@ function HomeContent() {
           {/* <ProjectCard link="/explore/vertical-calendar">
 							<p>Exploring Vertical Calendar</p>
 						</ProjectCard> */}
+
+          <Link
+            href="https://sidomatic11.github.io/day-15/"
+            target="_blank"
+            className="col-span-1 aspect-square border border-gray-900 hover:border-amber-500"
+          >
+            <video
+              src="/duck.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+              style={{ display: "block" }}
+            />
+          </Link>
 
           <ProjectCard link="/explore/hci-notes">
             <div className="flex h-full flex-col gap-4">
