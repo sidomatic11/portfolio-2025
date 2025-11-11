@@ -30,12 +30,7 @@ export default function WorkProjectCard({
       <div className="group flex flex-col bg-gray-900 p-[1px] hover:bg-amber-500 sm:flex-row">
         {/* Image Section */}
         <div className="relative aspect-[4/3] min-w-2/5 bg-white sm:min-w-1/2 lg:min-w-2/5">
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            fill
-            className="object-contain object-bottom"
-          />
+          <Image src={imageSrc} alt={imageAlt} fill className="object-cover" />
         </div>
         {/* Details Section */}
         <div className="flex h-auto flex-col border-t border-gray-900 bg-gray-50 px-4 py-4 text-sm font-light text-gray-900 group-hover:border-amber-500 sm:border-t-0 sm:border-l lg:px-6 lg:py-6">
