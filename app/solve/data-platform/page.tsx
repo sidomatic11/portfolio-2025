@@ -22,7 +22,7 @@ export default function Page() {
             from a user standpoint and the key requirements needed to achieve
             it.&quot;
           </p>
-          <p className="mt-0.5 text-base">– The Client</p>
+          <p className="mt-0.5 text-base">– The Client (paraphrased)</p>
         </div>
 
         <hr className="mx-auto my-8 max-w-xl" />
@@ -31,9 +31,7 @@ export default function Page() {
         <div className="mx-auto mb-2 max-w-xl sm:grid sm:grid-cols-3 sm:gap-8">
           <div className="max-w-xl">
             <p className="mb-1 text-base font-semibold">Client</p>
-            <p className="mb-6 text-base">
-              A data platform company (leaders in US Healthcare)
-            </p>
+            <p className="mb-6 text-base">US based Data Platform company</p>
           </div>
           <div className="max-w-xl">
             <p className="mb-1 text-base font-semibold">Company</p>
@@ -90,9 +88,13 @@ export default function Page() {
 
         {/* User Mindsets */}
         <div className="mx-auto mb-8 max-w-xl">
-          <h3 className="mb-4 text-xl font-semibold">
-            User Mindsets — our bespoke alternative to Personas
+          <h3 className="mb-4 text-2xl font-semibold">
+            To help them thoroughly understand their audience, we created User
+            Mindsets
           </h3>
+          <p className="mb-8 text-xl font-light">
+            ⭐️ Our bespoke alternative to Personas
+          </p>
           <p className="mb-4 text-base">
             Variety of developer roles, variety of responsibilities, no
             standardization... but common core operations.
@@ -103,7 +105,7 @@ export default function Page() {
             jobs, pain points and desires.
           </p>
         </div>
-        <div className="mb-12 w-full rounded-lg bg-gray-100 p-0.5 pb-4">
+        <div className="mb-16 w-full rounded-lg bg-gray-700 p-2 pb-4">
           <video
             src="/concentrix/is-mindsets.mp4"
             className="mb-2 w-full max-w-none rounded-lg"
@@ -111,32 +113,42 @@ export default function Page() {
             muted
             loop
           />
-          <p className="mx-auto max-w-xl text-sm text-gray-500">
+          <p className="mx-auto max-w-xl text-sm text-gray-100">
             User Mindsets and their mapping with the operations in the system.
           </p>
         </div>
 
         {/* Design Principles */}
         <div className="mx-auto mb-12 max-w-xl">
-          <h3 className="mb-4 text-xl font-semibold">Design Principles</h3>
+          <h3 className="mb-4 text-2xl font-semibold">
+            To facilitate cohesive UX design across the company, we defined
+            actionable Design Principles
+          </h3>
           <p className="mb-4 text-base">
             Qualities of the ideal user experience that are essential for it to
             work and are applicable across any facet of the product.
           </p>
         </div>
-        <div className="mb-12 w-full rounded-lg bg-gray-100 p-0.5">
+        <div className="mb-16 flex w-full max-w-full flex-col gap-2 rounded-lg bg-gray-700 p-2 md:flex-row">
           <img
-            src="/concentrix/is-principles.jpg"
-            alt="Design Principles"
-            className="w-full max-w-none rounded-lg"
+            src="/data-platform/principles-1.png"
+            alt="Design Principles 1"
+            className="w-full max-w-full min-w-0 flex-1 rounded-lg object-contain md:w-auto"
+          />
+          <img
+            src="/data-platform/principles-2.png"
+            alt="Design Principles 2"
+            className="w-full max-w-full min-w-0 flex-1 rounded-lg object-contain md:w-auto"
           />
         </div>
 
         {/* Northstar prototype */}
-        <h2 className="mx-auto mb-8 max-w-xl text-xl font-semibold">
-          Mid-fi prototype of the northstar product vision
+        <h2 className="mx-auto mb-8 max-w-xl text-2xl font-semibold">
+          Designed the mid-fi prototype + walkthrough video to illustrate the
+          product experience.
         </h2>
-        <div className="mb-12 w-full rounded-lg">
+
+        <div className="mb-4 w-full rounded-lg">
           <img
             src="/concentrix/is-prototype.png"
             alt="Mid-fi prototype"
@@ -144,6 +156,16 @@ export default function Page() {
           />
         </div>
 
+        <p className="mx-auto mb-2 text-sm">
+          Screenshots of the walkthrough video:
+        </p>
+        <div className="mb-16 w-full rounded-lg">
+          <img
+            src="/data-platform/walkthrough-stills.png"
+            alt="Walkthrough stills"
+            className="w-full max-w-none rounded-lg"
+          />
+        </div>
         {/* Testimonial */}
         <div className="relative mx-auto mb-12 max-w-xl">
           <div className="absolute -top-2 -left-2 font-serif text-6xl text-gray-300">
