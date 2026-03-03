@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
@@ -68,6 +69,10 @@ export default function RootLayout({
         </div>
         <Footer />
         <Analytics />
+        <Script
+          src="https://t.contentsquare.net/uxa/d3dacc29166cc.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
