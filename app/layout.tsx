@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   publisher: "Siddhant V Patil",
   robots: "index, follow",
   openGraph: {
-    title: "Siddhant V Patil - Product Designer • Creative Technologist",
+    title: "Siddhant V Patil - Product Design • Strategy • Code",
     description:
       "Specializing in early-stage innovation and complex problem spaces. 6 years across design & tech",
     url: "https://www.siddhantpatil.com",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         url: "https://www.siddhantpatil.com/preview-image.png",
         width: 1200,
         height: 630,
-        alt: "Siddhant V Patil - Product Designer • Creative Technologist",
+        alt: "Siddhant V Patil - Product Design • Strategy • Code",
       },
     ],
     locale: "en_US",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Siddhant V Patil - Product Designer • Creative Technologist",
+    title: "Siddhant V Patil - Product Design • Strategy • Code",
     description:
       "Specializing in early-stage innovation and complex problem spaces. 6 years across design & tech",
     images: ["https://www.siddhantpatil.com/preview-image.png"],
