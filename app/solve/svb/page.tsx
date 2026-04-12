@@ -191,7 +191,7 @@ export default function SVB() {
           </ul>
         </div>
 
-        <div className="mx-auto max-w-xl">
+        {/* <div className="mx-auto max-w-xl">
           <h2 className="mb-3 text-xl font-semibold">Further improvements</h2>
           <ul className="mb-8 list-none pl-0 text-base">
             <li className="mb-3 flex items-baseline gap-2">
@@ -203,7 +203,7 @@ export default function SVB() {
               <span>Accuracy of implementation</span>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         <hr className="mx-auto my-12 max-w-xl" />
 
