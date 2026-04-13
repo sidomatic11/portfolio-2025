@@ -170,7 +170,7 @@ function HomeContent() {
             </div>
           </ProjectCard> */}
 
-          <ProjectCard
+          {/* <ProjectCard
             link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0"
             newTab={true}
           >
@@ -248,7 +248,7 @@ function HomeContent() {
                 />
               </div>
             </div>
-          </ProjectCard>
+          </ProjectCard> */}
         </section>
 
         {/* EXPLORE SECTION */}
