@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="border-border-level-1 -mt-px flex h-14 w-full items-center overflow-hidden border">
           <a
             href={`mailto:${email}`}
-            className="flex h-full flex-1 items-center bg-slate-800 px-4 font-light text-white transition-all hover:bg-slate-700/40 hover:font-medium"
+            className="flex h-full flex-1 items-center bg-slate-800 px-4 font-light text-white transition-all hover:bg-slate-700 hover:font-medium"
           >
             {copySuccess ? "Copied!" : email}
           </a>
