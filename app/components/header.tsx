@@ -3,53 +3,80 @@ import Image from "next/image";
 // import ExploreSwitch from "./ExploreSwitch";
 import { ArrowLeft } from "iconoir-react";
 
-export default function Header({ isProjectHeader }: { isProjectHeader?: boolean }) {
+export default function Header({
+  isProjectHeader,
+}: {
+  isProjectHeader?: boolean;
+}) {
+  return (
+    <header className="bg-background-level-1 border-border-level-1 fixed right-0 bottom-0 left-0 z-50 flex h-16 w-full items-center justify-between border-y sm:top-0">
+      <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-between lg:w-[calc(100%-4rem)]">
+        <div className="border-border-level-1 bg-background-level-1 flex h-full w-16 flex-shrink-0 items-center justify-center border-r lg:border-x">
+          <Link
+            href={isProjectHeader ? "/#work" : "/#home"}
+            title={isProjectHeader ? "Back" : "Home"}
+            className="flex h-full w-full items-center justify-center"
+          >
+            {isProjectHeader ? (
+              <ArrowLeft className="h-6 w-6" />
+            ) : (
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={32}
+                height={32}
+                className="h-8 w-8"
+              />
+            )}
+          </Link>
+        </div>
 
-	return (
-		<header className="w-full flex items-center justify-between h-16 bg-white fixed bottom-0 left-0 right-0 z-50 border-y border-gray-900 sm:top-0 ">
-
-			<div className="w-full max-w-5xl mx-auto lg:w-[calc(100%-4rem)] h-full flex items-center justify-between">
-				<div className="border-r lg:border-x border-gray-900 h-full w-16 flex items-center justify-center flex-shrink-0">
-					<Link
-						href={isProjectHeader ? "/#work" : "/#home"}
-						title={isProjectHeader ? "Back" : "Home"}
-						className="h-full w-full flex items-center justify-center hover:bg-gray-200"
-					>
-						{isProjectHeader ? (
-							<ArrowLeft className="w-6 h-6" />
-						) : (
-							<Image src="/logo.svg" alt="Logo" width={32} height={32} className="w-8 h-8" />
-						)}
-					</Link>
-				</div>
-
-				{/* {toggleExploreSolve && (
+        {/* {toggleExploreSolve && (
 					<div className="flex-1 min-w-0 flex justify-center items-center h-full">
 						<ExploreSwitch isExploreVisible={isExploreVisible || false} onClick={toggleExploreSolve} />
 					</div>
 				)} */}
 
-				{!isProjectHeader && (
-					<div className="flex items-center h-full w-full sm:w-auto">
-						<div className="sm:border-l border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
-							<Link href="/#work" title="Work" className="h-full w-full flex items-center justify-center px-4 sm:px-6">work</Link>
-						</div>
+        {!isProjectHeader && (
+          <div className="flex h-full w-full items-center sm:w-auto">
+            <div className="border-border-level-1 bg-background-level-1 flex h-full flex-1 flex-shrink-0 items-center justify-center sm:w-fit sm:flex-none sm:border-l">
+              <Link
+                href="/#work"
+                title="Work"
+                className="flex h-full w-full items-center justify-center px-4 sm:px-6"
+              >
+                work
+              </Link>
+            </div>
 
-						{/* <div className="border-l border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
+            {/* <div className="border-border-level-1 bg-background-level-1 border-l h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0">
 							<Link href="/#explore" title="Explore" className="h-full w-full flex items-center justify-center px-4 sm:px-6">explore</Link>
 						</div> */}
 
-						<div className="border-l border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
-							<Link href="/#about" title="About" className="h-full w-full flex items-center justify-center px-4 sm:px-6">about</Link>
-						</div>
+            <div className="border-border-level-1 bg-background-level-1 flex h-full flex-1 flex-shrink-0 items-center justify-center border-l sm:w-fit sm:flex-none">
+              <Link
+                href="/#about"
+                title="About"
+                className="flex h-full w-full items-center justify-center px-4 sm:px-6"
+              >
+                about
+              </Link>
+            </div>
 
-						<div className="border-l lg:border-x border-gray-900 h-full flex-1 sm:w-fit sm:flex-none flex items-center justify-center flex-shrink-0 hover:bg-gray-200">
-							<Link href="https://drive.google.com/file/d/1LTnv9bKLkjsilegSi3ngFTEiwMaeAWn-/view" target="_blank" rel="noopener noreferrer" title="CV" className="h-full w-full flex items-center justify-center px-4 sm:px-6">cv</Link>
-						</div>
-					</div>
-				)}
-			</div>
-
-		</header>
-	);
+            <div className="border-border-level-1 bg-background-level-1 flex h-full flex-1 flex-shrink-0 items-center justify-center border-l sm:w-fit sm:flex-none lg:border-x">
+              <Link
+                href="https://drive.google.com/file/d/1LTnv9bKLkjsilegSi3ngFTEiwMaeAWn-/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="CV"
+                className="flex h-full w-full items-center justify-center px-4 sm:px-6"
+              >
+                cv
+              </Link>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
 }

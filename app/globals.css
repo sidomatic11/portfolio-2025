@@ -3,15 +3,31 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --brand-orange: #FFA348;
-  --brand-yellow: #FFDA46;
+  --brand-white: #F8FAFC;
+  --brand-orange: #F7A347;
+  --brand-yellow: #FBDA47;
+  --background-level-0: #E2E8F0;
+  --background-level-1: #F8FAFC;
+  --border-level-0: #B3BDCC;
+  --border-level-1: #64758B;
+  --text-dark: #0F172A;
+  --text-base: #1E293B;
+  --text-light: #F1F5F9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-white: var(--brand-white);
   --color-brand-orange: var(--brand-orange);
   --color-brand-yellow: var(--brand-yellow);
+  --color-background-level-0: var(--background-level-0);
+  --color-background-level-1: var(--background-level-1);
+  --color-border-level-0: var(--border-level-0);
+  --color-border-level-1: var(--border-level-1);
+  --color-text-dark: var(--text-dark);
+  --color-text-base: var(--text-base);
+  --color-text-light: var(--text-light);
 }
 
 /* Dark mode disabled
@@ -28,9 +44,13 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: var(--background-level-0);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+.font-eb-garamond {
+  font-family: var(--font-eb-garamond), "EB Garamond", Garamond, serif;
 }
 
 hr {

@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter } from "next/font/google";
+import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  variable: "--font-eb-garamond",
+});
 
 export const metadata: Metadata = {
   title: "Siddhant V Patil",
@@ -60,13 +68,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dot-grid w-full overflow-x-hidden`}>
+      <body
+        className={`${inter.className} ${inter.variable} ${ebGaramond.variable} w-full overflow-x-hidden`}
+      >
         <div
           id="home"
-          className="relative mx-auto min-h-screen max-w-5xl px-8 pb-32 text-gray-700 sm:pt-16 lg:w-[calc(100%-4rem)] lg:px-0"
+          className="relative mx-auto min-h-screen max-w-5xl px-8 text-gray-700 sm:pt-16 lg:w-[calc(100%-4rem)] lg:px-0"
         >
           {children}
         </div>
+
+        <svg className="hidden">
+          <filter id="noiseFilter">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.45"
+              numOctaves="2"
+              stitchTiles="stitch"
+            />
+          </filter>
+        </svg>
         <Footer />
         <Analytics />
         <Script

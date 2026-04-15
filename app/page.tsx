@@ -2,12 +2,11 @@
 
 import Image from "next/image";
 import Header from "./components/header";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import ProjectCard from "./components/project-card";
 import WorkProjectCard from "./components/work-project-card";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import { OpenNewWindow } from "iconoir-react";
 import HeroCanvas from "./components/HeroCanvas";
 import Link from "next/link";
 
@@ -16,24 +15,24 @@ import Link from "next/link";
 // Client component that uses useSearchParams
 function HomeContent() {
   // const [isExploreVisible, setIsExploreVisible] = useState(defaultIsExploreVisible);
-  const [showNDAProjects] = useState(false);
+  // const [showNDAProjects] = useState(false);
   // const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
 
-  // Use useEffect to safely handle localStorage and sessionStorage after component mounts
-  useEffect(() => {
-    // const storedValue = localStorage.getItem('isExploreVisible');
-    // if (storedValue) {
-    // 	setIsExploreVisible(storedValue === 'true');
-    // }
-    // Show animated spans after mount
-    // setShowAnimatedSpans(true);
-    // Handle NDA projects visibility
-    // if (searchParams.get('password') === 'CreativeLab' && !sessionStorage.getItem('showNDAProjects')) {
-    // 	sessionStorage.setItem('showNDAProjects', 'true');
-    // }
-    // setShowNDAProjects(sessionStorage.getItem('showNDAProjects') === 'true');
-  }, [searchParams]);
+  // // Use useEffect to safely handle localStorage and sessionStorage after component mounts
+  // useEffect(() => {
+  //   // const storedValue = localStorage.getItem('isExploreVisible');
+  //   // if (storedValue) {
+  //   // 	setIsExploreVisible(storedValue === 'true');
+  //   // }
+  //   // Show animated spans after mount
+  //   // setShowAnimatedSpans(true);
+  //   // Handle NDA projects visibility
+  //   // if (searchParams.get('password') === 'CreativeLab' && !sessionStorage.getItem('showNDAProjects')) {
+  //   // 	sessionStorage.setItem('showNDAProjects', 'true');
+  //   // }
+  //   // setShowNDAProjects(sessionStorage.getItem('showNDAProjects') === 'true');
+  // }, [searchParams]);
 
   // const toggleExploreSolve = () => {
   // 	setIsExploreVisible(!isExploreVisible);
@@ -48,21 +47,29 @@ function HomeContent() {
   return (
     <div className="w-full">
       <Header />
-      <main className="w-full">
+      <main
+        className="relative w-full sm:pt-16"
+        style={{
+          boxShadow:
+            "inset 1px 0 0 0 var(--border-level-0), inset -1px 0 0 0 var(--border-level-0)",
+        }}
+      >
+        <div className="border-border-level-0 absolute top-0 left-0 z-[-1] h-full w-1/2 border-r"></div>
+
         {/* HERO SECTION */}
         {/* padding bottom extra on small devices to accomodate for the image size */}
-        <div className="hero-section relative min-h-[calc(100svh-4rem)] w-full pt-12 pb-48 sm:min-h-auto sm:pt-20 sm:pb-28">
+        <div className="hero-section relative mb-40 min-h-[calc(100svh-4rem)] w-full pt-12 pb-48 sm:min-h-auto sm:pt-20 sm:pb-28">
           <HeroCanvas />
 
-          <div className="w-full">
-            <div className="w-fit border border-gray-900 bg-white px-6 py-6 shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
+          <div className="relative w-full">
+            <div className="border-border-level-1 w-fit border bg-white px-6 py-6 shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
               <p className="text-3xl leading-normal font-light text-gray-700 sm:text-4xl">
                 I shape <span className="font-bold">ambitious ideas</span> into{" "}
                 <span className="italic">meaningful software</span>.
               </p>
             </div>
 
-            <div className="relative mt-16 w-fit overflow-hidden border border-gray-900 bg-white pb-8 shadow-[8px_8px_0_0_var(--color-gray-300)]">
+            <div className="border-border-level-1 relative mt-16 w-fit overflow-hidden border bg-white pb-8 shadow-[8px_8px_0_0_var(--color-gray-300)]">
               <div className="w-full px-6 py-4">
                 <p className="mb-1 text-lg leading-normal font-light md:text-2xl">
                   Siddhant V Patil
@@ -73,7 +80,7 @@ function HomeContent() {
                   <span className="font-light">code</span>
                 </p>
               </div>
-              <div className="marquee-container absolute bottom-0 left-0 flex h-8 w-full items-center overflow-hidden border-t border-gray-900">
+              <div className="marquee-container border-border-level-1 absolute bottom-0 left-0 flex h-8 w-full items-center overflow-hidden border-t">
                 <div className="marquee">
                   <span className="marquee-content text-xs tracking-widest text-gray-500 uppercase md:text-sm">
                     6 years in design & tech &nbsp;•&nbsp; open to work
@@ -88,29 +95,34 @@ function HomeContent() {
             </div>
           </div>
 
-          <div className="absolute right-0 bottom-0 scale-x-[-1] transform sm:block">
+          <div className="border-border-level-0 absolute right-0 bottom-12 border sm:bottom-[-60px] sm:block">
             <Image
-              src="/profile-opaque.webp"
+              src="/profile-26.png"
               alt="Profile photo of Siddhant"
               width={284}
               height={284}
-              className="h-42 w-42 sm:h-48 sm:w-48 md:h-56 md:w-56 lg:h-72 lg:w-72"
+              className="h-auto w-42 sm:w-48 md:w-56 lg:w-72"
               draggable={false}
             />
           </div>
+          <div className="border-border-level-0 absolute right-0 bottom-[-60px] h-[60px] w-2/3 border-b border-l"></div>
         </div>
 
         {/* WORK SECTION */}
 
-        <div className="full-width-borders relative mb-16 w-full border-x border-gray-900 bg-white px-6 py-4">
-          <p className="text-3xl font-light">work</p>
-          <div
-            id="work"
-            className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
-          ></div>
+        <div className="relative mb-24 h-16 w-full">
+          <div className="bg-background-level-1 border-border-level-0 absolute top-0 left-0 w-full border px-8 py-6 sm:left-[-32px] sm:w-2/3">
+            <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
+              featured work
+            </p>
+            <div
+              id="work"
+              className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
+            ></div>
+          </div>
         </div>
 
-        <section className="mb-16 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
+        <section className="mb-48 grid grid-cols-1 items-center gap-[48px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
           <WorkProjectCard
             link="/solve/svb"
             category="product design"
@@ -141,11 +153,11 @@ function HomeContent() {
             tags={["Proof-of-Concept", "UI frontend", "Cursor AI", "2024"]}
           />
 
-          {showNDAProjects && (
+          {/* {showNDAProjects && (
             <ProjectCard link="/solve/ihh-poc">
               <p>NFT based loyalty program: Concept & Communication</p>
             </ProjectCard>
-          )}
+          )} */}
 
           {/* <ProjectCard link="/solve/svb">
 						<div className="flex flex-col gap-4 h-full">
@@ -253,14 +265,19 @@ function HomeContent() {
 
         {/* EXPLORE SECTION */}
 
-        <div
-          id="explore"
-          className="mb-16 w-fit border border-gray-900 bg-white px-6 py-4"
-        >
-          <p className="text-2xl font-light">creative explorations</p>
+        <div className="relative mb-24 h-16 w-full">
+          <div className="bg-background-level-1 border-border-level-0 absolute top-0 left-0 w-full border px-8 py-6 sm:left-[-32px] sm:w-2/3">
+            <p className="font-eb-garamond text-text-dark text-2xl font-bold lowercase italic sm:text-3xl">
+              creative explorations
+            </p>
+            <div
+              id="explore"
+              className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
+            ></div>
+          </div>
         </div>
 
-        <section className="mb-32 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
+        <section className="mb-48 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
           {/* <ProjectCard link="/explore/voice-typing">
 						<div className="flex flex-col h-full">
 							<div className="w-full">
@@ -430,42 +447,30 @@ function HomeContent() {
         </section>
 
         {/* ABOUT SECTION */}
-        <div className="full-width-borders relative mb-16 w-full border-x border-gray-900 bg-white px-6 py-4">
-          <p className="text-3xl font-light">about</p>
-          <div
-            id="about"
-            className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
-          ></div>
+        <div className="relative mb-24 h-16 w-full">
+          <div className="bg-background-level-1 border-border-level-0 absolute top-0 left-0 w-full border px-8 py-6 sm:left-[-32px] sm:w-2/3">
+            <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
+              about
+            </p>
+            <div
+              id="about"
+              className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
+            ></div>
+          </div>
         </div>
 
         <div className="w-full">
-          {/* Intro Section */}
-          {/* <div className="w-full mt-24 mb-32 font-light">
-						<div className="flex flex-col items-start">
-							<div className="w-full rounded-md mb-8 overflow-hidden" >
-								<img src="/about/siddhant.jpg" alt="Siddhant Patil" className="w-full h-full object-contain object-bottom border-1 border-gray-200 rounded-md" />
-							</div>
-							<p className="text-lg md:text-xl leading-relaxed text-gray-700">
-								Hey! This is Siddhant, your friendly neighborhood creative technologist :)
-							</p>
-						</div>
-
-						<p className="mt-4 text-lg md:text-xl leading-relaxed text-gray-700">
-							I am in an exploratory phase in my career, looking to leverage the various skills acquired so far — across UX design, technology and art — onto new innovative frontiers.
-						</p>
-					</div> */}
-
           {/* Background Section */}
           <section className="mb-16 md:mb-24">
             {/* <h2 className="w-full text-2xl md:text-3xl font-bold mb-12">
 							My background
 						</h2> */}
 
-            <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+            <div className="grid w-full grid-cols-1 gap-8 md:grid-cols-3 md:gap-0">
               {/* Design Card */}
-              <div className="">
-                <h3 className="mb-2 text-2xl font-light">Design</h3>
-                <div className="relative mb-4 aspect-square overflow-hidden">
+              <div className="bg-background-level-0 border-border-level-0 border px-6 pt-4 pb-8">
+                <h3 className="mb-4 text-xl font-bold">Design</h3>
+                <div className="border-border-level-1 relative mb-4 aspect-square overflow-hidden">
                   <video
                     src="/about/design.mp4"
                     autoPlay
@@ -492,8 +497,8 @@ function HomeContent() {
               </div>
 
               {/* Technology Card */}
-              <div className="">
-                <h3 className="mb-2 text-2xl font-light">Technology</h3>
+              <div className="bg-background-level-0 border-border-level-0 border px-6 pt-4 pb-8 md:border-l-0">
+                <h3 className="mb-4 text-xl font-bold">Technology</h3>
                 <div className="relative mb-4 aspect-square overflow-hidden">
                   <video
                     src="/about/tech.mp4"
@@ -521,8 +526,8 @@ function HomeContent() {
               </div>
 
               {/* Art Card */}
-              <div className="">
-                <h3 className="mb-2 text-2xl font-light">Art</h3>
+              <div className="bg-background-level-0 border-border-level-0 border px-6 pt-4 pb-8 md:border-l-0">
+                <h3 className="mb-4 text-xl font-bold">Art</h3>
                 <div className="relative mb-4 aspect-square overflow-hidden">
                   <video
                     src="/about/art.mp4"
@@ -547,12 +552,12 @@ function HomeContent() {
           </section>
 
           {/* Interests Section */}
-          <section className="w-full">
-            <div className="mb-12 w-fit border border-gray-900 bg-white px-6 py-4 text-2xl font-light">
+          <section className="w-full pb-32">
+            <div className="bg-background-level-0 border-border-level-0 w-full border px-6 py-8 text-2xl font-light">
               I love working on...
             </div>
-            <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-              <li className="flex items-start gap-4">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-01.svg"
@@ -572,7 +577,7 @@ function HomeContent() {
                   </p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 sm:border-l-0">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-02.svg"
@@ -591,7 +596,7 @@ function HomeContent() {
                   </p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 md:border-l-0">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-03.svg"
@@ -609,7 +614,7 @@ function HomeContent() {
                   </p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 sm:border-l-0 md:border-l-1">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-04.svg"
@@ -626,7 +631,7 @@ function HomeContent() {
                   </p>
                 </div>
               </li>
-              <li className="flex items-start gap-4">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 md:border-l-0">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-05.svg"
