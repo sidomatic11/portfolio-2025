@@ -387,7 +387,7 @@ function HomeContent() {
                 : undefined
             }
           >
-            <p className="font-eb-garamond text-text-dark text-2xl font-bold lowercase italic sm:text-3xl">
+            <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
               creative explorations
             </p>
             <div
