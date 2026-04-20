@@ -6,11 +6,30 @@ import Header from "./components/header";
 import ProjectCard from "./components/project-card";
 import WorkProjectCard from "./components/work-project-card";
 // import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { Suspense, useEffect, useState } from "react";
 import HeroCanvas from "./components/HeroCanvas";
 import Link from "next/link";
 
 // const defaultIsExploreVisible = false;
+
+function useSmUp() {
+  const [smUp, setSmUp] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 640px)");
+
+    const onChange = (event: MediaQueryListEvent) => {
+      setSmUp(event.matches);
+    };
+
+    setSmUp(mediaQuery.matches);
+    mediaQuery.addEventListener("change", onChange);
+    return () => mediaQuery.removeEventListener("change", onChange);
+  }, []);
+
+  return smUp;
+}
 
 // Client component that uses useSearchParams
 function HomeContent() {
@@ -18,6 +37,31 @@ function HomeContent() {
   // const [showNDAProjects] = useState(false);
   // const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
   // const searchParams = useSearchParams();
+  const shouldReduceMotion = useReducedMotion();
+  const smUp = useSmUp();
+  const shouldAnimateHeaderLeftSlide = smUp && !shouldReduceMotion;
+  const headerLeft = smUp && shouldReduceMotion ? -32 : 0;
+  const shouldAnimateWorkCardReveal = !shouldReduceMotion;
+  const shouldAnimateSectionReveal = !shouldReduceMotion;
+
+  const workItemVariants = {
+    hidden: { opacity: 0, y: 10 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { delay: 0.15, duration: 0.9, ease: [0.22, 1, 0.36, 1] },
+    },
+  };
+
+  const sectionRevealVariants = {
+    hidden: { opacity: 0, y: 14, scale: 0.99 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
 
   // // Use useEffect to safely handle localStorage and sessionStorage after component mounts
   // useEffect(() => {
@@ -111,7 +155,24 @@ function HomeContent() {
         {/* WORK SECTION */}
 
         <div className="relative mb-24 h-16 w-full">
-          <div className="bg-background-level-1 border-border-level-0 absolute top-0 left-0 w-full border px-8 py-6 sm:left-[-32px] sm:w-2/3">
+          <motion.div
+            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
+            style={{ left: headerLeft }}
+            initial={shouldAnimateHeaderLeftSlide ? { left: 0 } : false}
+            whileInView={
+              shouldAnimateHeaderLeftSlide ? { left: -32 } : undefined
+            }
+            viewport={
+              shouldAnimateHeaderLeftSlide
+                ? { once: true, amount: 0.6 }
+                : undefined
+            }
+            transition={
+              shouldAnimateHeaderLeftSlide
+                ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+                : undefined
+            }
+          >
             <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
               featured work
             </p>
@@ -119,39 +180,81 @@ function HomeContent() {
               id="work"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </div>
+          </motion.div>
         </div>
 
         <section className="mb-48 grid grid-cols-1 items-center gap-[48px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
-          <WorkProjectCard
-            link="/solve/svb"
-            category="product design"
-            title="API Developer Portal Redesign for SVB"
-            imageSrc="/thumbnails/svb.webp"
-            imageAlt="Silicon Valley Bank"
-            description="Transformed a dated, support-dependent portal into a fully self-service platform"
-            tags={["Team Lead", "Design Sprints", "UX", "2022"]}
-          />
+          <motion.div
+            className="col-span-1 h-full sm:col-span-2 lg:col-span-3"
+            variants={
+              shouldAnimateWorkCardReveal ? workItemVariants : undefined
+            }
+            initial={shouldAnimateWorkCardReveal ? "hidden" : false}
+            whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
+            viewport={
+              shouldAnimateWorkCardReveal
+                ? { once: true, amount: 0.3 }
+                : undefined
+            }
+          >
+            <WorkProjectCard
+              link="/solve/svb"
+              category="product design"
+              title="API Developer Portal Redesign for SVB"
+              imageSrc="/thumbnails/svb.webp"
+              imageAlt="Silicon Valley Bank"
+              description="Transformed a dated, support-dependent portal into a fully self-service platform"
+              tags={["Team Lead", "Design Sprints", "UX", "2022"]}
+            />
+          </motion.div>
 
-          <WorkProjectCard
-            link="/solve/data-platform"
-            category="strategy"
-            title="Data Fabric Platform Vision"
-            imageSrc="/thumbnails/iris.webp"
-            imageAlt="Data Fabric Platform Vision"
-            description="Crafted a user-centered product vision for a complex data-fabric platform"
-            tags={["Product Concept", "Research", "User Mindsets", "2021"]}
-          />
+          <motion.div
+            className="col-span-1 h-full sm:col-span-2 lg:col-span-3"
+            variants={
+              shouldAnimateWorkCardReveal ? workItemVariants : undefined
+            }
+            initial={shouldAnimateWorkCardReveal ? "hidden" : false}
+            whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
+            viewport={
+              shouldAnimateWorkCardReveal
+                ? { once: true, amount: 0.3 }
+                : undefined
+            }
+          >
+            <WorkProjectCard
+              link="/solve/data-platform"
+              category="strategy"
+              title="Data Fabric Platform Vision"
+              imageSrc="/thumbnails/iris.webp"
+              imageAlt="Data Fabric Platform Vision"
+              description="Crafted a user-centered product vision for a complex data-fabric platform"
+              tags={["Product Concept", "Research", "User Mindsets", "2021"]}
+            />
+          </motion.div>
 
-          <WorkProjectCard
-            link="/solve/ihh-poc"
-            category="code"
-            title="Patient Monitoring System for IHH Malaysia"
-            imageSrc="/thumbnails/image.webp"
-            imageAlt="IHH POC"
-            description="Unified chaotic ICU device data into a single nurse-friendly interface"
-            tags={["Proof-of-Concept", "UI frontend", "Cursor AI", "2024"]}
-          />
+          <motion.div
+            className="col-span-1 h-full sm:col-span-2 lg:col-span-3"
+            variants={
+              shouldAnimateWorkCardReveal ? workItemVariants : undefined
+            }
+            initial={shouldAnimateWorkCardReveal ? "hidden" : false}
+            whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
+            viewport={
+              shouldAnimateWorkCardReveal
+                ? { once: true, amount: 0.3 }
+                : undefined
+            }
+          >
+            <WorkProjectCard
+              link="/solve/ihh-poc"
+              category="code"
+              title="Patient Monitoring System for IHH Malaysia"
+              imageSrc="/thumbnails/image.webp"
+              imageAlt="IHH POC"
+              description="Unified chaotic ICU device data into a single nurse-friendly interface"
+              tags={["Proof-of-Concept", "UI frontend", "Cursor AI", "2024"]}
+            />
+          </motion.div>
 
           {/* {showNDAProjects && (
             <ProjectCard link="/solve/ihh-poc">
@@ -266,7 +369,24 @@ function HomeContent() {
         {/* EXPLORE SECTION */}
 
         <div className="relative mb-24 h-16 w-full">
-          <div className="bg-background-level-1 border-border-level-0 absolute top-0 left-0 w-full border px-8 py-6 sm:left-[-32px] sm:w-2/3">
+          <motion.div
+            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
+            style={{ left: headerLeft }}
+            initial={shouldAnimateHeaderLeftSlide ? { left: 0 } : false}
+            whileInView={
+              shouldAnimateHeaderLeftSlide ? { left: -32 } : undefined
+            }
+            viewport={
+              shouldAnimateHeaderLeftSlide
+                ? { once: true, amount: 0.6 }
+                : undefined
+            }
+            transition={
+              shouldAnimateHeaderLeftSlide
+                ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+                : undefined
+            }
+          >
             <p className="font-eb-garamond text-text-dark text-2xl font-bold lowercase italic sm:text-3xl">
               creative explorations
             </p>
@@ -274,10 +394,22 @@ function HomeContent() {
               id="explore"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </div>
+          </motion.div>
         </div>
 
-        <section className="mb-48 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
+        <motion.section
+          className="mb-48 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3"
+          variants={
+            shouldAnimateSectionReveal ? sectionRevealVariants : undefined
+          }
+          initial={shouldAnimateSectionReveal ? "hidden" : false}
+          whileInView={shouldAnimateSectionReveal ? "show" : undefined}
+          viewport={
+            shouldAnimateSectionReveal
+              ? { once: true, amount: 0.15 }
+              : undefined
+          }
+        >
           {/* <ProjectCard link="/explore/voice-typing">
 						<div className="flex flex-col h-full">
 							<div className="w-full">
@@ -444,11 +576,28 @@ function HomeContent() {
               mediapipe + three.js
             </span>
           </Link>
-        </section>
+        </motion.section>
 
         {/* ABOUT SECTION */}
         <div className="relative mb-24 h-16 w-full">
-          <div className="bg-background-level-1 border-border-level-0 absolute top-0 left-0 w-full border px-8 py-6 sm:left-[-32px] sm:w-2/3">
+          <motion.div
+            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
+            style={{ left: headerLeft }}
+            initial={shouldAnimateHeaderLeftSlide ? { left: 0 } : false}
+            whileInView={
+              shouldAnimateHeaderLeftSlide ? { left: -32 } : undefined
+            }
+            viewport={
+              shouldAnimateHeaderLeftSlide
+                ? { once: true, amount: 0.6 }
+                : undefined
+            }
+            transition={
+              shouldAnimateHeaderLeftSlide
+                ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+                : undefined
+            }
+          >
             <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
               about
             </p>
@@ -456,10 +605,22 @@ function HomeContent() {
               id="about"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="w-full">
+        <motion.div
+          className="w-full"
+          variants={
+            shouldAnimateSectionReveal ? sectionRevealVariants : undefined
+          }
+          initial={shouldAnimateSectionReveal ? "hidden" : false}
+          whileInView={shouldAnimateSectionReveal ? "show" : undefined}
+          viewport={
+            shouldAnimateSectionReveal
+              ? { once: true, amount: 0.15 }
+              : undefined
+          }
+        >
           {/* Background Section */}
           <section className="mb-16 md:mb-24">
             {/* <h2 className="w-full text-2xl md:text-3xl font-bold mb-12">
@@ -648,7 +809,7 @@ function HomeContent() {
               </li>
             </ul>
           </section>
-        </div>
+        </motion.div>
       </main>
 
       {/* <div className="absolute bottom-[-1px] left-0 w-full h-full z-[-1]">

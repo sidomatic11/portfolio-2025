@@ -26,7 +26,7 @@ export default function WorkProjectCard({
   tags,
 }: WorkProjectCardProps) {
   return (
-    <Link href={link} className="col-span-1 h-full sm:col-span-2 lg:col-span-3">
+    <Link href={link} className="h-full">
       <div className="group bg-background-level-1 border-border-level-1 relative flex flex-col border p-[1px] hover:border-amber-500 sm:flex-row">
         {/* Image Section */}
         <div className="relative min-w-2/5 p-8 sm:min-w-1/2 sm:p-12 lg:min-w-2/5">
