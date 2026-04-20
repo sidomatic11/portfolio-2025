@@ -20,13 +20,15 @@ export default function Header({
             {isProjectHeader ? (
               <ArrowLeft className="h-6 w-6" />
             ) : (
-              <Image
-                src="/logo.svg"
-                alt="Logo"
-                width={32}
-                height={32}
-                className="h-8 w-8"
-              />
+              <div data-header-logo>
+                <Image
+                  src="/logo.svg"
+                  alt="Logo"
+                  width={32}
+                  height={32}
+                  className="h-8 w-8"
+                />
+              </div>
             )}
           </Link>
         </div>
