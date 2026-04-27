@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^3.0.64",
+    "@ai-sdk/react": "^3.0.170",
     "@types/three": "^0.180.0",
     "@vercel/analytics": "^1.5.0",
+    "ai": "^6.0.168",
     "framer-motion": "^12.5.0",
     "iconoir-react": "^7.10.1",
     "next": "15.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "three": "^0.180.0"
+    "three": "^0.180.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

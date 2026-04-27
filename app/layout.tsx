@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import { Analytics } from "@vercel/analytics/next";
+import AiAssistant from "./components/AiAssistant";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -90,6 +91,7 @@ export default function RootLayout({
             />
           </filter>
         </svg>
+        <AiAssistant />
         <Footer />
         <Analytics />
         <Script
