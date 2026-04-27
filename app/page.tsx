@@ -202,6 +202,7 @@ function HomeContent() {
               category="product design"
               title="API Developer Portal Redesign for SVB"
               imageSrc="/thumbnails/svb.webp"
+              hoverImageSrc="/thumbnails/svb-hover.webp"
               imageAlt="Silicon Valley Bank"
               description="Transformed a dated, support-dependent portal into a fully self-service platform"
               tags={["Team Lead", "Design Sprints", "UX", "2022"]}
@@ -227,6 +228,7 @@ function HomeContent() {
               title="Data Fabric Platform Vision"
               imageSrc="/thumbnails/iris.webp"
               imageAlt="Data Fabric Platform Vision"
+              hoverImageSrc="/thumbnails/iris-hover.webp"
               description="Crafted a user-centered product vision for a complex data-fabric platform"
               tags={["Product Concept", "Research", "User Mindsets", "2021"]}
             />
@@ -251,6 +253,7 @@ function HomeContent() {
               title="Patient Monitoring System for IHH Malaysia"
               imageSrc="/thumbnails/image.webp"
               imageAlt="IHH POC"
+              hoverImageSrc="/thumbnails/ihh-hover.webp"
               description="Unified chaotic ICU device data into a single nurse-friendly interface"
               tags={["Proof-of-Concept", "UI frontend", "Cursor AI", "2024"]}
             />

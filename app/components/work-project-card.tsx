@@ -10,6 +10,7 @@ interface WorkProjectCardProps {
   link: string;
   title: string;
   imageSrc: string;
+  hoverImageSrc?: string;
   imageAlt: string;
   description: string;
   category: string;
@@ -21,6 +22,7 @@ export default function WorkProjectCard({
   category,
   title,
   imageSrc,
+  hoverImageSrc,
   imageAlt,
   description,
   tags,
@@ -31,12 +33,27 @@ export default function WorkProjectCard({
         {/* Image Section */}
         <div className="relative min-w-2/5 p-8 sm:min-w-1/2 sm:p-12 lg:min-w-2/5">
           <div className="relative z-1 aspect-[4/3] overflow-hidden rounded-lg">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              className="object-cover"
-            />
+            {/* Inner layer (revealed on hover) */}
+            {hoverImageSrc ? (
+              <Image
+                src={hoverImageSrc}
+                alt={imageAlt}
+                fill
+                className="object-cover"
+              />
+            ) : (
+              <div className="absolute inset-0 bg-black" />
+            )}
+
+            {/* Outer layer (appears on hover) */}
+            <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <Image
+                src={imageSrc}
+                alt={imageAlt}
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
           <div className="border-border-level-1 absolute top-[-1px] left-[-1px] z-0 h-[calc(50%)] w-[calc(50%+1px)] border-r sm:h-[calc(100%+2px)]"></div>
 
