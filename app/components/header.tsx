@@ -67,6 +67,17 @@ export default function Header({
 
             <div className="border-border-level-1 bg-background-level-1 flex h-full flex-1 flex-shrink-0 items-center justify-center border-l sm:w-fit sm:flex-none lg:border-x">
               <Link
+                href="/ai-projects"
+                title="AI projects"
+                className="flex h-full w-full items-center justify-center px-4 font-extrabold sm:px-6"
+              >
+                ai
+              </Link>
+            </div>
+
+            {/* CV — restore if needed
+            <div className="border-border-level-1 bg-background-level-1 flex h-full flex-1 flex-shrink-0 items-center justify-center border-l sm:w-fit sm:flex-none lg:border-x">
+              <Link
                 href="https://drive.google.com/file/d/1LTnv9bKLkjsilegSi3ngFTEiwMaeAWn-/view"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -76,6 +87,7 @@ export default function Header({
                 cv
               </Link>
             </div>
+            */}
           </div>
         )}
       </div>
