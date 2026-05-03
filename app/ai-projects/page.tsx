@@ -38,7 +38,7 @@ export default function AiProjects() {
             </p>
             <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-gray-300 bg-gray-100">
               <iframe
-                src="https://www.loom.com/embed/4f65e9b3a01f4d4db899f54d4f9702f3"
+                src="https://www.loom.com/embed/689f2e7f7b9e4b2cbd4145d60b33ef49"
                 title="Loom: Branching UX in AI chats"
                 className="absolute inset-0 h-full w-full"
                 allowFullScreen
@@ -47,7 +47,7 @@ export default function AiProjects() {
             </div>
             <p className="mt-2 text-sm text-gray-500">
               <a
-                href="https://www.loom.com/share/4f65e9b3a01f4d4db899f54d4f9702f3"
+                href="https://www.loom.com/share/689f2e7f7b9e4b2cbd4145d60b33ef49"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-gray-400 underline-offset-2 hover:text-gray-800"
@@ -85,7 +85,7 @@ export default function AiProjects() {
             </p>
             <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-gray-300 bg-gray-100">
               <iframe
-                src="https://www.loom.com/embed/4f65e9b3a01f4d4db899f54d4f9702f3"
+                src="https://www.loom.com/embed/689f2e7f7b9e4b2cbd4145d60b33ef49"
                 title="Loom video (placeholder)"
                 className="absolute inset-0 h-full w-full"
                 allowFullScreen
@@ -94,7 +94,7 @@ export default function AiProjects() {
             </div>
             <p className="mt-2 text-sm text-gray-500">
               <a
-                href="https://www.loom.com/share/4f65e9b3a01f4d4db899f54d4f9702f3"
+                href="https://www.loom.com/share/689f2e7f7b9e4b2cbd4145d60b33ef49"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline decoration-gray-400 underline-offset-2 hover:text-gray-800"
