@@ -12,7 +12,7 @@ export default function AiProjects() {
           <h2 className="mb-3 text-xl font-semibold">
             (re)Designing the Branching UX in AI Chats
           </h2>
-          <div className="mt-4 space-y-4 text-xl font-light text-gray-600">
+          <div className="mt-4 space-y-4 text-base leading-relaxed text-gray-700">
             <p>
               The primary goal of this project is to define a branching
               experience that can be incorporated by mainstream AI chats.
@@ -64,7 +64,7 @@ export default function AiProjects() {
           <h2 className="mb-3 text-xl font-semibold">
             Curated Portfolio (Generative UI)
           </h2>
-          <div className="mt-4 space-y-4 text-xl font-light text-gray-600">
+          <div className="mt-4 space-y-4 text-base leading-relaxed text-gray-700">
             <p>
               Exploring how I can make a dynamic portfolio experience, by
               leveraging generative UI.
