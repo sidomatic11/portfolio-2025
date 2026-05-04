@@ -10,6 +10,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Suspense, useEffect, useState } from "react";
 import HeroCanvas from "./components/HeroCanvas";
 import Link from "next/link";
+import { OpenNewWindow } from "iconoir-react";
 
 // const defaultIsExploreVisible = false;
 
@@ -288,7 +289,7 @@ function HomeContent() {
             </div>
           </ProjectCard> */}
 
-          {/* <ProjectCard
+          <ProjectCard
             link="https://like-period-e24.notion.site/XR-Multitasking-Design-Guide-7d7b5e393bd34aa6a81090839dd869c0"
             newTab={true}
           >
@@ -366,7 +367,7 @@ function HomeContent() {
                 />
               </div>
             </div>
-          </ProjectCard> */}
+          </ProjectCard>
         </section>
 
         {/* EXPLORE SECTION */}
