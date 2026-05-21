@@ -103,7 +103,7 @@ function HomeContent() {
 
         {/* HERO SECTION */}
         {/* padding bottom extra on small devices to accomodate for the image size */}
-        <div className="hero-section relative mb-40 min-h-[calc(100svh-4rem)] w-full pt-12 pb-48 sm:min-h-auto sm:pt-20 sm:pb-28">
+        <div className="hero-section relative mb-24 min-h-[calc(100svh-4rem)] w-full pt-12 pb-56 sm:min-h-[28rem] sm:pt-20 sm:pb-36">
           <HeroCanvas />
 
           <div className="relative w-full">
@@ -140,17 +140,16 @@ function HomeContent() {
             </div>
           </div>
 
-          <div className="border-border-level-0 absolute right-0 bottom-12 border sm:bottom-[-60px] sm:block">
+          <div className="absolute right-0 bottom-px sm:block">
             <Image
-              src="/profile-26.png"
+              src="/profile-opaque.webp"
               alt="Profile photo of Siddhant"
-              width={284}
-              height={284}
-              className="h-auto w-42 sm:w-48 md:w-56 lg:w-72"
+              width={1024}
+              height={1024}
+              className="h-auto w-52 -scale-x-100 sm:w-44 md:w-52 lg:w-64"
               draggable={false}
             />
           </div>
-          <div className="border-border-level-0 absolute right-0 bottom-[-60px] h-[60px] w-2/3 border-b border-l"></div>
         </div>
 
         {/* WORK SECTION */}
@@ -165,7 +164,7 @@ function HomeContent() {
             }
             viewport={
               shouldAnimateHeaderLeftSlide
-                ? { once: true, amount: 0.6 }
+                ? { once: true, amount: 0.1, initial: true }
                 : undefined
             }
             transition={
@@ -194,7 +193,7 @@ function HomeContent() {
             whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
             viewport={
               shouldAnimateWorkCardReveal
-                ? { once: true, amount: 0.3 }
+                ? { once: true, amount: 0.1, initial: true }
                 : undefined
             }
           >
@@ -219,7 +218,7 @@ function HomeContent() {
             whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
             viewport={
               shouldAnimateWorkCardReveal
-                ? { once: true, amount: 0.3 }
+                ? { once: true, amount: 0.1, initial: true }
                 : undefined
             }
           >
@@ -244,7 +243,7 @@ function HomeContent() {
             whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
             viewport={
               shouldAnimateWorkCardReveal
-                ? { once: true, amount: 0.3 }
+                ? { once: true, amount: 0.1, initial: true }
                 : undefined
             }
           >
@@ -382,7 +381,7 @@ function HomeContent() {
             }
             viewport={
               shouldAnimateHeaderLeftSlide
-                ? { once: true, amount: 0.6 }
+                ? { once: true, amount: 0.1, initial: true }
                 : undefined
             }
             transition={
@@ -410,7 +409,7 @@ function HomeContent() {
           whileInView={shouldAnimateSectionReveal ? "show" : undefined}
           viewport={
             shouldAnimateSectionReveal
-              ? { once: true, amount: 0.15 }
+              ? { once: true, amount: 0.1, initial: true }
               : undefined
           }
         >
@@ -593,7 +592,7 @@ function HomeContent() {
             }
             viewport={
               shouldAnimateHeaderLeftSlide
-                ? { once: true, amount: 0.6 }
+                ? { once: true, amount: 0.1, initial: true }
                 : undefined
             }
             transition={
@@ -621,7 +620,7 @@ function HomeContent() {
           whileInView={shouldAnimateSectionReveal ? "show" : undefined}
           viewport={
             shouldAnimateSectionReveal
-              ? { once: true, amount: 0.15 }
+              ? { once: true, amount: 0.1, initial: true }
               : undefined
           }
         >

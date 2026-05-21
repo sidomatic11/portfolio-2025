@@ -77,32 +77,34 @@ export default function HeroCanvas({ className = "" }: HeroCanvasProps) {
         // Cap at 2 to avoid performance issues on very high DPI displays
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-        // Get the hero section height to maintain proper aspect ratio
-        const heroSection =
-          canvas.closest(".hero-section") || canvas.parentElement;
-        const heroRect = heroSection?.getBoundingClientRect();
-        const heroHeight = heroRect?.height || window.innerHeight;
+        // Size to wrapper content area (excludes border-t/b on the dot-grid wrapper)
+        const wrapper = canvas.parentElement;
+        const heroSection = canvas.closest(".hero-section");
+        const canvasHeight =
+          wrapper?.clientHeight ??
+          heroSection?.getBoundingClientRect().height ??
+          window.innerHeight;
 
-        // Set actual canvas size (in pixels) - full viewport width, hero section height
+        // Set actual canvas size (in pixels) - full viewport width, wrapper content height
         canvas.width = Math.floor(window.innerWidth * dpr);
-        canvas.height = Math.floor(heroHeight * dpr);
+        canvas.height = Math.floor(canvasHeight * dpr);
 
-        // Set display size (CSS pixels) - full viewport width, hero section height
+        // Set display size (CSS pixels) - full viewport width, wrapper content height
         canvas.style.width = `${window.innerWidth}px`;
-        canvas.style.height = `${heroHeight}px`;
+        canvas.style.height = `${canvasHeight}px`;
 
         // Scale the drawing context to match device pixel ratio
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
         // Reset animation centers to screen center on resize
-        centerRef.current = { x: window.innerWidth / 2, y: heroHeight / 2 };
+        centerRef.current = { x: window.innerWidth / 2, y: canvasHeight / 2 };
         mouseRef.current = { x: centerRef.current.x, y: centerRef.current.y };
 
         // Only initialize floating triangles on first load (not on resize)
         if (floatingTrianglesRef.current.length === 0) {
           floatingTrianglesRef.current = createFloatingTriangles(
             window.innerWidth,
-            heroHeight,
+            canvasHeight,
           );
         }
       };
@@ -354,7 +356,7 @@ export default function HeroCanvas({ className = "" }: HeroCanvasProps) {
    * - absolute: Positioned relative to hero section
    * - left: 50% + transform: translateX(-50%): Centers horizontally
    * - width: 100vw: Full viewport width
-   * - height: 100%: Inherits hero section height
+   * - height: 100%: Fills wrapper content area (canvas sized via clientHeight)
    * - pointer-events-none: Clicks pass through to content
    * - z-index: -1: Sits behind other elements
    */
