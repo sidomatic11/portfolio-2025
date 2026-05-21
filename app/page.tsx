@@ -6,8 +6,13 @@ import Header from "./components/header";
 import ProjectCard from "./components/project-card";
 import WorkProjectCard from "./components/work-project-card";
 // import { useSearchParams } from "next/navigation";
-import { motion, useReducedMotion } from "framer-motion";
-import { Suspense, useEffect, useState } from "react";
+import {
+  motion,
+  useInView,
+  useReducedMotion,
+  type Variants,
+} from "framer-motion";
+import { Suspense, useEffect, useRef, useState, type ReactNode } from "react";
 import HeroCanvas from "./components/HeroCanvas";
 import Link from "next/link";
 import { OpenNewWindow } from "iconoir-react";
@@ -30,6 +35,80 @@ function useSmUp() {
   }, []);
 
   return smUp;
+}
+
+const IN_VIEW_AMOUNT = 0.1;
+
+function RevealOnView({
+  className,
+  variants,
+  enabled,
+  children,
+  as = "div",
+}: {
+  className?: string;
+  variants: Variants;
+  enabled: boolean;
+  children: ReactNode;
+  as?: "div" | "section";
+}) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, {
+    once: true,
+    amount: IN_VIEW_AMOUNT,
+    initial: enabled,
+  });
+
+  if (!enabled) {
+    const Tag = as;
+    return <Tag className={className}>{children}</Tag>;
+  }
+
+  const MotionTag = as === "section" ? motion.section : motion.div;
+
+  return (
+    <MotionTag
+      ref={ref}
+      className={className}
+      variants={variants}
+      initial="hidden"
+      animate={isInView ? "show" : "hidden"}
+    >
+      {children}
+    </MotionTag>
+  );
+}
+
+function HeaderSlideOnView({
+  className,
+  headerLeft,
+  enabled,
+  children,
+}: {
+  className?: string;
+  headerLeft: number;
+  enabled: boolean;
+  children: ReactNode;
+}) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, {
+    once: true,
+    amount: IN_VIEW_AMOUNT,
+    initial: enabled,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      style={{ left: enabled ? (isInView ? -32 : 0) : headerLeft }}
+      transition={
+        enabled ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] } : undefined
+      }
+    >
+      {children}
+    </motion.div>
+  );
 }
 
 // Client component that uses useSearchParams
@@ -155,23 +234,10 @@ function HomeContent() {
         {/* WORK SECTION */}
 
         <div className="relative mb-24 h-16 w-full">
-          <motion.div
+          <HeaderSlideOnView
             className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
-            style={{ left: headerLeft }}
-            initial={shouldAnimateHeaderLeftSlide ? { left: 0 } : false}
-            whileInView={
-              shouldAnimateHeaderLeftSlide ? { left: -32 } : undefined
-            }
-            viewport={
-              shouldAnimateHeaderLeftSlide
-                ? { once: true, amount: 0.1, initial: true }
-                : undefined
-            }
-            transition={
-              shouldAnimateHeaderLeftSlide
-                ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
-                : undefined
-            }
+            headerLeft={headerLeft}
+            enabled={shouldAnimateHeaderLeftSlide}
           >
             <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
               featured work
@@ -180,22 +246,14 @@ function HomeContent() {
               id="work"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </motion.div>
+          </HeaderSlideOnView>
         </div>
 
         <section className="mb-48 grid grid-cols-1 items-center gap-[48px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
-          <motion.div
+          <RevealOnView
             className="col-span-1 h-full sm:col-span-2 lg:col-span-3"
-            variants={
-              shouldAnimateWorkCardReveal ? workItemVariants : undefined
-            }
-            initial={shouldAnimateWorkCardReveal ? "hidden" : false}
-            whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
-            viewport={
-              shouldAnimateWorkCardReveal
-                ? { once: true, amount: 0.1, initial: true }
-                : undefined
-            }
+            variants={workItemVariants}
+            enabled={shouldAnimateWorkCardReveal}
           >
             <WorkProjectCard
               link="/solve/svb"
@@ -207,20 +265,12 @@ function HomeContent() {
               description="Transformed a dated, support-dependent portal into a fully self-service platform"
               tags={["Team Lead", "Design Sprints", "UX", "2022"]}
             />
-          </motion.div>
+          </RevealOnView>
 
-          <motion.div
+          <RevealOnView
             className="col-span-1 h-full sm:col-span-2 lg:col-span-3"
-            variants={
-              shouldAnimateWorkCardReveal ? workItemVariants : undefined
-            }
-            initial={shouldAnimateWorkCardReveal ? "hidden" : false}
-            whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
-            viewport={
-              shouldAnimateWorkCardReveal
-                ? { once: true, amount: 0.1, initial: true }
-                : undefined
-            }
+            variants={workItemVariants}
+            enabled={shouldAnimateWorkCardReveal}
           >
             <WorkProjectCard
               link="/solve/data-platform"
@@ -232,20 +282,12 @@ function HomeContent() {
               description="Crafted a user-centered product vision for a complex data-fabric platform"
               tags={["Product Concept", "Research", "User Mindsets", "2021"]}
             />
-          </motion.div>
+          </RevealOnView>
 
-          <motion.div
+          <RevealOnView
             className="col-span-1 h-full sm:col-span-2 lg:col-span-3"
-            variants={
-              shouldAnimateWorkCardReveal ? workItemVariants : undefined
-            }
-            initial={shouldAnimateWorkCardReveal ? "hidden" : false}
-            whileInView={shouldAnimateWorkCardReveal ? "show" : undefined}
-            viewport={
-              shouldAnimateWorkCardReveal
-                ? { once: true, amount: 0.1, initial: true }
-                : undefined
-            }
+            variants={workItemVariants}
+            enabled={shouldAnimateWorkCardReveal}
           >
             <WorkProjectCard
               link="/solve/ihh-poc"
@@ -257,7 +299,7 @@ function HomeContent() {
               description="Unified chaotic ICU device data into a single nurse-friendly interface"
               tags={["Proof-of-Concept", "UI frontend", "Cursor AI", "2024"]}
             />
-          </motion.div>
+          </RevealOnView>
 
           {/* {showNDAProjects && (
             <ProjectCard link="/solve/ihh-poc">
@@ -372,23 +414,10 @@ function HomeContent() {
         {/* EXPLORE SECTION */}
 
         <div className="relative mb-24 h-16 w-full">
-          <motion.div
+          <HeaderSlideOnView
             className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
-            style={{ left: headerLeft }}
-            initial={shouldAnimateHeaderLeftSlide ? { left: 0 } : false}
-            whileInView={
-              shouldAnimateHeaderLeftSlide ? { left: -32 } : undefined
-            }
-            viewport={
-              shouldAnimateHeaderLeftSlide
-                ? { once: true, amount: 0.1, initial: true }
-                : undefined
-            }
-            transition={
-              shouldAnimateHeaderLeftSlide
-                ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
-                : undefined
-            }
+            headerLeft={headerLeft}
+            enabled={shouldAnimateHeaderLeftSlide}
           >
             <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
               creative explorations
@@ -397,21 +426,14 @@ function HomeContent() {
               id="explore"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </motion.div>
+          </HeaderSlideOnView>
         </div>
 
-        <motion.section
+        <RevealOnView
+          as="section"
           className="mb-48 grid grid-cols-1 items-center gap-[32px] sm:grid-cols-2 sm:items-start lg:grid-cols-3"
-          variants={
-            shouldAnimateSectionReveal ? sectionRevealVariants : undefined
-          }
-          initial={shouldAnimateSectionReveal ? "hidden" : false}
-          whileInView={shouldAnimateSectionReveal ? "show" : undefined}
-          viewport={
-            shouldAnimateSectionReveal
-              ? { once: true, amount: 0.1, initial: true }
-              : undefined
-          }
+          variants={sectionRevealVariants}
+          enabled={shouldAnimateSectionReveal}
         >
           {/* <ProjectCard link="/explore/voice-typing">
 						<div className="flex flex-col h-full">
@@ -579,27 +601,14 @@ function HomeContent() {
               mediapipe + three.js
             </span>
           </Link>
-        </motion.section>
+        </RevealOnView>
 
         {/* ABOUT SECTION */}
         <div className="relative mb-24 h-16 w-full">
-          <motion.div
+          <HeaderSlideOnView
             className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
-            style={{ left: headerLeft }}
-            initial={shouldAnimateHeaderLeftSlide ? { left: 0 } : false}
-            whileInView={
-              shouldAnimateHeaderLeftSlide ? { left: -32 } : undefined
-            }
-            viewport={
-              shouldAnimateHeaderLeftSlide
-                ? { once: true, amount: 0.1, initial: true }
-                : undefined
-            }
-            transition={
-              shouldAnimateHeaderLeftSlide
-                ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
-                : undefined
-            }
+            headerLeft={headerLeft}
+            enabled={shouldAnimateHeaderLeftSlide}
           >
             <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
               about
@@ -608,21 +617,13 @@ function HomeContent() {
               id="about"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </motion.div>
+          </HeaderSlideOnView>
         </div>
 
-        <motion.div
+        <RevealOnView
           className="w-full"
-          variants={
-            shouldAnimateSectionReveal ? sectionRevealVariants : undefined
-          }
-          initial={shouldAnimateSectionReveal ? "hidden" : false}
-          whileInView={shouldAnimateSectionReveal ? "show" : undefined}
-          viewport={
-            shouldAnimateSectionReveal
-              ? { once: true, amount: 0.1, initial: true }
-              : undefined
-          }
+          variants={sectionRevealVariants}
+          enabled={shouldAnimateSectionReveal}
         >
           {/* Background Section */}
           <section className="mb-16 md:mb-24">
@@ -812,7 +813,7 @@ function HomeContent() {
               </li>
             </ul>
           </section>
-        </motion.div>
+        </RevealOnView>
       </main>
 
       {/* <div className="absolute bottom-[-1px] left-0 w-full h-full z-[-1]">
