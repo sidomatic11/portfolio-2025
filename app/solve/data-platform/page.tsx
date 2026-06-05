@@ -30,22 +30,22 @@ export default function Page() {
         {/* Quick facts: Client, Company, Timeline on one line */}
         <div className="mx-auto mb-2 max-w-xl sm:grid sm:grid-cols-3 sm:gap-8">
           <div className="max-w-xl">
-            <p className="mb-1 text-base font-semibold">Client</p>
+            <p className="project-meta-label mb-1">Client</p>
             <p className="mb-6 text-base">US based Data Platform company</p>
           </div>
           <div className="max-w-xl">
-            <p className="mb-1 text-base font-semibold">Company</p>
+            <p className="project-meta-label mb-1">Company</p>
             <p className="mb-6 text-base">Concentrix Catalyst</p>
           </div>
           <div className="max-w-xl">
-            <p className="mb-1 text-base font-semibold">Timeline</p>
+            <p className="project-meta-label mb-1">Timeline</p>
             <p className="mb-6 text-base">2021</p>
           </div>
         </div>
 
         {/* Team on next line */}
         <div className="mx-auto mb-12 max-w-xl">
-          <p className="mb-1 text-base font-semibold">Team</p>
+          <p className="project-meta-label mb-1">Team</p>
           <div className="mt-1 flex flex-row flex-wrap gap-2">
             <PersonChip
               imageUrl="/data-platform/aaron.webp"
@@ -71,8 +71,8 @@ export default function Page() {
 
         {/* Activities */}
         <div className="mx-auto max-w-xl">
-          <p className="mb-2 text-base font-semibold">Activities</p>
-          <div className="mb-8 flex flex-col gap-2 font-mono text-sm text-gray-600 lowercase">
+          <p className="project-meta-label mb-2">Activities</p>
+          <div className="mb-8 flex flex-col gap-2 font-ibm-plex-mono text-sm text-gray-600 lowercase">
             <div>
               <span className="font-bold">Lead:</span> Product Concept Design,
               User Mindsets, Design Principles
@@ -168,7 +168,7 @@ export default function Page() {
         </div>
         {/* Testimonial */}
         <div className="relative mx-auto mb-12 max-w-xl">
-          <div className="absolute -top-2 -left-2 font-serif text-6xl text-gray-300">
+          <div className="absolute -top-2 -left-2 font-ibm-plex-serif text-6xl text-gray-300">
             &ldquo;
           </div>
           <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 pl-12">

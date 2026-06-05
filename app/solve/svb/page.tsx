@@ -31,7 +31,7 @@ export default function SVB() {
           <div className="space-y-6">
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
               <div className="sm:w-1/2">
-                <p className="text-base font-semibold">Company</p>
+                <p className="project-meta-label">Company</p>
                 <a
                   href="https://www.concentrix.com/catalyst/"
                   className="cursor-pointer text-base"
@@ -42,7 +42,7 @@ export default function SVB() {
                 </a>
               </div>
               <div className="sm:w-1/2">
-                <p className="text-base font-semibold">Client</p>
+                <p className="project-meta-label">Client</p>
                 <a
                   href="https://www.svb.com/"
                   className="cursor-pointer text-base"
@@ -55,16 +55,16 @@ export default function SVB() {
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
               <div className="sm:w-1/2">
-                <p className="text-base font-semibold">My Role</p>
+                <p className="project-meta-label">My Role</p>
                 <p className="text-base">Design Lead</p>
               </div>
               <div className="sm:w-1/2">
-                <p className="text-base font-semibold">Timeline</p>
+                <p className="project-meta-label">Timeline</p>
                 <p className="text-base">4 months (late 2022)</p>
               </div>
             </div>
             <div>
-              <p className="text-base font-semibold">Team</p>
+              <p className="project-meta-label">Team</p>
               <div className="mt-1 flex flex-row flex-wrap gap-2">
                 <PersonChip
                   imageUrl="/siddhant.jpg"
@@ -98,8 +98,8 @@ export default function SVB() {
               </div>
             </div>
             <div>
-              <p className="text-base font-semibold">Activities</p>
-              <p className="font-mono text-sm text-gray-600">
+              <p className="project-meta-label">Activities</p>
+              <p className="font-ibm-plex-mono text-sm text-gray-600">
                 design sprints, user and stakeholder interviews, personas,
                 landscape review, IA, content model, user flows, wireframes, UI,
                 interactive prototypes, design system, client presentations
@@ -222,7 +222,7 @@ export default function SVB() {
           <div className="space-y-8">
             {/* Testimonial 1 */}
             <div className="relative">
-              <div className="absolute -top-2 -left-2 font-serif text-6xl text-gray-300">
+              <div className="absolute -top-2 -left-2 font-ibm-plex-serif text-6xl text-gray-300">
                 &ldquo;
               </div>
               <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 pl-12">
@@ -258,7 +258,7 @@ export default function SVB() {
 
             {/* Testimonial 2 */}
             <div className="relative">
-              <div className="absolute -top-2 -left-2 font-serif text-6xl text-gray-300">
+              <div className="absolute -top-2 -left-2 font-ibm-plex-serif text-6xl text-gray-300">
                 &ldquo;
               </div>
               <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 pl-12">

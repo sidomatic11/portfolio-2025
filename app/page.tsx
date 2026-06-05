@@ -12,32 +12,22 @@ import {
   useReducedMotion,
   type Variants,
 } from "framer-motion";
-import { Suspense, useEffect, useRef, useState, type ReactNode } from "react";
+import { Suspense, useRef, type ReactNode } from "react";
 import HeroCanvas from "./components/HeroCanvas";
 import Link from "next/link";
 import { OpenNewWindow } from "iconoir-react";
 
 // const defaultIsExploreVisible = false;
 
-function useSmUp() {
-  const [smUp, setSmUp] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 640px)");
-
-    const onChange = (event: MediaQueryListEvent) => {
-      setSmUp(event.matches);
-    };
-
-    setSmUp(mediaQuery.matches);
-    mediaQuery.addEventListener("change", onChange);
-    return () => mediaQuery.removeEventListener("change", onChange);
-  }, []);
-
-  return smUp;
+function SectionHeader({
+  className,
+  children,
+}: {
+  className?: string;
+  children: ReactNode;
+}) {
+  return <div className={className}>{children}</div>;
 }
-
-const IN_VIEW_AMOUNT = 0.1;
 
 function RevealOnView({
   className,
@@ -79,48 +69,13 @@ function RevealOnView({
   );
 }
 
-function HeaderSlideOnView({
-  className,
-  headerLeft,
-  enabled,
-  children,
-}: {
-  className?: string;
-  headerLeft: number;
-  enabled: boolean;
-  children: ReactNode;
-}) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref, {
-    once: true,
-    amount: IN_VIEW_AMOUNT,
-    initial: enabled,
-  });
-
-  return (
-    <motion.div
-      ref={ref}
-      className={className}
-      style={{ left: enabled ? (isInView ? -32 : 0) : headerLeft }}
-      transition={
-        enabled ? { duration: 0.6, ease: [0.22, 1, 0.36, 1] } : undefined
-      }
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-// Client component that uses useSearchParams
+const IN_VIEW_AMOUNT = 0.1;
 function HomeContent() {
   // const [isExploreVisible, setIsExploreVisible] = useState(defaultIsExploreVisible);
   // const [showNDAProjects] = useState(false);
   // const [showAnimatedSpans, setShowAnimatedSpans] = useState(false);
   // const searchParams = useSearchParams();
   const shouldReduceMotion = useReducedMotion();
-  const smUp = useSmUp();
-  const shouldAnimateHeaderLeftSlide = smUp && !shouldReduceMotion;
-  const headerLeft = smUp && shouldReduceMotion ? -32 : 0;
   const shouldAnimateWorkCardReveal = !shouldReduceMotion;
   const shouldAnimateSectionReveal = !shouldReduceMotion;
 
@@ -169,7 +124,7 @@ function HomeContent() {
   // const imageSrc = isExploreVisible ? '/footer/mountains.svg' : '/footer/city.svg';
 
   return (
-    <div className="w-full">
+    <div className="font-ibm-plex-sans w-full">
       <Header />
       <main
         className="relative w-full sm:pt-16"
@@ -186,14 +141,14 @@ function HomeContent() {
           <HeroCanvas />
 
           <div className="relative w-full">
-            <div className="border-border-level-1 w-fit border bg-white px-6 py-6 shadow-[8px_8px_0_0_var(--color-brand-yellow),16px_16px_0_0_var(--color-brand-orange)]">
+            <div className="border-border-level-1 w-fit border bg-white px-6 py-6">
               <p className="text-3xl leading-normal font-light text-gray-700 sm:text-4xl">
                 I shape <span className="font-bold">ambitious ideas</span> into{" "}
                 <span className="italic">meaningful software</span>.
               </p>
             </div>
 
-            <div className="border-border-level-1 relative mt-16 w-fit overflow-hidden border bg-white pb-8 shadow-[8px_8px_0_0_var(--color-gray-300)]">
+            <div className="border-border-level-1 relative mt-16 w-fit overflow-hidden border bg-white pb-8">
               <div className="w-full px-6 py-4">
                 <p className="mb-1 text-lg leading-normal font-light md:text-2xl">
                   Siddhant V Patil
@@ -234,19 +189,17 @@ function HomeContent() {
         {/* WORK SECTION */}
 
         <div className="relative mb-24 h-16 w-full">
-          <HeaderSlideOnView
-            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
-            headerLeft={headerLeft}
-            enabled={shouldAnimateHeaderLeftSlide}
+          <SectionHeader
+            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 lg:w-1/2"
           >
-            <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
-              featured work
+            <p className="text-text-dark text-2xl font-medium sm:text-3xl">
+              Featured Work
             </p>
             <div
               id="work"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </HeaderSlideOnView>
+          </SectionHeader>
         </div>
 
         <section className="mb-48 grid grid-cols-1 items-center gap-[48px] sm:grid-cols-2 sm:items-start lg:grid-cols-3">
@@ -260,7 +213,6 @@ function HomeContent() {
               category="product design"
               title="API Developer Portal Redesign for SVB"
               imageSrc="/thumbnails/svb.webp"
-              hoverImageSrc="/thumbnails/svb-hover.webp"
               imageAlt="Silicon Valley Bank"
               description="Transformed a dated, support-dependent portal into a fully self-service platform"
               tags={["Team Lead", "Design Sprints", "UX", "2022"]}
@@ -278,7 +230,6 @@ function HomeContent() {
               title="Data Fabric Platform Vision"
               imageSrc="/thumbnails/iris.webp"
               imageAlt="Data Fabric Platform Vision"
-              hoverImageSrc="/thumbnails/iris-hover.webp"
               description="Crafted a user-centered product vision for a complex data-fabric platform"
               tags={["Product Concept", "Research", "User Mindsets", "2021"]}
             />
@@ -295,7 +246,6 @@ function HomeContent() {
               title="Patient Monitoring System for IHH Malaysia"
               imageSrc="/thumbnails/image.webp"
               imageAlt="IHH POC"
-              hoverImageSrc="/thumbnails/ihh-hover.webp"
               description="Unified chaotic ICU device data into a single nurse-friendly interface"
               tags={["Proof-of-Concept", "UI frontend", "Cursor AI", "2024"]}
             />
@@ -414,19 +364,17 @@ function HomeContent() {
         {/* EXPLORE SECTION */}
 
         <div className="relative mb-24 h-16 w-full">
-          <HeaderSlideOnView
-            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
-            headerLeft={headerLeft}
-            enabled={shouldAnimateHeaderLeftSlide}
+          <SectionHeader
+            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 lg:w-1/2"
           >
-            <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
-              creative explorations
+            <p className="text-text-dark text-2xl font-medium sm:text-3xl">
+              Creative Explorations
             </p>
             <div
               id="explore"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </HeaderSlideOnView>
+          </SectionHeader>
         </div>
 
         <RevealOnView
@@ -605,19 +553,17 @@ function HomeContent() {
 
         {/* ABOUT SECTION */}
         <div className="relative mb-24 h-16 w-full">
-          <HeaderSlideOnView
-            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 sm:w-2/3"
-            headerLeft={headerLeft}
-            enabled={shouldAnimateHeaderLeftSlide}
+          <SectionHeader
+            className="bg-background-level-1 border-border-level-0 absolute top-0 w-full border px-8 py-6 lg:w-1/2"
           >
-            <p className="text-text-dark text-2xl font-bold tracking-[0.12em] uppercase sm:text-3xl">
-              about
+            <p className="text-text-dark text-2xl font-medium sm:text-3xl">
+              About
             </p>
             <div
               id="about"
               className="absolute top-0 left-0 h-16 w-full sm:top-[-63px]"
             ></div>
-          </HeaderSlideOnView>
+          </SectionHeader>
         </div>
 
         <RevealOnView
@@ -722,7 +668,7 @@ function HomeContent() {
               I love working on...
             </div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-6">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-01.svg"
@@ -733,7 +679,7 @@ function HomeContent() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-lg font-semibold">
+                  <h3 className="mb-1 text-lg leading-snug font-semibold">
                     Prototyping & Proof of Concepts
                   </h3>
                   <p className="text-gray-600">
@@ -742,7 +688,7 @@ function HomeContent() {
                   </p>
                 </div>
               </li>
-              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 sm:border-l-0">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-6 sm:border-l-0">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-02.svg"
@@ -753,7 +699,7 @@ function HomeContent() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-lg font-semibold">
+                  <h3 className="mb-1 text-lg leading-snug font-semibold">
                     Innovative Explorations
                   </h3>
                   <p className="text-gray-600">
@@ -761,7 +707,7 @@ function HomeContent() {
                   </p>
                 </div>
               </li>
-              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 md:border-l-0">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-6 md:border-l-0">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-03.svg"
@@ -772,14 +718,16 @@ function HomeContent() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-lg font-semibold">Emerging Tech</h3>
+                  <h3 className="mb-1 text-lg leading-snug font-semibold">
+                    Emerging Tech
+                  </h3>
                   <p className="text-gray-600">
                     I enjoy researching, keeping up and working with the latest
                     in tech.
                   </p>
                 </div>
               </li>
-              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 sm:border-l-0 md:border-l-1">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-6 sm:border-l-0 md:border-l-1">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-04.svg"
@@ -790,13 +738,15 @@ function HomeContent() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-lg font-semibold">Social Impact</h3>
+                  <h3 className="mb-1 text-lg leading-snug font-semibold">
+                    Social Impact
+                  </h3>
                   <p className="text-gray-600">
                     Real problems, real solutions.
                   </p>
                 </div>
               </li>
-              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-4 md:border-l-0">
+              <li className="border-border-level-0 bg-background-level-0 flex items-start gap-4 border border-t-0 p-6 md:border-l-0">
                 <div className="h-12 w-12 flex-shrink-0">
                   <Image
                     src="/icon-05.svg"
@@ -807,7 +757,9 @@ function HomeContent() {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-lg font-semibold">Art with Tech</h3>
+                  <h3 className="mb-1 text-lg leading-snug font-semibold">
+                    Art with Tech
+                  </h3>
                   <p className="text-gray-600">For the pure joy of it.</p>
                 </div>
               </li>

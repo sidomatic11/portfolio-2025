@@ -20,7 +20,7 @@ export default function Header({
             {isProjectHeader ? (
               <ArrowLeft className="h-6 w-6" />
             ) : (
-              <div data-header-logo>
+              <div>
                 <Image
                   src="/logo.svg"
                   alt="Logo"
@@ -40,7 +40,7 @@ export default function Header({
 				)} */}
 
         {!isProjectHeader && (
-          <div className="flex h-full w-full items-center sm:w-auto">
+          <div className="font-ibm-plex-mono flex h-full w-full items-center uppercase sm:w-auto">
             <div className="border-border-level-1 bg-background-level-1 flex h-full flex-1 flex-shrink-0 items-center justify-center sm:w-fit sm:flex-none sm:border-l">
               <Link
                 href="/#work"
@@ -69,7 +69,7 @@ export default function Header({
               <Link
                 href="/ai-projects"
                 title="AI projects"
-                className="flex h-full w-full items-center justify-center px-4 font-extrabold sm:px-6"
+                className="flex h-full w-full items-center justify-center px-4 font-bold sm:px-6"
               >
                 ai
               </Link>

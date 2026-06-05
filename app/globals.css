@@ -28,6 +28,9 @@
   --color-text-dark: var(--text-dark);
   --color-text-base: var(--text-base);
   --color-text-light: var(--text-light);
+  --font-sans: var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+  --font-serif: var(--font-ibm-plex-serif), "IBM Plex Serif", serif;
 }
 
 /* Dark mode disabled
@@ -46,11 +49,26 @@ html {
 body {
   background: var(--background-level-0);
   color: var(--foreground);
-  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-family: var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif;
 }
 
-.font-eb-garamond {
-  font-family: var(--font-eb-garamond), "EB Garamond", Garamond, serif;
+.font-ibm-plex-mono {
+  font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+}
+
+.font-ibm-plex-sans {
+  font-family: var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif;
+}
+
+.font-ibm-plex-serif {
+  font-family: var(--font-ibm-plex-serif), "IBM Plex Serif", serif;
+}
+
+.project-meta-label {
+  font-family: var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 hr {
@@ -137,6 +155,7 @@ hr {
 
 /* Prevent unwanted interactions in hero section */
 .hero-section {
+  font-family: var(--font-ibm-plex-sans), "IBM Plex Sans", sans-serif;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;

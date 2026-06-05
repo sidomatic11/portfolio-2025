@@ -19,12 +19,12 @@ export default function S1010() {
             {/* Client and timeline info */}
             <div className="sm:flex sm:gap-12 mb-8">
               <div className="w-full">
-                <p className="text-base mb-1 font-semibold">Client</p>
+                <p className="project-meta-label mb-1">Client</p>
                 <p className="text-base mb-8">Concentrix</p>
               </div>
 
               <div className="w-full">
-                <p className="text-base mb-1 font-semibold">Timeline</p>
+                <p className="project-meta-label mb-1">Timeline</p>
                 <p className="text-base mb-8">Late 2022</p>
               </div>
             </div>

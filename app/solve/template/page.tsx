@@ -66,7 +66,7 @@ export default function Template() {
             {/* Code Example */}
             <section className="mb-16">
               <h2 className="text-2xl font-semibold mb-4">Code Example</h2>
-              <div className="bg-gray-100 p-4 rounded-lg font-mono text-sm">
+              <div className="bg-gray-100 p-4 rounded-lg font-ibm-plex-mono text-sm">
                 <pre>
                   {`function example() {
   console.log("This is a code example");

@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-border-level-1 relative row-start-3 mx-auto flex h-64 flex-col items-center justify-center border-t bg-slate-800 pb-16 text-gray-700 before:absolute before:inset-0 before:left-1/2 before:-z-10 before:w-screen before:-translate-x-1/2 before:bg-white before:content-[''] sm:pb-0">
+    <footer className="font-ibm-plex-sans border-border-level-1 relative row-start-3 mx-auto flex h-64 flex-col items-center justify-center border-t bg-slate-800 pb-16 text-gray-700 before:absolute before:inset-0 before:left-1/2 before:-z-10 before:w-screen before:-translate-x-1/2 before:bg-white before:content-[''] sm:pb-0">
       <div className="border-border-level-1 relative isolate flex h-full w-full max-w-5xl flex-col justify-center border-x px-8 md:px-32 lg:px-64">
         <div className="border-border-level-1 pointer-events-none absolute top-0 left-0 z-[-1] h-full w-1/2 border-r" />
         <nav className="flex w-full">

@@ -19,20 +19,20 @@ export default function Page() {
           {/* <p className="max-w-xl mx-auto text-2xl mb-8">Research driven, future product vision for a data platform company</p> */}
 
           <div className="max-w-xl mx-auto mb-8 mt-8">
-            <p className="text-base mb-1 font-semibold">Client</p>
+            <p className="project-meta-label mb-1">Client</p>
             <p className="text-base mb-8">A data platform company, leading in US healthcare</p>
           </div>
 
 
           {/* Business objective */}
           <div className="max-w-xl mx-auto mb-8">
-            <p className="text-base mb-1 font-semibold">Business Objective</p>
+            <p className="project-meta-label mb-1">Business Objective</p>
             <p className="text-base mb-8">Help envision the product of the future, what it should look like from a <i>user</i> standpoint and understand the key requirements needed to achieve it.</p>
           </div>
 
           {/* Activities */}
           <div className="max-w-xl mx-auto mb-12">
-            <p className="text-base mb-2 font-semibold">My Activities</p>
+            <p className="project-meta-label mb-2">My Activities</p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <div className="sm:w-1/2">

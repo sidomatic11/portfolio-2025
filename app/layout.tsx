@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { EB_Garamond, Inter } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
-import LoadingScreen from "./components/LoadingScreen";
 import { Analytics } from "@vercel/analytics/next";
 
-const inter = Inter({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "700"],
+  variable: "--font-ibm-plex-mono",
 });
 
-const ebGaramond = EB_Garamond({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-eb-garamond",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-ibm-plex-sans",
+});
+
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-ibm-plex-serif",
 });
 
 export const metadata: Metadata = {
@@ -70,9 +79,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${inter.variable} ${ebGaramond.variable} w-full overflow-x-hidden`}
+        className={`${ibmPlexSans.className} ${ibmPlexMono.variable} ${ibmPlexSans.variable} ${ibmPlexSerif.variable} w-full overflow-x-hidden`}
       >
-        <LoadingScreen />
         <div
           id="home"
           className="relative mx-auto min-h-screen max-w-5xl px-8 text-gray-700 sm:pt-16 lg:w-[calc(100%-4rem)] lg:px-0"

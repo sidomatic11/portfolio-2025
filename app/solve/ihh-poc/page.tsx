@@ -18,7 +18,7 @@ export default function About() {
         {/* Client and timeline info */}
         <div className="mx-auto max-w-xl sm:flex sm:gap-12">
           <div className="max-w-xl sm:w-2/3">
-            <p className="mb-1 text-base font-semibold">Client</p>
+            <p className="project-meta-label mb-1">Client</p>
             <p className="mb-8 text-base">
               {" "}
               IHH Healthcare Berhad — Pantai Hospital Klang & Gleneagles
@@ -27,14 +27,14 @@ export default function About() {
           </div>
 
           <div className="max-w-xl sm:w-1/3">
-            <p className="mb-1 text-base font-semibold">Timeline</p>
+            <p className="project-meta-label mb-1">Timeline</p>
             <p className="mb-8 text-base">2 months</p>
           </div>
         </div>
 
         {/* Team members */}
         <div className="mx-auto mb-8 max-w-xl">
-          <p className="mb-1 text-base font-semibold">Team</p>
+          <p className="project-meta-label mb-1">Team</p>
           <div className="flex flex-row flex-wrap gap-2">
             <PersonChip
               imageUrl="/rajnikanth.jpeg"
@@ -47,8 +47,8 @@ export default function About() {
         </div>
 
         <div className="mx-auto mb-12 max-w-xl">
-          <p className="mb-1 text-base font-semibold">Activities</p>
-          <p className="font-mono text-sm text-gray-600">
+          <p className="project-meta-label mb-1">Activities</p>
+          <p className="font-ibm-plex-mono text-sm text-gray-600">
             UI prototyping, UI design and development, backend integration, data
             parsing, hardware integration
           </p>
